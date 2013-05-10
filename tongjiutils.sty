@@ -1,0 +1,104 @@
+\ProvidesPackage{tongjiutils}[2009/05/13 1.0 put any packages you
+would like to use here]
+
+% 处理数学公式中的黑斜体的宏包
+\RequirePackage{bm}
+
+
+% 不同于~|\mathcal| or |\mathfrak| 之类的英文花体字体
+\RequirePackage{mathrsfs}
+
+% 表格中支持跨行
+\RequirePackage{multirow}
+
+% 跨页表格
+\RequirePackage{longtable}
+
+% 固定宽度的表格
+\RequirePackage{tabularx}
+
+% 表格中的反斜线
+\RequirePackage{slashbox}
+
+% 表格横线粗细
+\RequirePackage{booktabs}
+
+% 确定浮动对象的位置，可以使用~H，强制将浮动对象放到这里（可能效果很差）
+\RequirePackage{float}
+% 图片上修改
+\RequirePackage{overpic}
+% tikz
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows,decorations.pathmorphing,positioning,backgrounds,chains,fit,calc,%
+petri,through,shapes}
+
+% 调整目录特殊要求，重定义缩进量
+\usepackage{titletoc}
+\titlecontents{chapter}[0pt]{\addvspace{2.5pt}}%edited by amouse 20120330  %2.5pt即是行距控制参数，可修改
+          {\xiaosi\song\thecontentslabel\enspace}%
+              {\xiaosi\song}{\dotfill\contentspage}[\addvspace{0pt}]
+\titlecontents{section}[1em]{\addvspace{2.5pt}}%
+          {\xiaosi\song \thecontentslabel\enspace}%
+              {\xiaosi\song}{\dotfill\contentspage}[\addvspace{0pt}]
+\titlecontents{subsection}[2em]{\addvspace{2.5pt}}%
+          {\xiaosi\song\thecontentslabel\enspace}%
+              {\xiaosi\song}{\dotfill\contentspage}[\addvspace{0pt}]
+
+% 浮动图形控制宏包。
+% 允许上一个~section 的浮动图形出现在下一个~section 的开始部分
+% 该宏包提供处理浮动对象的~|\FloatBarrier| 命令，使所有未处
+% 理的浮动图形立即被处理。这三个宏包仅供参考，未必使用：
+ % \RequirePackage[below]{placeins}
+ % \RequirePackage{floatflt} % 图文混排用宏包
+ % \RequirePackage{rotating} % 图形和表格的控制旋转
+
+% 给自定义的宏后面自动加空白
+% \RequirePackage{xspace}
+
+
+% 定义自己常用的东西
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%           自定义命令                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}   % 定义绝对值符号 usage: \abs{x}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}  % 定义取模符号   usage: \norm{x}
+%%常数（如π、i、e等）和微分算子d用直立体表示
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\me}{\mathrm{e}}
+\newcommand{\mi}{\mathrm{i}}
+\newcommand{\mpi}{\mathrm{\pi}}
+\DeclareMathAlphabet{\mathfsl}{OT1}{cmss}{m}{sl}
+\newcommand{\n}[1]{$#1$\nobreakdash-\hspace{0pt}} %For "\n{n}dimensional" ("n-dimensional")
+\newcommand{\Ndash}{\nobreakdash\textendash}% for "pages 1\Ndash 9"
+%%%%%罗马字符 用法：(\rmnum{1})
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\jw}{j\omega}
+\newcommand{\w}{\omega}
+\newcommand{\W}{\Omega}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\m}[1]{$#1$}
+\newcommand{\mybox}[2]{\fbox{\parbox{#1}{#2}}}
+\newcommand{\mycolorbox}[2]{\fcolorbox{black}{lightgray}{\parbox[t]{#1}{#2}}}
+\newcommand{\china}{中华人民共和国}
+
+% mycolor
+\definecolor{red}{rgb}{1,0,0}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\definecolor{blue}{RGB}{40,60,140}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\definecolor{green}{rgb}{0.25,0.75,0.25}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\definecolor{gray}{rgb}{0.7,0.7,0.7}
+\newcommand{\gray}[1]{\textcolor{gray}{#1}}
+\definecolor{white}{rgb}{1,1,1}
+\newcommand{\white}[1]{\textcolor{wit}{#1}}
+% 表格粗横线，竖线
+\newcommand{\csx}{\vrule width 1.2pt}
+\newcommand{\chx}{\noalign{\hrule height 1.2pt}}
+\newcommand{\ta}[2]{\multicolumn{1}{#1}{#2}} %居中对齐 change #1
+
+\endinput
