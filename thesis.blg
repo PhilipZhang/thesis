@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99c (TeX Live 2009)
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: data/chap01.aux
+A level-1 auxiliary file: data/chap02.aux
+A level-1 auxiliary file: data/chap03.aux
+A level-1 auxiliary file: data/chap04.aux
+A level-1 auxiliary file: data/chap05.aux
+A level-1 auxiliary file: data/chap06.aux
+A level-1 auxiliary file: data/ack.aux
+The style file: tongjibib.bst
+A level-1 auxiliary file: data/resume.aux
+Database file #1: ref/refs.bib
+Warning--empty booktitle in Lucas81aniterative
+Warning--empty institution in vsfm
+Warning--empty institution in siftgpu
+You've used 4 entries,
+            2221 wiz_defined-function locations,
+            567 strings with 4721 characters,
+and the built_in function-call counts, 1300 in all, are:
+= -- 132
+> -- 26
+< -- 1
++ -- 12
+- -- 6
+* -- 86
+:= -- 188
+add.period$ -- 11
+call.type$ -- 4
+change.case$ -- 2
+chr.to.int$ -- 0
+cite$ -- 7
+duplicate$ -- 85
+empty$ -- 134
+format.name$ -- 8
+if$ -- 292
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 2
+newline$ -- 30
+num.names$ -- 4
+pop$ -- 17
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 25
+stack$ -- 0
+substring$ -- 137
+swap$ -- 10
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 15
+width$ -- 5
+write$ -- 52
+(There were 3 warnings)

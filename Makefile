@@ -14,6 +14,11 @@ view:
 edit:
 	@vim -p `find . -name "*.tex" -o -name "*.bib"`
 
+add:
+	git add data/*
+	git add ref/*
+	git add ./*
+
 ################################################################################
 pdflatex ${FILENAME}.aux: ${FILENAME}.tex
 	-@echo "\033[32mpdflatex -interaction=nonstopmode $<\033[0m"
