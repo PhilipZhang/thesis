@@ -1,32 +1,18 @@
 \begin{thebibliography}{1}
 
-\bibitem{Lucas81aniterative}
+\bibitem{harris}
+Harris C, Stephens M.
+\newblock A combined corner and edge detector.
+\newblock In Proc. of Fourth Alvey Vision Conference, 1988.
+\newblock  147--151
+\tongjidot
+
+\bibitem{pyrlk}
 Lucas B~D, Kanade T.
 \newblock An Iterative Image Registration Technique with an Application to
   Stereo Vision.
 \newblock 1981.
 \newblock  674--679
-\tongjidot
-
-\bibitem{vsfm}
-C W.
-\newblock VisualSFM.
-\newblock Technical report, 2011.
-\newblock  {\url{http://homes.cs.washington.edu/~ccwu/vsfm/}}
-\tongjidot
-
-\bibitem{siftgpu}
-C W.
-\newblock SiftGPU.
-\newblock Technical report, 2007.
-\newblock  {\url{http://cs.unc.edu/~ccwu/siftgpu}}
-\tongjidot
-
-\bibitem{mba}
-Furukawa Y, Ponce J.
-\newblock Accurate Camera Calibration from Multi-View Stereo and Bundle
-  Adjustment.
-\newblock Int. J. Comput. Vision, 2009, 84(3): 257--268
 \tongjidot
 
 \end{thebibliography}
