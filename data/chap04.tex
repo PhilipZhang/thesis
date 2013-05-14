@@ -53,6 +53,38 @@
 图片。。。
 
 伪代码。。。
+\begin{algorithmic}[1]
+	\State Input: 点云模型$M$
+	\State Input: 体素维度$d$
+	\State Output: 三维体素数组$\mathbb{V}[d,d,d]$
+	\State 初始化点云边界值$X_max=Y_max=_Z_max=MIN_FLOAT,X_min=Y_min=Z_min=MAX_FLOAT$
+	\ForAll{空间点$P(P_x,P_y,P_z) \in M$}
+		\If{$P_x>X_max$}
+		\State $X_max=P_x$
+		\EndIf
+		\If{$P_y>Y_max$}
+		\State $Y_max=P_y$
+		\EndIf
+		\If{$P_z>Z_max$}
+		\State $Z_max=P_z$
+		\EndIf
+		\If{$P_x<X_min$}
+		\State $X_min=P_x$
+		\EndIf
+		\If{$P_y<Y_min$}
+		\State $Y_min=P_y$
+		\EndIf
+		\If{$P_z<Z_min$}
+		\State $Z_min=P_z$
+		\EndIf
+	\EndFor
+	\ForAll{空间点$P(P_x,P_y,P_z) \in M$}
+		\State $V_x = \frac{P_x-X_min}{X_max-X_min}\cdot d$
+		\State $V_y = \frac{P_y-Y_min}{Y_max-Y_min}\cdot d$
+		\State $V_z = \frac{P_z-Z_min}{Z_max-Z_min}\cdot d$
+		\State $\mathbb{V}[V_x, V_y, V_z] = \mathbb{V}[V_x, V_y, V_z] \bigcup \{P\} $
+	\EndFor
+\end{algorithmic}
 
 \subsection{三维体素泛洪确定邻域范围}
 在确定了三维体素模型以后，便需要从根到叶，自底向上地对树的骨架结构进行生长。
@@ -148,27 +180,30 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 
 伪代码。。。\\
 功能：根据纵向合并角度参数，以当前节点为发起点递归式地纵向合并枝干\\
-\begin{algorithmic}[1]
-	\State 初始化纵向合并角度$\alpha$
-	\State 设定当前节点$N$
-	\ForAll{节点$N'\in N.Children$}
-		\While{$N'.ChildCount = 1$}
-			\State $\vec{u} \gets N'.Position-N.Position$
-			\State $\vec{v} \gets N''.Position-N'.Position$
-			\State $\gamma \gets \cos^{-1}({\frac{\vec{u} \cdot \vec{v}}{|\vec{u}|\cdot|\vec{v}|}})$
-			\If{$\gamma<\alpha$}
-				\State $N.child \gets N.AddChild(N'')$
-				\State $N.child \gets N.DeleteChild(N') $
-			\EndIf
-			\State $N' \gets N'.FirstChild$
-		\EndWhile
-	\EndFor
-	\If{$N.ChildCount > 1$}
+\begin{algorithm}
+	\caption{纵向合并枝干}
+	\begin{algorithmic}[1]
+		\Require 纵向合并角度$alpha$
+		\Require 当前节点$N$
 		\ForAll{节点$N'\in N.Children$}
-			\State 以$N'$为当前节点递归调用该函数
+		\While{$N'.ChildCount = 1$}
+		\State $\vec{u} \gets N'.Position-N.Position$
+		\State $\vec{v} \gets N''.Position-N'.Position$
+		\State $\gamma \gets \cos^{-1}({\frac{\vec{u} \cdot \vec{v}}{|\vec{u}|\cdot|\vec{v}|}})$
+		\If{$\gamma<\alpha$}
+		\State $N.child \gets N.AddChild(N'')$
+		\State $N.child \gets N.DeleteChild(N') $
+		\EndIf
+		\State $N' \gets N'.FirstChild$
+		\EndWhile
 		\EndFor
-	\EndIf
-\end{algorithmic}
+		\If{$N.ChildCount > 1$}
+		\ForAll{节点$N'\in N.Children$}
+		\State 以$N'$为当前节点递归调用该函数
+		\EndFor
+		\EndIf
+	\end{algorithmic}
+\end{algorithm}
 
 功能：根据横向合并角度参数，横向合并夹角小于角度阈值的末端叶子枝干\\
 \begin{algorithmic}[1]
