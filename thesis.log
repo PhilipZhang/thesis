@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.3.8)  14 MAY 2013 22:32
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.3.8)  15 MAY 2013 13:56
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -882,6 +882,27 @@ File: tongjithesis.cfg 2009/05/13 1.0 Tongji University Thesis Template
 \c@currconjecturectr=\count179
 \c@endconjecturectr=\count180
 \c@conjecture=\count181
+
+
+! LaTeX Error: \algorithmicrequire undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 \renewcommand{\algorithmicrequire}
+                                        {\textbf{Input:}}
+? 
+
+! LaTeX Error: \algorithmicensure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.130 \renewcommand{\algorithmicensure}
+                                       {\textbf{Output:}}
+? 
 ) (./tongjiutils.sty
 Package: tongjiutils 2009/05/13 1.0 put any packages you would like to use here
 
@@ -1549,139 +1570,153 @@ nment
 Normal \count register pool exhausted, switching to extended pool.
 \c@algorithm=\count277
 )
+(/usr/share/texlive-bin/current/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box55
+\UL@hyphenbox=\box56
+\UL@skip=\skip90
+\UL@hook=\toks60
+\UL@pe=\count278
+\UL@pixel=\dimen232
+\ULC@box=\box57
+Package: ulem 2010/01/21
+\ULdepth=\dimen233
+)
+(/usr/share/texlive-bin/current/texmf-dist/tex/latex/extarrows/extarrows.sty
+Package: extarrows 2008/05/15 v1.0b Some extensible arrows
+)
 
 LaTeX Warning: Unused global option(s):
     [12bp].
 
 (./thesis.aux (./data/chap01.aux) (./data/chap02.aux) (./data/chap03.aux)
-(./data/chap04.aux) (./data/chap05.aux) (./data/chap06.aux) (./data/ack.aux)
-(./data/resume.aux))
+(./data/chap04.aux) (./data/chap05.aux) (./data/chap06.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 48.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 48.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 50.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 50.
 
 
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 48.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 48.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 50.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 50.
 
 
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 48.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 48.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 50.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 50.
 
 
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 48.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 48.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 50.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 50.
 
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 48.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 50.
 
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )<<ot1.cmap>> (/usr/share/texlive-bin/current/texmf-dist/tex/context/base/supp-
 pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count278
-\scratchdimen=\dimen232
-\scratchbox=\box55
-\nofMPsegments=\count279
-\nofMParguments=\count280
-\everyMPshowfont=\toks60
-\MPscratchCnt=\count281
-\MPscratchDim=\dimen233
-\MPnumerator=\count282
-\everyMPtoPDFconversion=\toks61
+\scratchcounter=\count279
+Normal \dimen register pool exhausted, switching to extended pool.
+\scratchdimen=\dimen256
+\scratchbox=\box58
+\nofMPsegments=\count280
+\nofMParguments=\count281
+\everyMPshowfont=\toks61
+\MPscratchCnt=\count282
+\MPscratchDim=\dimen257
+\MPnumerator=\count283
+\everyMPtoPDFconversion=\toks62
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption3 Info: subfig package 1.2 or 1.3 is loaded.
-LaTeX Info: Redefining \subref on input line 48.
+LaTeX Info: Redefining \subref on input line 50.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
@@ -1690,7 +1725,7 @@ Package: ltcaption 2008/03/28 v1.2 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 48.
+Package hyperref Info: Link coloring OFF on input line 50.
 
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2009/12/18 v2.35 Cross-referencing by name of section
@@ -1702,15 +1737,15 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 sty
 Package: gettitlestring 2009/12/18 v1.3 Cleanup title references (HO)
 )
-\c@section@level=\count283
+\c@section@level=\count284
 )
-LaTeX Info: Redefining \ref on input line 48.
-LaTeX Info: Redefining \pageref on input line 48.
+LaTeX Info: Redefining \ref on input line 50.
+LaTeX Info: Redefining \pageref on input line 50.
  (./thesis.out) (./thesis.out)
 \@outlinefile=\write6
 \openout6 = `thesis.out'.
 
-\AtBeginShipoutBox=\box56
+\AtBeginShipoutBox=\box59
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1754,71 +1789,71 @@ File: UTF8.enc 2008/12/29 4.8.2
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
 File: UTF8.chr 2008/12/29 4.8.2
 )
-LaTeX Font Info:    Try loading font information for C70+song on input line 48.
+LaTeX Font Info:    Try loading font information for C70+song on input line 50.
 
  (/usr/share/texlive-bin/current/../texmf-local/tex/latex/cjk/UTF8/c70song.fd
 File: c70zhsong.fd 2009/09/23 4.8.2
 )<<c7030.cmap>> (./data/cover.tex)
-<figures/tongji-logo-cover.jpg, id=249, 789.95125pt x 204.765pt>
+<figures/tongji-logo-cover.jpg, id=189, 789.95125pt x 204.765pt>
 File: figures/tongji-logo-cover.jpg Graphic file (type jpg)
 
 <use figures/tongji-logo-cover.jpg>
-LaTeX Font Info:    Try loading font information for C70+li on input line 57.
+LaTeX Font Info:    Try loading font information for C70+li on input line 59.
 
 (/usr/share/texlive-bin/current/../texmf-local/tex/latex/cjk/UTF8/c70li.fd
 File: c70li.fd 2009/09/23 4.8.2
 )<<c705d.cmap>><<c705b.cmap>><<c7078.cmap>><<c7058.cmap>><<c704f.cmap>><<c708b.
 cmap>><<c7065.cmap>>
-LaTeX Font Info:    Try loading font information for C70+hei on input line 57.
+LaTeX Font Info:    Try loading font information for C70+hei on input line 59.
 
 (/usr/share/texlive-bin/current/../texmf-local/tex/latex/cjk/UTF8/c70hei.fd
 File: c70hei.fd 2009/09/23 4.8.2
 )<<c7076.cmap>><<c7068.cmap>><<c7098.cmap>><<c70ff.cmap>>
 Package CJKpunct Info: use punctuation spaces for family 'song' with punctstyle
- (quanjiao) on input line 57.
+ (quanjiao) on input line 59.
 <<c7056.cmap>><<c7081.cmap>><<c7071.cmap>><<c7079.cmap>><<c7057.cmap>><<c7091.c
 map>><<c7063.cmap>>
-LaTeX Font Info:    Calculating math sizes for size <16.06> on input line 57.
+LaTeX Font Info:    Calculating math sizes for size <16.06> on input line 59.
 <<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+txsya on input line 57.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 59.
 
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 57.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 59.
 
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 57.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 59.
 
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 57.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 59.
 
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 57.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 59.
 
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <16.06> not available
-(Font)              size <17.28> substituted on input line 57.
+(Font)              size <17.28> substituted on input line 59.
 
-LaTeX Font Info:    Try loading font information for C70+fs on input line 57.
+LaTeX Font Info:    Try loading font information for C70+fs on input line 59.
 (/usr/share/texlive-bin/current/../texmf-local/tex/latex/cjk/UTF8/c70fs.fd
 File: c70fs.fd 2009/09/23 4.8.2
 )<<c7059.cmap>><<c7054.cmap>>
 Package CJKpunct Info: use punctuation spaces for family 'fs' with punctstyle (
-quanjiao) on input line 57.
+quanjiao) on input line 59.
 <<c7053.cmap>><<c7062.cmap>><<c7096.cmap>><<c707c.cmap>><<c7075.cmap>><<c704e.c
 map>><<c7060.cmap>><<c707a.cmap>><<c7095.cmap>><<c707b.cmap>><<c7067.cmap>><<c7
 05e.cmap>>
-Overfull \hbox (34.14322pt too wide) in paragraph at lines 57--57
+Overfull \hbox (34.14322pt too wide) in paragraph at lines 59--59
  []| [] 
  []
 
@@ -1837,35 +1872,35 @@ Non-PDF special ignored!
 File: figures/tongji-logo-cover.jpg Graphic file (type jpg)
 
 <use figures/tongji-logo-cover.jpg>
-LaTeX Font Info:    Try loading font information for OT1+txss on input line 57.
+LaTeX Font Info:    Try loading font information for OT1+txss on input line 59.
 
 
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/txfonts/ot1txss.fd
 File: ot1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <20.075> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 57.
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 19.07118pt on input line 57.
+(Font)              scaled to size 19.07118pt on input line 59.
 
-Overfull \hbox (9.95847pt too wide) in paragraph at lines 57--57
+Overfull \hbox (9.95847pt too wide) in paragraph at lines 59--59
  [][] 
  []
 
 
-Overfull \hbox (168.73674pt too wide) in paragraph at lines 57--57
+Overfull \hbox (168.73674pt too wide) in paragraph at lines 59--59
  [] 
  []
 
 
-Overfull \hbox (34.14322pt too wide) in paragraph at lines 57--57
+Overfull \hbox (34.14322pt too wide) in paragraph at lines 59--59
  []| [] 
  []
 
 LaTeX Font Info:    Font shape `OT1/txss/bx/n' in size <16.06> not available
-(Font)              Font shape `OT1/txss/b/n' tried instead on input line 57.
+(Font)              Font shape `OT1/txss/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
-(Font)              scaled to size 15.25694pt on input line 57.
+(Font)              scaled to size 15.25694pt on input line 59.
 [3] [4
 
 
@@ -1880,31 +1915,31 @@ cmap>><<c7073.cmap>> [7] [8
 
 ]
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 11.4427pt on input line 57.
+(Font)              scaled to size 11.4427pt on input line 59.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 15.25694pt on input line 57.
+(Font)              scaled to size 15.25694pt on input line 59.
 <<c7064.cmap>><<c709a.cmap>><<c7069.cmap>><<c705c.cmap>><<c7020.cmap>><<c706a.c
 map>><<c7070.cmap>>
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 57.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 59.
  (/usr/share/texlive-bin/current/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12.045> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 57.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 59.
 <<c7086.cmap>><<c7074.cmap>><<c7082.cmap>>
 Package CJKpunct Info: use punctuation spaces for family 'hei' with punctstyle 
-(quanjiao) on input line 57.
-LaTeX Font Info:    Calculating math sizes for size <12.045> on input line 57.
+(quanjiao) on input line 59.
+LaTeX Font Info:    Calculating math sizes for size <12.045> on input line 59.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 57.
+(Font)              size <8> substituted on input line 59.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.57 \makecover
+l.59 \makecover
                 [1
 
 
@@ -1912,7 +1947,7 @@ l.57 \makecover
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.57 \makecover
+l.59 \makecover
                 [2
 
 
@@ -1923,41 +1958,32 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.III}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.62 \tableofcontents
+l.64 \tableofcontents
                       [3
 
 
 ]
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
-(Font)              scaled to size 16.41594pt on input line 62.
+(Font)              scaled to size 16.41594pt on input line 64.
  (./thesis.toc<<c708a.cmap>><<c7055.cmap>><<c7083.cmap>>pdfTeX warning (ext4): 
 destination with the same identifier (name{page.IV}) has been already used, dup
 licate ignored
 <to be read again> 
                    \relax 
-l.31 ...ÈÅáÂà∞ÁöÑÈóÆÈ¢ò}{9}{subsubsection.4.3.1.3}
+l.31 ...ÅáÂà∞ÁöÑÈóÆÈ¢ò}{11}{subsubsection.4.3.1.3}
                                                    [4
 
 
-]<<c708c.cmap>><<c7097.cmap>>)
+])
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
- (./data/denotation.texpdfTeX warning (ext4): destination with the same identif
-ier (name{page.V}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.V}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2 \item
-         [GNU] GNU's Not Unix /'gnu:/ [5])pdfTeX warning (ext4): destination wi
-th the same identifier (name{page.VI}) has been already used, duplicate ignored
-
-<to be read again> 
-                   \relax 
-l.76 \mainmatter
-                 [6
-
-
-]
+l.78 \mainmatter
+                 [5]
 \openout2 = `data/chap01.aux'.
 
  (./data/chap01.tex
@@ -1967,7 +1993,7 @@ LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
 (Font)              scaled to size 11.4427pt on input line 9.
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 14.30338pt on input line 11.
-<<c7077.cmap>><<c708e.cmap>><<c706e.cmap>>
+<<c7097.cmap>><<c7077.cmap>><<c708e.cmap>><<c706e.cmap>>
 Overfull \vbox (0.57536pt too high) has occurred while \output is active []
 
 
@@ -1996,7 +2022,7 @@ Overfull \vbox (0.70184pt too high) has occurred while \output is active []
  (./data/chap03.tex<<c7099.cmap>>
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 13.34981pt on input line 18.
-
+<<c708c.cmap>>
 Overfull \vbox (0.5859pt too high) has occurred while \output is active []
 
 
@@ -2020,41 +2046,27 @@ Overfull \vbox (0.5859pt too high) has occurred while \output is active []
 
 
 ]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 57.
+
 Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 91--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--96
-
- []
-
-<<c709f.cmap>>
 Overfull \vbox (0.5859pt too high) has occurred while \output is active []
 
 
 [8]
-Missing character: There is no å in font txr!
-Missing character: There is no å in font txr!
-
-
-LaTeX Warning: File ot14f.cmap not found on input line 149.
-
-
 Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 149--151
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
+Underfull \hbox (badness 10000) in paragraph at lines 219--222
 
  []
 
@@ -2062,18 +2074,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--174
 Overfull \vbox (0.5859pt too high) has occurred while \output is active []
 
 
-[10])
+[10]<<c709f.cmap>>
+Missing character: There is no å in font txr!
+Missing character: There is no å in font txr!
+
+
+LaTeX Warning: File ot162.cmap not found on input line 262.
+
+
 Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 
 
-[11]
-\openout2 = `data/chap05.aux'.
-
- (./data/chap05.tex)
+[11])
 Overfull \vbox (0.5859pt too high) has occurred while \output is active []
 
 
-[12
+[12]
+Overfull \vbox (0.67021pt too high) has occurred while \output is active []
+
+
+[13]
+Overfull \vbox (0.5859pt too high) has occurred while \output is active []
+
+
+[14]
+\openout2 = `data/chap05.aux'.
+
+ (./data/chap05.tex)
+Overfull \vbox (0.62807pt too high) has occurred while \output is active []
+
+
+[15
 
 
 
@@ -2081,133 +2112,35 @@ Overfull \vbox (0.5859pt too high) has occurred while \output is active []
 \openout2 = `data/chap06.aux'.
 
  (./data/chap06.tex)
-Overfull \vbox (0.61754pt too high) has occurred while \output is active []
+Overfull \vbox (0.5859pt too high) has occurred while \output is active []
 
 
-[13
-
-
-
-] [14
-
-
-
-
-]
-\openout2 = `data/ack.aux'.
-
- (./data/ack.tex<<c709e.cmap>><<c7084.cmap>><<c706f.cmap>>) [15
-
-
-
-]
 [16
 
 
 
-] (./thesis.bbl) [17
+] (./thesis.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [17
 
 
-] [18
 
 
-] (./data/appendix01.tex
-Overfull \vbox (0.60698pt too high) has occurred while \output is active []
-
-
-[19
-
-]
-LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 10
-0.
-
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.52061> not available
-(Font)              size <6> substituted on input line 100.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--103
-[]|\OT1/txr/m/n/11.04124 Waxman
- []
-
-[20pdfTeX warning (ext4): destination with the same identifier (name{equation.A
-.1.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.126 A
-        large number of classical optimization methods have been developed t...
-] <figures/tongji-lib-logo.jpg, id=882, 260.975pt x 100.375pt>
-File: figures/tongji-lib-logo.jpg Graphic file (type jpg)
-
-<use figures/tongji-lib-logo.jpg> [21 <./figures/tongji-lib-logo.jpg>] [22]<<c7
-09c.cmap>>
-Underfull \hbox (badness 10000) in paragraph at lines 206--206
-[]|\OT1/txr/m/n/11.04124 Waxman
- []
-
-<<c7085.cmap>>
-Overfull \vbox (0.6913pt too high) has occurred while \output is active []
-
-
-[23
-
-] <figures/hello.jpg, id=919, 280.04625pt x 104.64093pt>
-File: figures/hello.jpg Graphic file (type jpg)
-
-<use figures/hello.jpg> [24 <./figures/hello.jpg>]
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 257
-.
-
-(/usr/share/texlive-bin/current/texmf-dist/tex/latex/txfonts/ot1txtt.fd
-File: ot1txtt.fd 2000/12/15 v3.1
-))
-Overfull \vbox (0.58589pt too high) has occurred while \output is active []
-
-
-[25
-
-] [26
 
 
 ]
-\openout2 = `data/resume.aux'.
-
- (./data/resume.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
-
- []
-
-[27
-
-
-
-])
-Overfull \vbox (0.5859pt too high) has occurred while \output is active []
-
-
-[28]
 \tf@thm=\write8
 \openout8 = `thesis.thm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 109.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 109.
- (./thesis.aux (./data/chap01.aux) (./data/chap02.aux) (./data/chap03.aux)
-(./data/chap04.aux) (./data/chap05.aux) (./data/chap06.aux) (./data/ack.aux)
-(./data/resume.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 109.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
+ (./thesis.aux (./data/chap01.aux) (./data/chap02.aux) (./data/chap03.aux) (./d
+ata/chap04.aux) (./data/chap05.aux) (./data/chap06.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 111.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: F34DFEE829D094219B7C7EB1FA37F412;9576.
+(rerunfilecheck)             Checksum: 3F3C4DEBB39EA8B60B9C994CC48B004E;7328.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2215,62 +2148,51 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 32203 strings out of 495046
- 609809 string characters out of 3181473
- 723853 words of memory out of 3000000
- 33179 multiletter control sequences out of 15000+200000
- 208168 words of font info for 619 fonts, out of 3000000 for 9000
+ 31339 strings out of 495046
+ 596532 string characters out of 3181473
+ 730307 words of memory out of 3000000
+ 32570 multiletter control sequences out of 15000+200000
+ 171513 words of font info for 509 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 56i,12n,76p,669b,2022s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,12n,76p,669b,1822s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive-bin/current/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/
 share/texlive-bin/current/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr
 /share/texlive-bin/current/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr
 /share/texlive-bin/current/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></us
 r/share/texlive-bin/current/texmf-dist/fonts/type1/public/txfonts/txex.pfb></us
 r/share/texlive-bin/current/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></us
-r/share/texlive-bin/current/texmf-dist/fonts/type1/public/txfonts/txtt.pfb></us
-r/share/texlive-bin/current/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></us
-r/share/texlive-bin/current/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></us
-r/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei4e.
-pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/uni
-cuhei4f.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unic
-uhei/unicuhei50.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/
-cjk/unicuhei/unicuhei51.pfb></usr/share/texlive-bin/current/../texmf-local/font
-s/type1/cjk/unicuhei/unicuhei52.pfb></usr/share/texlive-bin/current/../texmf-lo
-cal/fonts/type1/cjk/unicuhei/unicuhei53.pfb></usr/share/texlive-bin/current/../
-texmf-local/fonts/type1/cjk/unicuhei/unicuhei54.pfb></usr/share/texlive-bin/cur
-rent/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei56.pfb></usr/share/texlive
--bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei57.pfb></usr/share
-/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei59.pfb></u
-sr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei5b
+r/share/texlive-bin/current/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></u
+sr/share/texlive-bin/current/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></u
+sr/share/texlive-bin/current/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></u
+sr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei4e
 .pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/un
-icuhei5c.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uni
-cuhei/unicuhei5e.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1
-/cjk/unicuhei/unicuhei5f.pfb></usr/share/texlive-bin/current/../texmf-local/fon
-ts/type1/cjk/unicuhei/unicuhei60.pfb></usr/share/texlive-bin/current/../texmf-l
-ocal/fonts/type1/cjk/unicuhei/unicuhei62.pfb></usr/share/texlive-bin/current/..
-/texmf-local/fonts/type1/cjk/unicuhei/unicuhei65.pfb></usr/share/texlive-bin/cu
-rrent/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei67.pfb></usr/share/texliv
-e-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei68.pfb></usr/shar
-e/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei6a.pfb></
-usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei6
-c.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/u
-nicuhei76.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/un
-icuhei/unicuhei78.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type
-1/cjk/unicuhei/unicuhei7a.pfb></usr/share/texlive-bin/current/../texmf-local/fo
-nts/type1/cjk/unicuhei/unicuhei7b.pfb></usr/share/texlive-bin/current/../texmf-
-local/fonts/type1/cjk/unicuhei/unicuhei7e.pfb></usr/share/texlive-bin/current/.
-./texmf-local/fonts/type1/cjk/unicuhei/unicuhei7f.pfb></usr/share/texlive-bin/c
-urrent/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei82.pfb></usr/share/texli
-ve-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei8a.pfb></usr/sha
-re/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei8b.pfb><
+icuhei4f.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uni
+cuhei/unicuhei50.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1
+/cjk/unicuhei/unicuhei52.pfb></usr/share/texlive-bin/current/../texmf-local/fon
+ts/type1/cjk/unicuhei/unicuhei53.pfb></usr/share/texlive-bin/current/../texmf-l
+ocal/fonts/type1/cjk/unicuhei/unicuhei56.pfb></usr/share/texlive-bin/current/..
+/texmf-local/fonts/type1/cjk/unicuhei/unicuhei57.pfb></usr/share/texlive-bin/cu
+rrent/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei5b.pfb></usr/share/texliv
+e-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei5c.pfb></usr/shar
+e/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei5e.pfb></
+usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei5
+f.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/u
+nicuhei60.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/un
+icuhei/unicuhei62.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type
+1/cjk/unicuhei/unicuhei65.pfb></usr/share/texlive-bin/current/../texmf-local/fo
+nts/type1/cjk/unicuhei/unicuhei67.pfb></usr/share/texlive-bin/current/../texmf-
+local/fonts/type1/cjk/unicuhei/unicuhei68.pfb></usr/share/texlive-bin/current/.
+./texmf-local/fonts/type1/cjk/unicuhei/unicuhei6a.pfb></usr/share/texlive-bin/c
+urrent/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei6c.pfb></usr/share/texli
+ve-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei76.pfb></usr/sha
+re/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei7a.pfb><
 /usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei
-8c.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/
-unicuhei8d.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/u
-nicuhei/unicuhei8f.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/typ
-e1/cjk/unicuhei/unicuhei91.pfb></usr/share/texlive-bin/current/../texmf-local/f
-onts/type1/cjk/unicuhei/unicuhei96.pfb></usr/share/texlive-bin/current/../texmf
--local/fonts/type1/cjk/unicuhei/unicuhei97.pfb></usr/share/texlive-bin/current/
+7b.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unicuhei/
+unicuhei7e.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/u
+nicuhei/unicuhei82.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/typ
+e1/cjk/unicuhei/unicuhei8a.pfb></usr/share/texlive-bin/current/../texmf-local/f
+onts/type1/cjk/unicuhei/unicuhei8f.pfb></usr/share/texlive-bin/current/../texmf
+-local/fonts/type1/cjk/unicuhei/unicuhei91.pfb></usr/share/texlive-bin/current/
 ../texmf-local/fonts/type1/cjk/unicuhei/unicuhei98.pfb></usr/share/texlive-bin/
 current/../texmf-local/fonts/type1/cjk/unicuhei/unicuhei9a.pfb></usr/share/texl
 ive-bin/current/../texmf-local/fonts/type1/cjk/unifs/unifs4e.pfb></usr/share/te
@@ -2298,167 +2220,154 @@ pe1/cjk/unifs/unifs8b.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/
 type1/cjk/unifs/unifs95.pfb></usr/share/texlive-bin/current/../texmf-local/font
 s/type1/cjk/unifs/unifs96.pfb></usr/share/texlive-bin/current/../texmf-local/fo
 nts/type1/cjk/unifs/unifsff.pfb></usr/share/texlive-bin/current/../texmf-local/
-fonts/type1/cjk/unihei/unihei30.pfb></usr/share/texlive-bin/current/../texmf-lo
-cal/fonts/type1/cjk/unihei/unihei4e.pfb></usr/share/texlive-bin/current/../texm
-f-local/fonts/type1/cjk/unihei/unihei4f.pfb></usr/share/texlive-bin/current/../
-texmf-local/fonts/type1/cjk/unihei/unihei50.pfb></usr/share/texlive-bin/current
-/../texmf-local/fonts/type1/cjk/unihei/unihei51.pfb></usr/share/texlive-bin/cur
-rent/../texmf-local/fonts/type1/cjk/unihei/unihei52.pfb></usr/share/texlive-bin
-/current/../texmf-local/fonts/type1/cjk/unihei/unihei53.pfb></usr/share/texlive
--bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei54.pfb></usr/share/tex
-live-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei55.pfb></usr/share
-/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei56.pfb></usr/s
-hare/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei57.pfb></u
-sr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei58.pfb
-></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei59
+fonts/type1/cjk/unihei/unihei4e.pfb></usr/share/texlive-bin/current/../texmf-lo
+cal/fonts/type1/cjk/unihei/unihei4f.pfb></usr/share/texlive-bin/current/../texm
+f-local/fonts/type1/cjk/unihei/unihei50.pfb></usr/share/texlive-bin/current/../
+texmf-local/fonts/type1/cjk/unihei/unihei51.pfb></usr/share/texlive-bin/current
+/../texmf-local/fonts/type1/cjk/unihei/unihei52.pfb></usr/share/texlive-bin/cur
+rent/../texmf-local/fonts/type1/cjk/unihei/unihei53.pfb></usr/share/texlive-bin
+/current/../texmf-local/fonts/type1/cjk/unihei/unihei54.pfb></usr/share/texlive
+-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei55.pfb></usr/share/tex
+live-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei56.pfb></usr/share
+/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei57.pfb></usr/s
+hare/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei58.pfb></u
+sr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei59.pfb
+></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei5b
 .pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unih
-ei5b.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/
-unihei5c.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uni
-hei/unihei5d.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk
-/unihei/unihei5e.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1
-/cjk/unihei/unihei5f.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/t
-ype1/cjk/unihei/unihei60.pfb></usr/share/texlive-bin/current/../texmf-local/fon
-ts/type1/cjk/unihei/unihei62.pfb></usr/share/texlive-bin/current/../texmf-local
-/fonts/type1/cjk/unihei/unihei63.pfb></usr/share/texlive-bin/current/../texmf-l
-ocal/fonts/type1/cjk/unihei/unihei64.pfb></usr/share/texlive-bin/current/../tex
-mf-local/fonts/type1/cjk/unihei/unihei65.pfb></usr/share/texlive-bin/current/..
-/texmf-local/fonts/type1/cjk/unihei/unihei66.pfb></usr/share/texlive-bin/curren
-t/../texmf-local/fonts/type1/cjk/unihei/unihei67.pfb></usr/share/texlive-bin/cu
-rrent/../texmf-local/fonts/type1/cjk/unihei/unihei68.pfb></usr/share/texlive-bi
-n/current/../texmf-local/fonts/type1/cjk/unihei/unihei6a.pfb></usr/share/texliv
-e-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei6c.pfb></usr/share/te
-xlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei6d.pfb></usr/shar
-e/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei70.pfb></usr/
-share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei71.pfb></
-usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei72.pf
+ei5c.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/
+unihei5d.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uni
+hei/unihei5e.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk
+/unihei/unihei5f.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1
+/cjk/unihei/unihei60.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/t
+ype1/cjk/unihei/unihei62.pfb></usr/share/texlive-bin/current/../texmf-local/fon
+ts/type1/cjk/unihei/unihei63.pfb></usr/share/texlive-bin/current/../texmf-local
+/fonts/type1/cjk/unihei/unihei64.pfb></usr/share/texlive-bin/current/../texmf-l
+ocal/fonts/type1/cjk/unihei/unihei65.pfb></usr/share/texlive-bin/current/../tex
+mf-local/fonts/type1/cjk/unihei/unihei66.pfb></usr/share/texlive-bin/current/..
+/texmf-local/fonts/type1/cjk/unihei/unihei67.pfb></usr/share/texlive-bin/curren
+t/../texmf-local/fonts/type1/cjk/unihei/unihei68.pfb></usr/share/texlive-bin/cu
+rrent/../texmf-local/fonts/type1/cjk/unihei/unihei6a.pfb></usr/share/texlive-bi
+n/current/../texmf-local/fonts/type1/cjk/unihei/unihei6c.pfb></usr/share/texliv
+e-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei6d.pfb></usr/share/te
+xlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei70.pfb></usr/shar
+e/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei72.pfb></usr/
+share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei73.pfb></
+usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei74.pf
 b></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei7
-3.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/uni
-hei74.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei
-/unihei75.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/un
-ihei/unihei76.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cj
-k/unihei/unihei78.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type
-1/cjk/unihei/unihei7a.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/
-type1/cjk/unihei/unihei7b.pfb></usr/share/texlive-bin/current/../texmf-local/fo
-nts/type1/cjk/unihei/unihei7d.pfb></usr/share/texlive-bin/current/../texmf-loca
-l/fonts/type1/cjk/unihei/unihei7e.pfb></usr/share/texlive-bin/current/../texmf-
-local/fonts/type1/cjk/unihei/unihei80.pfb></usr/share/texlive-bin/current/../te
-xmf-local/fonts/type1/cjk/unihei/unihei81.pfb></usr/share/texlive-bin/current/.
-./texmf-local/fonts/type1/cjk/unihei/unihei82.pfb></usr/share/texlive-bin/curre
-nt/../texmf-local/fonts/type1/cjk/unihei/unihei83.pfb></usr/share/texlive-bin/c
-urrent/../texmf-local/fonts/type1/cjk/unihei/unihei88.pfb></usr/share/texlive-b
-in/current/../texmf-local/fonts/type1/cjk/unihei/unihei89.pfb></usr/share/texli
-ve-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei8b.pfb></usr/share/t
-exlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei8c.pfb></usr/sha
-re/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei8d.pfb></usr
-/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei8f.pfb><
-/usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei90.p
+5.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/uni
+hei76.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei
+/unihei78.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/un
+ihei/unihei7a.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cj
+k/unihei/unihei7b.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type
+1/cjk/unihei/unihei7d.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/
+type1/cjk/unihei/unihei7e.pfb></usr/share/texlive-bin/current/../texmf-local/fo
+nts/type1/cjk/unihei/unihei80.pfb></usr/share/texlive-bin/current/../texmf-loca
+l/fonts/type1/cjk/unihei/unihei82.pfb></usr/share/texlive-bin/current/../texmf-
+local/fonts/type1/cjk/unihei/unihei83.pfb></usr/share/texlive-bin/current/../te
+xmf-local/fonts/type1/cjk/unihei/unihei88.pfb></usr/share/texlive-bin/current/.
+./texmf-local/fonts/type1/cjk/unihei/unihei89.pfb></usr/share/texlive-bin/curre
+nt/../texmf-local/fonts/type1/cjk/unihei/unihei8b.pfb></usr/share/texlive-bin/c
+urrent/../texmf-local/fonts/type1/cjk/unihei/unihei8d.pfb></usr/share/texlive-b
+in/current/../texmf-local/fonts/type1/cjk/unihei/unihei8f.pfb></usr/share/texli
+ve-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei90.pfb></usr/share/t
+exlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei91.pfb></usr/sha
+re/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei95.pfb></usr
+/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei98.pfb><
+/usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei9a.p
 fb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei
-91.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/un
-ihei95.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihe
-i/unihei96.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/u
-nihei/unihei97.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/c
-jk/unihei/unihei98.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/typ
-e1/cjk/unihei/unihei9a.pfb></usr/share/texlive-bin/current/../texmf-local/fonts
-/type1/cjk/unihei/uniheiff.pfb></usr/share/texlive-bin/current/../texmf-local/f
-onts/type1/cjk/unili/unili4f.pfb></usr/share/texlive-bin/current/../texmf-local
-/fonts/type1/cjk/unili/unili58.pfb></usr/share/texlive-bin/current/../texmf-loc
-al/fonts/type1/cjk/unili/unili5b.pfb></usr/share/texlive-bin/current/../texmf-l
-ocal/fonts/type1/cjk/unili/unili5d.pfb></usr/share/texlive-bin/current/../texmf
--local/fonts/type1/cjk/unili/unili65.pfb></usr/share/texlive-bin/current/../tex
-mf-local/fonts/type1/cjk/unili/unili78.pfb></usr/share/texlive-bin/current/../t
-exmf-local/fonts/type1/cjk/unili/unili8b.pfb></usr/share/texlive-bin/current/..
-/texmf-local/fonts/type1/cjk/unisong/unisong20.pfb></usr/share/texlive-bin/curr
-ent/../texmf-local/fonts/type1/cjk/unisong/unisong30.pfb></usr/share/texlive-bi
-n/current/../texmf-local/fonts/type1/cjk/unisong/unisong4e.pfb></usr/share/texl
-ive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong4f.pfb></usr/shar
-e/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong50.pfb></us
-r/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong51.pf
+ff.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unili/uni
+li4f.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unili/u
+nili58.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unili
+/unili5b.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uni
+li/unili5d.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/u
+nili/unili65.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk
+/unili/unili78.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/c
+jk/unili/unili8b.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1
+/cjk/unisong/unisong20.pfb></usr/share/texlive-bin/current/../texmf-local/fonts
+/type1/cjk/unisong/unisong30.pfb></usr/share/texlive-bin/current/../texmf-local
+/fonts/type1/cjk/unisong/unisong4e.pfb></usr/share/texlive-bin/current/../texmf
+-local/fonts/type1/cjk/unisong/unisong4f.pfb></usr/share/texlive-bin/current/..
+/texmf-local/fonts/type1/cjk/unisong/unisong50.pfb></usr/share/texlive-bin/curr
+ent/../texmf-local/fonts/type1/cjk/unisong/unisong51.pfb></usr/share/texlive-bi
+n/current/../texmf-local/fonts/type1/cjk/unisong/unisong52.pfb></usr/share/texl
+ive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong53.pfb></usr/shar
+e/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong54.pfb></us
+r/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong55.pf
 b></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unison
-g52.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/
-unisong53.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/un
-isong/unisong54.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/
-cjk/unisong/unisong55.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/
-type1/cjk/unisong/unisong56.pfb></usr/share/texlive-bin/current/../texmf-local/
-fonts/type1/cjk/unisong/unisong57.pfb></usr/share/texlive-bin/current/../texmf-
-local/fonts/type1/cjk/unisong/unisong58.pfb></usr/share/texlive-bin/current/../
-texmf-local/fonts/type1/cjk/unisong/unisong59.pfb></usr/share/texlive-bin/curre
-nt/../texmf-local/fonts/type1/cjk/unisong/unisong5b.pfb></usr/share/texlive-bin
-/current/../texmf-local/fonts/type1/cjk/unisong/unisong5c.pfb></usr/share/texli
-ve-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong5d.pfb></usr/share
-/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong5e.pfb></usr
-/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong5f.pfb
+g56.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/
+unisong57.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/un
+isong/unisong58.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/
+cjk/unisong/unisong59.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/
+type1/cjk/unisong/unisong5b.pfb></usr/share/texlive-bin/current/../texmf-local/
+fonts/type1/cjk/unisong/unisong5c.pfb></usr/share/texlive-bin/current/../texmf-
+local/fonts/type1/cjk/unisong/unisong5d.pfb></usr/share/texlive-bin/current/../
+texmf-local/fonts/type1/cjk/unisong/unisong5e.pfb></usr/share/texlive-bin/curre
+nt/../texmf-local/fonts/type1/cjk/unisong/unisong5f.pfb></usr/share/texlive-bin
+/current/../texmf-local/fonts/type1/cjk/unisong/unisong60.pfb></usr/share/texli
+ve-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong61.pfb></usr/share
+/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong62.pfb></usr
+/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong63.pfb
 ></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong
-60.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/u
-nisong61.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uni
-song/unisong62.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/c
-jk/unisong/unisong63.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/t
-ype1/cjk/unisong/unisong64.pfb></usr/share/texlive-bin/current/../texmf-local/f
-onts/type1/cjk/unisong/unisong65.pfb></usr/share/texlive-bin/current/../texmf-l
-ocal/fonts/type1/cjk/unisong/unisong66.pfb></usr/share/texlive-bin/current/../t
-exmf-local/fonts/type1/cjk/unisong/unisong67.pfb></usr/share/texlive-bin/curren
-t/../texmf-local/fonts/type1/cjk/unisong/unisong68.pfb></usr/share/texlive-bin/
-current/../texmf-local/fonts/type1/cjk/unisong/unisong69.pfb></usr/share/texliv
-e-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong6a.pfb></usr/share/
-texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong6b.pfb></usr/
-share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong6c.pfb>
-</usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong6
-d.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/un
-isong6e.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unis
-ong/unisong6f.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cj
-k/unisong/unisong70.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/ty
-pe1/cjk/unisong/unisong71.pfb></usr/share/texlive-bin/current/../texmf-local/fo
-nts/type1/cjk/unisong/unisong72.pfb></usr/share/texlive-bin/current/../texmf-lo
-cal/fonts/type1/cjk/unisong/unisong73.pfb></usr/share/texlive-bin/current/../te
-xmf-local/fonts/type1/cjk/unisong/unisong74.pfb></usr/share/texlive-bin/current
-/../texmf-local/fonts/type1/cjk/unisong/unisong75.pfb></usr/share/texlive-bin/c
-urrent/../texmf-local/fonts/type1/cjk/unisong/unisong76.pfb></usr/share/texlive
--bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong77.pfb></usr/share/t
-exlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong78.pfb></usr/s
-hare/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong79.pfb><
-/usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong7a
+64.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/u
+nisong65.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uni
+song/unisong66.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/c
+jk/unisong/unisong67.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/t
+ype1/cjk/unisong/unisong68.pfb></usr/share/texlive-bin/current/../texmf-local/f
+onts/type1/cjk/unisong/unisong69.pfb></usr/share/texlive-bin/current/../texmf-l
+ocal/fonts/type1/cjk/unisong/unisong6a.pfb></usr/share/texlive-bin/current/../t
+exmf-local/fonts/type1/cjk/unisong/unisong6b.pfb></usr/share/texlive-bin/curren
+t/../texmf-local/fonts/type1/cjk/unisong/unisong6c.pfb></usr/share/texlive-bin/
+current/../texmf-local/fonts/type1/cjk/unisong/unisong6d.pfb></usr/share/texliv
+e-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong6e.pfb></usr/share/
+texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong70.pfb></usr/
+share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong71.pfb>
+</usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong7
+2.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/un
+isong73.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unis
+ong/unisong74.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cj
+k/unisong/unisong75.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/ty
+pe1/cjk/unisong/unisong76.pfb></usr/share/texlive-bin/current/../texmf-local/fo
+nts/type1/cjk/unisong/unisong77.pfb></usr/share/texlive-bin/current/../texmf-lo
+cal/fonts/type1/cjk/unisong/unisong78.pfb></usr/share/texlive-bin/current/../te
+xmf-local/fonts/type1/cjk/unisong/unisong79.pfb></usr/share/texlive-bin/current
+/../texmf-local/fonts/type1/cjk/unisong/unisong7a.pfb></usr/share/texlive-bin/c
+urrent/../texmf-local/fonts/type1/cjk/unisong/unisong7b.pfb></usr/share/texlive
+-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong7c.pfb></usr/share/t
+exlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong7d.pfb></usr/s
+hare/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong7e.pfb><
+/usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong7f
 .pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/uni
-song7b.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uniso
-ng/unisong7c.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk
-/unisong/unisong7d.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/typ
-e1/cjk/unisong/unisong7e.pfb></usr/share/texlive-bin/current/../texmf-local/fon
-ts/type1/cjk/unisong/unisong7f.pfb></usr/share/texlive-bin/current/../texmf-loc
-al/fonts/type1/cjk/unisong/unisong80.pfb></usr/share/texlive-bin/current/../tex
-mf-local/fonts/type1/cjk/unisong/unisong81.pfb></usr/share/texlive-bin/current/
-../texmf-local/fonts/type1/cjk/unisong/unisong82.pfb></usr/share/texlive-bin/cu
-rrent/../texmf-local/fonts/type1/cjk/unisong/unisong83.pfb></usr/share/texlive-
-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong84.pfb></usr/share/te
-xlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong85.pfb></usr/sh
-are/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong86.pfb></
-usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong88.
+song80.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uniso
+ng/unisong81.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk
+/unisong/unisong82.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/typ
+e1/cjk/unisong/unisong83.pfb></usr/share/texlive-bin/current/../texmf-local/fon
+ts/type1/cjk/unisong/unisong86.pfb></usr/share/texlive-bin/current/../texmf-loc
+al/fonts/type1/cjk/unisong/unisong88.pfb></usr/share/texlive-bin/current/../tex
+mf-local/fonts/type1/cjk/unisong/unisong89.pfb></usr/share/texlive-bin/current/
+../texmf-local/fonts/type1/cjk/unisong/unisong8a.pfb></usr/share/texlive-bin/cu
+rrent/../texmf-local/fonts/type1/cjk/unisong/unisong8b.pfb></usr/share/texlive-
+bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong8c.pfb></usr/share/te
+xlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong8d.pfb></usr/sh
+are/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong8e.pfb></
+usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong8f.
 pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unis
-ong89.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unison
-g/unisong8a.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/
-unisong/unisong8b.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type
-1/cjk/unisong/unisong8c.pfb></usr/share/texlive-bin/current/../texmf-local/font
-s/type1/cjk/unisong/unisong8d.pfb></usr/share/texlive-bin/current/../texmf-loca
-l/fonts/type1/cjk/unisong/unisong8e.pfb></usr/share/texlive-bin/current/../texm
-f-local/fonts/type1/cjk/unisong/unisong8f.pfb></usr/share/texlive-bin/current/.
-./texmf-local/fonts/type1/cjk/unisong/unisong90.pfb></usr/share/texlive-bin/cur
-rent/../texmf-local/fonts/type1/cjk/unisong/unisong91.pfb></usr/share/texlive-b
-in/current/../texmf-local/fonts/type1/cjk/unisong/unisong94.pfb></usr/share/tex
-live-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong95.pfb></usr/sha
-re/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong96.pfb></u
-sr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong97.p
-fb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/uniso
-ng98.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong
-/unisong99.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/u
-nisong/unisong9a.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1
-/cjk/unisong/unisong9c.pfb></usr/share/texlive-bin/current/../texmf-local/fonts
-/type1/cjk/unisong/unisong9e.pfb></usr/share/texlive-bin/current/../texmf-local
-/fonts/type1/cjk/unisong/unisong9f.pfb></usr/share/texlive-bin/current/../texmf
--local/fonts/type1/cjk/unisong/unisongff.pfb></usr/share/texlive-bin/current/te
-xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive-bin/current/texmf
--dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive-bin/current/texmf-di
-st/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive-bin/current/texmf-dist/
-fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (42 pages, 6479229 bytes).
+ong90.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unison
+g/unisong91.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/
+unisong/unisong94.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type
+1/cjk/unisong/unisong95.pfb></usr/share/texlive-bin/current/../texmf-local/font
+s/type1/cjk/unisong/unisong96.pfb></usr/share/texlive-bin/current/../texmf-loca
+l/fonts/type1/cjk/unisong/unisong97.pfb></usr/share/texlive-bin/current/../texm
+f-local/fonts/type1/cjk/unisong/unisong98.pfb></usr/share/texlive-bin/current/.
+./texmf-local/fonts/type1/cjk/unisong/unisong99.pfb></usr/share/texlive-bin/cur
+rent/../texmf-local/fonts/type1/cjk/unisong/unisong9a.pfb></usr/share/texlive-b
+in/current/../texmf-local/fonts/type1/cjk/unisong/unisong9f.pfb></usr/share/tex
+live-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisongff.pfb></usr/sha
+re/texlive-bin/current/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
+texlive-bin/current/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
+live-bin/current/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (30 pages, 5448314 bytes).
 PDF statistics:
- 1650 PDF objects out of 1728 (max. 8388607)
- 141 named destinations out of 1000 (max. 500000)
- 1162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1366 PDF objects out of 1440 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
+ 986 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,18 +1,3 @@
-\begin{thebibliography}{1}
-
-\bibitem{harris}
-Harris C, Stephens M.
-\newblock A combined corner and edge detector.
-\newblock In Proc. of Fourth Alvey Vision Conference, 1988.
-\newblock  147--151
-\tongjidot
-
-\bibitem{pyrlk}
-Lucas B~D, Kanade T.
-\newblock An Iterative Image Registration Technique with an Application to
-  Stereo Vision.
-\newblock 1981.
-\newblock  674--679
-\tongjidot
+\begin{thebibliography}{}
 
 \end{thebibliography}

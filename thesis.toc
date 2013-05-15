@@ -22,35 +22,21 @@
 \contentsline {section}{\numberline {4.2}基于三维体素泛洪与线性拟合的三维树木骨架抽取}{6}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}三维体素模型}{7}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}三维体素泛洪确定邻域范围}{7}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}通过拟合确定分支}{8}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}半径怎么探索？？}{8}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}基于枝干合并的轻量化处理}{8}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}L-System的尝试}{8}{subsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.1.1}L-System简介}{8}{subsubsection.4.3.1.1}
-\contentsline {subsubsection}{\numberline {4.3.1.2}树木模型的参数化L-System规则抽取}{8}{subsubsection.4.3.1.2}
-\contentsline {subsubsection}{\numberline {4.3.1.3}使用L-System进行树木轻量化建模遇到的问题}{9}{subsubsection.4.3.1.3}
-\contentsline {subsection}{\numberline {4.3.2}树木轻量化？枝干合并！}{9}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}建模质量评估算法}{11}{section.4.4}
-\contentsline {section}{\numberline {4.5}本章小节}{11}{section.4.5}
-\contentsline {chapter}{\numberline {第\nobreakspace {}5\nobreakspace {}章}实验过程与分析}{12}{chapter.5}
-\contentsline {section}{\numberline {5.1}实验环境}{12}{section.5.1}
-\contentsline {section}{\numberline {5.2}实验结果与分析}{12}{section.5.2}
-\contentsline {chapter}{\numberline {第\nobreakspace {}6\nobreakspace {}章}总结与展望}{13}{chapter.6}
-\contentsline {section}{\numberline {6.1}总结}{13}{section.6.1}
-\contentsline {section}{\numberline {6.2}未来的工作}{13}{section.6.2}
-\contentsline {chapter}{致\hspace {1em}谢}{15}{section*.16}
-\contentsline {chapter}{参考文献}{17}{section*.18}
-\contentsline {chapter}{\numberline {附录\nobreakspace {}}外文资料原文}{19}{appendix.A}
-\contentsline {section}{\numberline {A.1}Single-Objective Programming}{19}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Linear Programming}{20}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {A.1.2}Nonlinear Programming}{21}{subsection.A.1.2}
-\contentsline {subsection}{\numberline {A.1.3}Integer Programming}{21}{subsection.A.1.3}
-\contentsline {chapter}{\numberline {附录\nobreakspace {}}外文资料的调研阅读报告或书面翻译}{23}{appendix.B}
-\contentsline {section}{\numberline {B.1}单目标规划}{23}{section.B.1}
-\contentsline {subsection}{\numberline {B.1.1}线性规划}{23}{subsection.B.1.1}
-\contentsline {subsection}{\numberline {B.1.2}非线性规划}{24}{subsection.B.1.2}
-\contentsline {subsection}{\numberline {B.1.3}整数规划}{24}{subsection.B.1.3}
-\contentsline {chapter}{\numberline {附录\nobreakspace {}}其它附录}{25}{appendix.C}
-\contentsline {section}{\numberline {C.1}测试附录}{25}{section.C.1}
-\contentsline {chapter}{个人简历、在学期间发表的学术论文与研究成果}{27}{section*.29}
+\contentsline {subsection}{\numberline {4.2.3}通过最小二乘法线性拟合确定分支}{10}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}半径怎么探索？？}{10}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}基于枝干合并的轻量化处理}{10}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}L-System的尝试}{10}{subsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.1.1}L-System简介}{10}{subsubsection.4.3.1.1}
+\contentsline {subsubsection}{\numberline {4.3.1.2}树木模型的参数化L-System规则抽取}{11}{subsubsection.4.3.1.2}
+\contentsline {subsubsection}{\numberline {4.3.1.3}使用L-System进行树木轻量化建模遇到的问题}{11}{subsubsection.4.3.1.3}
+\contentsline {subsection}{\numberline {4.3.2}树木轻量化？枝干合并！}{12}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}建模质量评估算法}{12}{section.4.4}
+\contentsline {section}{\numberline {4.5}本章小节}{12}{section.4.5}
+\contentsline {chapter}{\numberline {第\nobreakspace {}5\nobreakspace {}章}实验过程与分析}{15}{chapter.5}
+\contentsline {section}{\numberline {5.1}实验环境}{15}{section.5.1}
+\contentsline {section}{\numberline {5.2}实验结果与分析}{15}{section.5.2}
+\contentsline {chapter}{\numberline {第\nobreakspace {}6\nobreakspace {}章}总结与展望}{16}{chapter.6}
+\contentsline {section}{\numberline {6.1}总结}{16}{section.6.1}
+\contentsline {section}{\numberline {6.2}未来的工作}{16}{section.6.2}
+\contentsline {chapter}{参考文献}{17}{section*.14}
 \contentsfinish 

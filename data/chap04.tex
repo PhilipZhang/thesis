@@ -53,38 +53,41 @@
 图片。。。
 
 伪代码。。。
+\begin{algorithm}
+	\caption{点云模型体素化}
 \begin{algorithmic}[1]
-	\State Input: 点云模型$M$
-	\State Input: 体素维度$d$
-	\State Output: 三维体素数组$\mathbb{V}[d,d,d]$
-	\State 初始化点云边界值$X_max=Y_max=_Z_max=MIN_FLOAT,X_min=Y_min=Z_min=MAX_FLOAT$
+	\Require 点云模型$M$
+	\Require 体素维度$d$
+	\Ensure 三维体素数组$\mathbb{V}[1..d,1..d,1..d]$
+	\State 初始化点云边界值$X_{max}=Y_{max}=Z_{max}=MIN\uline\quad FLOAT,X_{min}=Y_{min}=Z_{min}=MAX\uline\quad FLOAT$
 	\ForAll{空间点$P(P_x,P_y,P_z) \in M$}
-		\If{$P_x>X_max$}
-		\State $X_max=P_x$
+	\If{$P_x>X_{max}$}
+	\State $X_{max}=P_x$
+\EndIf
+\If{$P_y>Y_{max}$}
+\State $Y_{max}=P_y$
 		\EndIf
-		\If{$P_y>Y_max$}
-		\State $Y_max=P_y$
+		\If{$P_z>Z_{max}$}
+		\State $Z_{max}=P_z$
+	\EndIf
+	\If{$P_x<X_{min}$}
+	\State $X_{min}=P_x$
+\EndIf
+\If{$P_y<Y_{min}$}
+\State $Y_{min}=P_y$
 		\EndIf
-		\If{$P_z>Z_max$}
-		\State $Z_max=P_z$
-		\EndIf
-		\If{$P_x<X_min$}
-		\State $X_min=P_x$
-		\EndIf
-		\If{$P_y<Y_min$}
-		\State $Y_min=P_y$
-		\EndIf
-		\If{$P_z<Z_min$}
-		\State $Z_min=P_z$
-		\EndIf
-	\EndFor
-	\ForAll{空间点$P(P_x,P_y,P_z) \in M$}
-		\State $V_x = \frac{P_x-X_min}{X_max-X_min}\cdot d$
-		\State $V_y = \frac{P_y-Y_min}{Y_max-Y_min}\cdot d$
-		\State $V_z = \frac{P_z-Z_min}{Z_max-Z_min}\cdot d$
-		\State $\mathbb{V}[V_x, V_y, V_z] = \mathbb{V}[V_x, V_y, V_z] \bigcup \{P\} $
+		\If{$P_z<Z_{min}$}
+		\State $Z_{min}=P_z$
+	\EndIf
+\EndFor
+\ForAll{空间点$P(P_x,P_y,P_z) \in M$}
+\State $V_x = \frac{P_x-X_{min}}{X_{max}-X_{min}}\cdot d$
+\State $V_y = \frac{P_y-Y_{min}}{Y_{max}-Y_{min}}\cdot d$
+\State $V_z = \frac{P_z-Z_{min}}{Z_{max}-Z_{min}}\cdot d$
+\State $\mathbb{V}[V_x, V_y, V_z] = \mathbb{V}[V_x, V_y, V_z] \bigcup \{P\} $
 	\EndFor
 \end{algorithmic}
+\end{algorithm}
 
 \subsection{三维体素泛洪确定邻域范围}
 在确定了三维体素模型以后，便需要从根到叶，自底向上地对树的骨架结构进行生长。
@@ -103,9 +106,100 @@
 
 伪代码。。。
 
-在进行三维泛洪的时候，还可以将27个方向的迭代的过程并行化，以提高算法的效率。
+\begin{algorithm}
+	\caption{三维体素泛洪确定邻域范围}
+	\begin{algorithmic}[1]
+		\Require 当前体素$C$
+		\Require 三维体素数组$\mathbb{V}[1..d,1..d,1..d]$
+		\Require 泛洪方向数组$\mathbb{D}[1..27]$
+		\Require 邻域范围增长比例阈值$\lambda$
+		\Ensure	邻域范围内体素集合$\mathbb{S}$
+		\State 初始化单次迭代新增体素集合$\mathbb{S'}$
+		\State $\mathbb{S'}.AddVoxel($根节点所在体素$)$
+		\ForAll{泛洪方向$Direction \in \mathbb{D}$}
+			\State $NewIndex = C.Index + Direction$
+			\State $NewVoxel = \mathbb{V}[NewIndex.x,NewIndex.y,NewIndex.z]$
+			\If{$NewVoxel$非空$\bigcap NewVoxel$有效}
+				\State $\mathbb{S'}.AddVoxel(NewVoxel)$
+			\EndIf
+		\EndFor
+		\State 体素增长比例$\mu=\frac{\mathbb{S'}.VoxelCount}{\mathbb{S}.VoxelCount}$
+		\If{$\mu > \lambda$}
+			\ForAll{$voxel \in \mathbb{S'}$}
+				\State 把$voxel$作为当前体素进行递归调用
+			\EndFor
+		\EndIf
+		\State \Return $\mathbb{S}$
+	\end{algorithmic}
+\end{algorithm}
 
-\subsection{通过拟合确定分支}
+在进行三维泛洪的时候，可以编程实现27个方向迭代过程的并行化，以提高算法的效率。
+
+\subsection{通过最小二乘法线性拟合确定分支}
+当得到邻域范围以后，便得到了邻域内体素在基于当前节点27个方向上的密度分布，而
+每个体素内又包含着若干的点，因此等于是得到了在当前节点邻域内的点云分布情况。
+接下来的工作就是怎样从各个方向的点云的分布情况抽取出核心的骨架。本文应用线性
+拟合的方法来从密集的点中抽取出一条线段，作为该部分的骨架。
+
+该方法首先要剔除掉那些点云密度很小的方向，以免每个节点都朝各个方向长出一些
+细碎的枝条。因为这些细碎的枝条就算在此步中不剔除，到后续的轻量化的时候也不容许
+它们的存在。
+
+然后对于剩下的若干方向$d_1,d_2...d_n$，分别对它们进行基于最小二乘法的线性拟合，这个步骤可以
+实现为并行以提升计算的速度。具体方法是：对某个方向$d_i$，将其包含的体素中的点
+全部抽取出来，得到一个密集的点集$S_i$。然后采用待定方程的办法，设直线方程为：
+%\begin{equation} \label{eq:line}
+%	\left\{ 
+%		\begin{array}{lll}
+%			a_1x_1+b_1x_2+c_1x_3 & = & b1\\
+%			a_2x_1+b_2x_2+c_2x_3 & = & b2\\
+%			... & & \\
+%			a_nx_1+b_nx_2+c_nx_3 & = & bn
+%		\end{array}
+%	\right.
+%\end{equation}
+%在这个方程组中，令\\
+%\begin{displaymath}
+%U=
+%\left(
+%\begin{array}{ccc}
+%	a_1 & b_1 & c_1\\
+%	a_2 & b_2 & c_2\\
+%	... & ... & ...\\
+%	a_n & b_n & c_n
+%\end{array}
+%\right)
+%,\quad
+%x=
+%\left(
+%\begin{array}{c}
+%	x1\\
+%	x2\\
+%	x3
+%\end{array}
+%\right)
+%,\quad
+%B=
+%\left(
+%\begin{array}{c}
+%	b_1\\
+%	b_2\\
+%	...\\
+%	b_n
+%\end{array}
+%\right)
+%\end{displaymath}
+%
+%在实践中，由于筛选方向上的点数较多且发散分布，由线性代数的理论知，$U$是过约束的，
+%即$n>r$,其中$r$是矩阵$U$的秩。这种情况下没有标准的解，只能找到使误差最小的向量$x$，
+%误差定义为:\\
+%\begin{equation}
+%	E\xlongequal{def} \sum_{i=1}^n{(a_ix_1+b_ix_2+c_ix_3-b_i)^2}=|Ux-y|^2
+%\end{equation}
+%
+%由于$E$正比于方程的均方误差，因此只要E达到最小值，那么点集相对于该直线的波动就最
+%小。换句话说，也就是该直线最好的模拟了该点集所表示的骨架。由线性代数的方法我们很容易
+%可以得到当$E$达到最小值时
 
 \subsection{半径怎么探索？？}
 
@@ -183,8 +277,10 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 \begin{algorithm}
 	\caption{纵向合并枝干}
 	\begin{algorithmic}[1]
-		\Require 纵向合并角度$alpha$
+		%\Comment {根据纵向合并角度参数，以当前节点为发起点递归式地纵向合并枝干}
+		\Require 纵向合并角度$\alpha$
 		\Require 当前节点$N$
+		\Ensure None
 		\ForAll{节点$N'\in N.Children$}
 		\While{$N'.ChildCount = 1$}
 		\State $\vec{u} \gets N'.Position-N.Position$
@@ -206,9 +302,12 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 \end{algorithm}
 
 功能：根据横向合并角度参数，横向合并夹角小于角度阈值的末端叶子枝干\\
+\begin{algorithm}
+	\caption{横向合并枝干}
 \begin{algorithmic}[1]
-	\State 初始化横向合并角度$\beta$
-	\State 设定当前节点$N$
+	\Require 初始化横向合并角度$\beta$
+	\Require 设定当前节点$N$
+	\Ensure None
 	\ForAll{节点对$P\in N.Children$}
 		\State $N_1 \gets P.FirstNode$
 		\State $N_2 \gets P.SecondNode$
@@ -231,7 +330,7 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 		\State 以P为当前节点递归调用该函数
 	\EndFor
 \end{algorithmic}
-
+\end{algorithm}
 
 %---------------------------------质量评估----------------------------------
 \section{建模质量评估算法}
