@@ -1,3 +1,104 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{lsystem}
+Lindenmayer A.
+\newblock Mathematical models for cellular interaction in development: Parts I
+  and II.
+\newblock Journal of Theoretical Biology, 1968, 18
+\tongjidot
+
+\bibitem{beauty}
+Prusinkiewicz P, Lindenmayer A.
+\newblock The algorithmic beauty of plants.
+\newblock New York, NY, USA: Springer-Verlag New York, Inc., 1990
+\tongjidot
+
+\bibitem{devmodels}
+Prusinkiewicz P, Lindenmayer A, Hanan J.
+\newblock Development models of herbaceous plants for computer imagery
+  purposes.
+\newblock Proceedings of the 15th annual conference on Computer graphics and
+  interactive techniques, New York, NY, USA: ACM, 1988.
+\newblock  141--150
+\tongjidot
+
+\bibitem{sketch}
+Anastacio F, Prusinkiewicz P, Sousa M~C.
+\newblock Sketch-Based Interfaces and Modeling (SBIM): Sketch-based
+  parameterization of L-systems using illustration-inspired construction lines
+  and depth modulation.
+\newblock Comput. Graph., 2009, 33(4): 440--451
+\tongjidot
+
+\bibitem{amap}
+Reffye P, Edelin C, Fran\c{c}on J, et~al.
+\newblock Plant models faithful to botanical structure and development.
+\newblock Proceedings of the 15th annual conference on Computer graphics and
+  interactive techniques, New York, NY, USA: ACM, 1988.
+\newblock  151--158
+\tongjidot
+
+\bibitem{reche}
+Reche-Martinez A, Martin I, Drettakis G.
+\newblock Volumetric reconstruction and interactive rendering of trees from
+  photographs.
+\newblock ACM Trans. Graph., 2004, 23(3): 720--727
+\tongjidot
+
+\bibitem{neubert}
+Neubert B, Franken T, Deussen O.
+\newblock Approximate image-based tree-modeling using particle flows.
+\newblock ACM Trans. Graph., 2007, 26(3)
+\tongjidot
+
+\bibitem{quanlong}
+Quan L, Tan P, Zeng G, et~al.
+\newblock Image-based plant modeling.
+\newblock ACM SIGGRAPH 2006 Papers, New York, NY, USA: ACM, 2006.
+\newblock  599--604
+\tongjidot
+
+\bibitem{tanping}
+Tan P, Zeng G, Wang J, et~al.
+\newblock Image-based tree modeling.
+\newblock ACM SIGGRAPH 2007 papers, New York, NY, USA: ACM, 2007
+\tongjidot
+
+\bibitem{tanping2}
+Tan P, Fang T, Xiao J, et~al.
+\newblock Single image tree modeling.
+\newblock ACM Trans. Graph., 2008, 27(5): 108:1--108:7
+\tongjidot
+
+\bibitem{lichuan}
+Li C, Deussen O, Song Y~Z, et~al.
+\newblock Modeling and generating moving trees from video.
+\newblock ACM Trans. Graph., 2011, 30(6): 127:1--127:12
+\tongjidot
+
+\bibitem{verroust}
+Verroust A, Rocquencourt I, Lazarus F.
+\newblock Extracting Skeletal Curves from 3D Scattered Data.
+\newblock The Visual Computer, 1999, 16: 15--25
+\tongjidot
+
+\bibitem{bucksch}
+Bucksch A.
+\newblock SKELETONIZATION AND SEGMENTATION OF POINT CLOUDS USING OCTREES AND
+  GRAPH THEORY, 2006
+\tongjidot
+
+\bibitem{xu}
+Xu H, Gossett N, Chen B.
+\newblock Knowledge and heuristic-based modeling of laser-scanned trees.
+\newblock ACM Trans. Graph., 2007, 26(4)
+\tongjidot
+
+\bibitem{cote}
+Côté J~F, Widlowski J~L, Fournier R~A, et~al.
+\newblock The structural and radiative consistency of three-dimensional tree
+  reconstructions from terrestrial lidar.
+\newblock Remote Sensing of Environment, 2009, 113(5): 1067 -- 1081
+\tongjidot
 
 \end{thebibliography}

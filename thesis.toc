@@ -1,42 +1,45 @@
 \contentsline {chapter}{\numberline {第\nobreakspace {}1\nobreakspace {}章}引言}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}背景介绍}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}课题的主要工作}{1}{section.1.2}
-\contentsline {chapter}{\numberline {第\nobreakspace {}2\nobreakspace {}章}方法综述与技术简介}{3}{chapter.2}
+\contentsline {chapter}{\numberline {第\nobreakspace {}2\nobreakspace {}章}研究综述与技术简介}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}树木建模方法综述}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}基于多张图像的三维重建方法简介}{3}{section.2.2}
-\contentsline {section}{\numberline {2.3}基于点云的骨架抽取方法综述}{3}{section.2.3}
-\contentsline {chapter}{\numberline {第\nobreakspace {}3\nobreakspace {}章}基于图像的树木轻量化3D建模方法}{4}{chapter.3}
-\contentsline {section}{\numberline {3.1}技术路线}{4}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}基于改进的PyrLK光流法的图像特征匹配}{4}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}三维重建}{4}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}基于三维体素泛洪与线性拟合的三维树木骨架抽取}{5}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}基于用户交互的模型改善与轻量化}{5}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}建模质量评估}{5}{subsection.3.1.5}
-\contentsline {section}{\numberline {3.2}技术路线图}{5}{section.3.2}
-\contentsline {chapter}{\numberline {第\nobreakspace {}4\nobreakspace {}章}基于图像树木轻量化建模的若干算法}{6}{chapter.4}
-\contentsline {section}{\numberline {4.1}基于改进的PyrLK光流法的特征点匹配方法}{6}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}对于SIFT特征点匹配的尝试}{6}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}基于PyrLK光流法的特征点匹配}{6}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}改进的PyrLK光流法}{6}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}基于改进PyrLK光流法的三维重建}{6}{subsection.4.1.4}
-\contentsline {section}{\numberline {4.2}基于三维体素泛洪与线性拟合的三维树木骨架抽取}{6}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}三维体素模型}{7}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}三维体素泛洪确定邻域范围}{7}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}通过最小二乘法线性拟合确定分支}{10}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}半径怎么探索？？}{10}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}基于枝干合并的轻量化处理}{10}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}L-System的尝试}{10}{subsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.1.1}L-System简介}{10}{subsubsection.4.3.1.1}
-\contentsline {subsubsection}{\numberline {4.3.1.2}树木模型的参数化L-System规则抽取}{11}{subsubsection.4.3.1.2}
-\contentsline {subsubsection}{\numberline {4.3.1.3}使用L-System进行树木轻量化建模遇到的问题}{11}{subsubsection.4.3.1.3}
-\contentsline {subsection}{\numberline {4.3.2}树木轻量化？枝干合并！}{12}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}建模质量评估算法}{12}{section.4.4}
-\contentsline {section}{\numberline {4.5}本章小节}{12}{section.4.5}
-\contentsline {chapter}{\numberline {第\nobreakspace {}5\nobreakspace {}章}实验过程与分析}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}实验环境}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}实验结果与分析}{15}{section.5.2}
-\contentsline {chapter}{\numberline {第\nobreakspace {}6\nobreakspace {}章}总结与展望}{16}{chapter.6}
-\contentsline {section}{\numberline {6.1}总结}{16}{section.6.1}
-\contentsline {section}{\numberline {6.2}未来的工作}{16}{section.6.2}
-\contentsline {chapter}{参考文献}{17}{section*.14}
+\contentsline {subsection}{\numberline {2.1.1}虚拟树木建模技术}{3}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}现实树木重建技术}{4}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}基于图像序列的树木三维重建技术}{5}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}基于多张图像的三维重建方法简介}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}基于树木点云的骨架抽取方法的研究综述}{5}{section.2.3}
+\contentsline {chapter}{\numberline {第\nobreakspace {}3\nobreakspace {}章}基于图像的树木轻量化3D建模方法}{6}{chapter.3}
+\contentsline {section}{\numberline {3.1}技术路线}{6}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}基于改进的PyrLK光流法的图像特征匹配}{6}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}三维重建}{6}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}基于三维体素泛洪与线性拟合的三维树木骨架抽取}{7}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}基于用户交互的模型改善与轻量化}{7}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}建模质量评估}{7}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}技术路线图}{7}{section.3.2}
+\contentsline {chapter}{\numberline {第\nobreakspace {}4\nobreakspace {}章}基于图像树木轻量化建模的若干算法}{8}{chapter.4}
+\contentsline {section}{\numberline {4.1}基于改进的PyrLK光流法的特征点匹配方法}{8}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}对于SIFT特征点匹配的尝试}{8}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}基于PyrLK光流法的特征点匹配}{8}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}改进的PyrLK光流法}{8}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}基于改进PyrLK光流法的三维重建}{8}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}基于三维体素泛洪与线性拟合的三维树木骨架抽取}{8}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}三维体素模型}{9}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}三维体素泛洪确定邻域范围}{9}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}通过最小二乘法线性拟合确定分支}{11}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}半径怎么探索？？}{12}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}基于枝干合并的轻量化处理}{12}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}L-System的尝试}{13}{subsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.1.1}L-System简介}{13}{subsubsection.4.3.1.1}
+\contentsline {subsubsection}{\numberline {4.3.1.2}树木模型的参数化L-System规则抽取}{13}{subsubsection.4.3.1.2}
+\contentsline {subsubsection}{\numberline {4.3.1.3}使用L-System进行树木轻量化建模遇到的问题}{14}{subsubsection.4.3.1.3}
+\contentsline {subsection}{\numberline {4.3.2}树木轻量化？枝干合并！}{14}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}建模质量评估算法}{17}{section.4.4}
+\contentsline {section}{\numberline {4.5}本章小节}{17}{section.4.5}
+\contentsline {chapter}{\numberline {第\nobreakspace {}5\nobreakspace {}章}实验过程与分析}{18}{chapter.5}
+\contentsline {section}{\numberline {5.1}实验环境}{18}{section.5.1}
+\contentsline {section}{\numberline {5.2}实验结果与分析}{18}{section.5.2}
+\contentsline {chapter}{\numberline {第\nobreakspace {}6\nobreakspace {}章}总结与展望}{19}{chapter.6}
+\contentsline {section}{\numberline {6.1}总结}{19}{section.6.1}
+\contentsline {section}{\numberline {6.2}未来的工作}{19}{section.6.2}
+\contentsline {chapter}{参考文献}{21}{section*.14}
 \contentsfinish 

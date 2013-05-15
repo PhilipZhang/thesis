@@ -61,25 +61,8 @@
 	\Ensure 三维体素数组$\mathbb{V}[1..d,1..d,1..d]$
 	\State 初始化点云边界值$X_{max}=Y_{max}=Z_{max}=MIN\uline\quad FLOAT,X_{min}=Y_{min}=Z_{min}=MAX\uline\quad FLOAT$
 	\ForAll{空间点$P(P_x,P_y,P_z) \in M$}
-	\If{$P_x>X_{max}$}
-	\State $X_{max}=P_x$
-\EndIf
-\If{$P_y>Y_{max}$}
-\State $Y_{max}=P_y$
-		\EndIf
-		\If{$P_z>Z_{max}$}
-		\State $Z_{max}=P_z$
-	\EndIf
-	\If{$P_x<X_{min}$}
-	\State $X_{min}=P_x$
-\EndIf
-\If{$P_y<Y_{min}$}
-\State $Y_{min}=P_y$
-		\EndIf
-		\If{$P_z<Z_{min}$}
-		\State $Z_{min}=P_z$
-	\EndIf
-\EndFor
+		\State $CheckBoundary(P)$
+	\EndFor
 \ForAll{空间点$P(P_x,P_y,P_z) \in M$}
 \State $V_x = \frac{P_x-X_{min}}{X_{max}-X_{min}}\cdot d$
 \State $V_y = \frac{P_y-Y_{min}}{Y_{max}-Y_{min}}\cdot d$
@@ -104,15 +87,16 @@
 
 图片。。。
 
-伪代码。。。
+该算法的伪代码如下：\\
 
-\begin{algorithm}
+\begin{algorithm} \label{alg:3dfld}
 	\caption{三维体素泛洪确定邻域范围}
 	\begin{algorithmic}[1]
-		\Require 当前体素$C$
-		\Require 三维体素数组$\mathbb{V}[1..d,1..d,1..d]$
-		\Require 泛洪方向数组$\mathbb{D}[1..27]$
-		\Require 邻域范围增长比例阈值$\lambda$
+		\Require 当前体素$C$，三维体素数组$\mathbb{V}[1..d,1..d,1..d]$，
+		泛洪方向数组$\mathbb{D}[1..27]$，邻域范围增长比例阈值$\lambda$
+		%\Require 三维体素数组$\mathbb{V}[1..d,1..d,1..d]$
+		%\Require 泛洪方向数组$\mathbb{D}[1..27]$
+		%\Require 邻域范围增长比例阈值$\lambda$
 		\Ensure	邻域范围内体素集合$\mathbb{S}$
 		\State 初始化单次迭代新增体素集合$\mathbb{S'}$
 		\State $\mathbb{S'}.AddVoxel($根节点所在体素$)$
@@ -145,61 +129,90 @@
 细碎的枝条。因为这些细碎的枝条就算在此步中不剔除，到后续的轻量化的时候也不容许
 它们的存在。
 
-然后对于剩下的若干方向$d_1,d_2...d_n$，分别对它们进行基于最小二乘法的线性拟合，这个步骤可以
-实现为并行以提升计算的速度。具体方法是：对某个方向$d_i$，将其包含的体素中的点
-全部抽取出来，得到一个密集的点集$S_i$。然后采用待定方程的办法，设直线方程为：
-%\begin{equation} \label{eq:line}
-%	\left\{ 
-%		\begin{array}{lll}
-%			a_1x_1+b_1x_2+c_1x_3 & = & b1\\
-%			a_2x_1+b_2x_2+c_2x_3 & = & b2\\
-%			... & & \\
-%			a_nx_1+b_nx_2+c_nx_3 & = & bn
-%		\end{array}
-%	\right.
-%\end{equation}
-%在这个方程组中，令\\
-%\begin{displaymath}
-%U=
-%\left(
-%\begin{array}{ccc}
-%	a_1 & b_1 & c_1\\
-%	a_2 & b_2 & c_2\\
-%	... & ... & ...\\
-%	a_n & b_n & c_n
-%\end{array}
-%\right)
-%,\quad
-%x=
-%\left(
-%\begin{array}{c}
-%	x1\\
-%	x2\\
-%	x3
-%\end{array}
-%\right)
-%,\quad
-%B=
-%\left(
-%\begin{array}{c}
-%	b_1\\
-%	b_2\\
-%	...\\
-%	b_n
-%\end{array}
-%\right)
-%\end{displaymath}
-%
-%在实践中，由于筛选方向上的点数较多且发散分布，由线性代数的理论知，$U$是过约束的，
-%即$n>r$,其中$r$是矩阵$U$的秩。这种情况下没有标准的解，只能找到使误差最小的向量$x$，
-%误差定义为:\\
-%\begin{equation}
-%	E\xlongequal{def} \sum_{i=1}^n{(a_ix_1+b_ix_2+c_ix_3-b_i)^2}=|Ux-y|^2
-%\end{equation}
-%
-%由于$E$正比于方程的均方误差，因此只要E达到最小值，那么点集相对于该直线的波动就最
-%小。换句话说，也就是该直线最好的模拟了该点集所表示的骨架。由线性代数的方法我们很容易
-%可以得到当$E$达到最小值时
+然后对于剩下的若干方向$d_1,d_2...d_k$，每个方向都对应着树木的一个骨架。在处理
+某个方向$d_i$时，将其包含的体素中的所有点抽取出来，得到一个密集的点集$S_i$。
+然后采用待定方程的办法，设直线方程为：
+\begin{equation}
+	\mathbf{x} = \mathbf{x_0} + \mathbf{d}t,\quad(t \in [0,\infty))
+\end{equation}
+
+其中$\mathbf{x_0}$是当前节点的坐标，$\mathbf{d}$是待拟合的直线方向。我们假设
+点集$S_i$中的点$P_1,P_2,...P_m$都在直线上，则可以得到以下方程组：\\
+
+\begin{equation} \label{eq:line}
+	\left\{ 
+		\begin{array}{lll}
+			a_{11}d_x+a_{12}d_y+a_{13}d_z & = & b1\\
+			a_{21}d_x+a_{22}d_y+a_{23}d_z & = & b2\\
+			... & & \\
+			a_{n1}d_x+a_{n2}d_y+a_{n3}d_z & = & bn
+		\end{array}
+	\right.
+\end{equation}
+
+其中具体数值未给出，注意这里的$n=3m$，因为每个点$P$可以提供三个方向的方程式。
+在这个方程组中，令\\
+\begin{displaymath}
+	\mathbf{U}=
+\left(
+\begin{array}{ccc}
+	a_{11} & a_{12} & a_{13}\\
+	a_{21} & a_{22} & a_{23}\\
+	... & ... & ...\\
+	a_{n1} & a_{n2} & a_{n3}\\
+\end{array}
+\right)
+,\quad
+\mathbf{d}=
+\left(
+\begin{array}{c}
+	d_x\\
+	d_y\\
+	d_z
+\end{array}
+\right)
+,\quad
+\mathbf{b}=
+\left(
+\begin{array}{c}
+	b_1\\
+	b_2\\
+	...\\
+	b_n
+\end{array}
+\right)
+\end{displaymath}
+
+
+在实践中，由于筛选方向上的点数较多且发散分布，由线性代数的理论知，$\mathbf{U}$是过约束的，
+即$n>r$,其中$r$是矩阵$\mathbf{U}$的秩。这种情况下没有标准的解，只能找到使误差最小的向量$\mathbf{d}$，
+误差定义为:\\
+\begin{equation}
+	E\xlongequal{def} \sum_{i=1}^n(\mathbf{d}t_i - \mathbf{x_i} + \mathbf{x_0})^2=|\mathbf{Ud}-\mathbf{b}|^2
+\end{equation}
+
+由于$E$正比于方程的均方误差，因此只要E达到最小值，那么点集相对于该直线的波动就最
+小。换句话说，也就是该直线最好的模拟了该点集所表示的骨架。由线性代数的方法很容易
+可以解得$\mathbf{d}=\mathbf{[(U^TU)^{-1}U^T]b}$。
+
+图片。。。
+
+下表是得到邻域信息后进行骨架抽取的伪代码，其中\textit{Least Squares Processing}表示运用最小二乘法进行
+线性拟合。
+
+\begin{algorithm}
+	\caption{基于邻域的骨架抽取}
+	\begin{algorithmic}[1]
+		\Require 当前节点体素$V$
+		\Require 骨架方向数组$\mathbb{D}[1..n]$
+		\Ensure 当前节点子节点集合$\mathbb{S}$
+		\ForAll{骨架方向$d\in D$}
+			\State $NewChild\gets Least Squares Processing$
+			\State $\mathbb{S}.AddChild(NewChild)$
+		\EndFor
+		\State \Return $\mathbb{S}$
+	\end{algorithmic}
+\end{algorithm}
 
 \subsection{半径怎么探索？？}
 
