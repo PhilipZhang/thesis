@@ -101,4 +101,24 @@ Côté J~F, Widlowski J~L, Fournier R~A, et~al.
 \newblock Remote Sensing of Environment, 2009, 113(5): 1067 -- 1081
 \tongjidot
 
+\bibitem{horn}
+Horn B~K~P, Schunck B~G.
+\newblock Determining Optical Flow.
+\newblock ARTIFICAL INTELLIGENCE, 1981, 17: 185--203
+\tongjidot
+
+\bibitem{lk}
+Lucas B~D, Kanade T.
+\newblock An Iterative Image Registration Technique with an Application to
+  Stereo Vision.
+\newblock 1981.
+\newblock  674--679
+\tongjidot
+
+\bibitem{pyrlk}
+Bouguet J.
+\newblock Pyramidal implementation of the Lucas Kanade feature tracker.
+\newblock Intel Corporation, Microprocessor Research Labs, 2000.
+\tongjidot
+
 \end{thebibliography}
