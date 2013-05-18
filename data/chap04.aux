@@ -6,69 +6,81 @@
 \citation{pyrlk}
 \citation{pyrlk}
 \FN@pp@footnotehinttrue 
-\@writefile{toc}{\contentsline {chapter}{\numberline {第\nobreakspace  {}4\nobreakspace  {}章}基于图像树木轻量化建模的若干算法}{8}{chapter.4}}
-\newlabel{cha:algorithm}{{4}{8}{基于图像树木轻量化建模的若干算法\relax }{chapter.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}基于改进的PyrLK光流法的特征点匹配方法}{8}{section.4.1}}
-\newlabel{sec:pyrlk}{{4.1}{8}{基于改进的PyrLK光流法的特征点匹配方法\relax }{section.4.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}光流法简介}{8}{subsection.4.1.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}PyrLK光流算法}{9}{subsection.4.1.2}}
-\newlabel{subsec:pyrlk}{{4.1.2}{9}{PyrLK光流算法\relax }{subsection.4.1.2}{}}
-\newlabel{eq:opticalflow}{{4.1}{9}{PyrLK光流算法\relax }{equation.4.1.1}{}}
-\newlabel{eq:similarity}{{4.4}{10}{PyrLK光流算法\relax }{equation.4.1.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}改进的PyrLK光流算法}{10}{subsection.4.1.3}}
-\newlabel{subsec:revisedpyrlk}{{4.1.3}{10}{改进的PyrLK光流算法\relax }{subsection.4.1.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3.1}加入放射变换}{10}{subsubsection.4.1.3.1}}
-\newlabel{eq:affine}{{4.7}{11}{加入放射变换\relax }{equation.4.1.7}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3.2}提高鲁棒性}{11}{subsubsection.4.1.3.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}基于三维体素泛洪与线性拟合的三维树木骨架抽取}{11}{section.4.2}}
-\newlabel{sec:sklextract}{{4.2}{11}{基于三维体素泛洪与线性拟合的三维树木骨架抽取\relax }{section.4.2}{}}
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{alg:pyrlk}{{\caption@xref {alg:pyrlk}{ on input line 202}}{12}{提高鲁棒性\relax }{subsubsection.4.1.3.2}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces 支持仿射变换和容错机制的PyrLK光流法\relax }}{12}{algorithm.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}三维体素模型}{13}{subsection.4.2.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}三维体素泛洪确定邻域范围}{13}{subsection.4.2.2}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces 点云模型体素化\relax }}{14}{algorithm.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}通过最小二乘法线性拟合确定分支}{14}{subsection.4.2.3}}
-\newlabel{subsec:leastsquares}{{4.2.3}{14}{通过最小二乘法线性拟合确定分支\relax }{subsection.4.2.3}{}}
-\newlabel{alg:3dfld}{{\caption@xref {alg:3dfld}{ on input line 298}}{15}{三维体素泛洪确定邻域范围\relax }{subsection.4.2.2}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces 三维体素泛洪确定邻域范围\relax }}{15}{algorithm.3}}
-\newlabel{eq:line}{{4.9}{16}{通过最小二乘法线性拟合确定分支\relax }{equation.4.2.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}获取骨架半径}{16}{subsection.4.2.4}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces 基于邻域的骨架抽取\relax }}{17}{algorithm.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}基于枝干合并的轻量化处理}{17}{section.4.3}}
-\newlabel{sec:branchcombine}{{4.3}{17}{基于枝干合并的轻量化处理\relax }{section.4.3}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces 骨架半径抽取\relax }}{18}{algorithm.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}L-System的尝试}{18}{subsection.4.3.1}}
-\newlabel{subsec:lsystem}{{4.3.1}{18}{L-System的尝试\relax }{subsection.4.3.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.1}L-System简介}{18}{subsubsection.4.3.1.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.2}树木模型的参数化L-System规则抽取}{18}{subsubsection.4.3.1.2}}
-\newlabel{eq:turtle}{{4.11}{19}{树木模型的参数化L-System规则抽取\relax }{equation.4.3.11}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.3}使用L-System进行树木轻量化建模遇到的问题}{19}{subsubsection.4.3.1.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}树木轻量化？枝干合并！}{19}{subsection.4.3.2}}
-\newlabel{subsec:branchmerge}{{4.3.2}{19}{树木轻量化？枝干合并！\relax }{subsection.4.3.2}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第\nobreakspace  {}4\nobreakspace  {}章}基于图像树木轻量化建模的若干算法}{9}{chapter.4}}
+\newlabel{cha:algorithm}{{4}{9}{基于图像树木轻量化建模的若干算法\relax }{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}基于改进的PyrLK光流法的特征点匹配方法}{9}{section.4.1}}
+\newlabel{sec:pyrlk}{{4.1}{9}{基于改进的PyrLK光流法的特征点匹配方法\relax }{section.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}光流法简介}{9}{subsection.4.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}PyrLK光流算法}{10}{subsection.4.1.2}}
+\newlabel{subsec:pyrlk}{{4.1.2}{10}{PyrLK光流算法\relax }{subsection.4.1.2}{}}
+\newlabel{eq:opticalflow}{{4.1}{10}{PyrLK光流算法\relax }{equation.4.1.1}{}}
+\newlabel{eq:similarity}{{4.4}{11}{PyrLK光流算法\relax }{equation.4.1.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}改进的PyrLK光流算法}{11}{subsection.4.1.3}}
+\newlabel{subsec:revisedpyrlk}{{4.1.3}{11}{改进的PyrLK光流算法\relax }{subsection.4.1.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3.1}加入放射变换}{11}{subsubsection.4.1.3.1}}
+\newlabel{eq:affine}{{4.7}{12}{加入放射变换\relax }{equation.4.1.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3.2}提高鲁棒性}{12}{subsubsection.4.1.3.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}基于三维体素泛洪与线性拟合的三维树木骨架抽取}{12}{section.4.2}}
+\newlabel{sec:sklextract}{{4.2}{12}{基于三维体素泛洪与线性拟合的三维树木骨架抽取\relax }{section.4.2}{}}
+\newlabel{alg:pyrlk}{{\caption@xref {alg:pyrlk}{ on input line 202}}{13}{提高鲁棒性\relax }{subsubsection.4.1.3.2}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces 支持仿射变换和容错机制的PyrLK光流法\relax }}{13}{algorithm.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}三维体素模型}{14}{subsection.4.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}三维体素泛洪确定邻域范围}{14}{subsection.4.2.2}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces 点云模型体素化\relax }}{15}{algorithm.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}通过最小二乘法线性拟合确定分支}{15}{subsection.4.2.3}}
+\newlabel{subsec:leastsquares}{{4.2.3}{15}{通过最小二乘法线性拟合确定分支\relax }{subsection.4.2.3}{}}
+\newlabel{alg:3dfld}{{\caption@xref {alg:3dfld}{ on input line 298}}{16}{三维体素泛洪确定邻域范围\relax }{subsection.4.2.2}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces 三维体素泛洪确定邻域范围\relax }}{16}{algorithm.3}}
+\newlabel{eq:line}{{4.9}{17}{通过最小二乘法线性拟合确定分支\relax }{equation.4.2.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces 线性拟合计算分支方向\relax }}{18}{figure.caption.13}}
+\newlabel{fig:fitting}{{4.1}{18}{线性拟合计算分支方向\relax \relax }{figure.caption.13}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces 基于邻域的骨架抽取\relax }}{18}{algorithm.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}获取骨架半径}{18}{subsection.4.2.4}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces 骨架半径抽取\relax }}{19}{algorithm.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}基于枝干合并的轻量化处理}{20}{section.4.3}}
+\newlabel{sec:branchcombine}{{4.3}{20}{基于枝干合并的轻量化处理\relax }{section.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}L-System的尝试}{20}{subsection.4.3.1}}
+\newlabel{subsec:lsystem}{{4.3.1}{20}{L-System的尝试\relax }{subsection.4.3.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.1}L-System简介}{20}{subsubsection.4.3.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.2}树木模型的参数化L-System规则抽取}{20}{subsubsection.4.3.1.2}}
+\newlabel{eq:turtle}{{4.11}{21}{树木模型的参数化L-System规则抽取\relax }{equation.4.3.11}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.3}使用L-System进行树木轻量化建模遇到的问题}{21}{subsubsection.4.3.1.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}树木轻量化？枝干合并！}{21}{subsection.4.3.2}}
+\newlabel{subsec:branchmerge}{{4.3.2}{21}{树木轻量化？枝干合并！\relax }{subsection.4.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces 树枝简化过程\relax }}{22}{figure.caption.14}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((a))}{\ignorespaces {输入树枝骨架}}}{22}{subfigure.4.2.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((b))}{\ignorespaces {合并AB、BC}}}{22}{subfigure.4.2.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((c))}{\ignorespaces {合并AC、CD}}}{22}{subfigure.4.2.3}}
+\newlabel{fig:vert}{{4.2}{22}{树枝简化过程\relax \relax }{figure.caption.14}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {6}{\ignorespaces 纵向合并枝干\relax }}{23}{algorithm.6}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {7}{\ignorespaces 横向合并枝干\relax }}{24}{algorithm.7}}
 \citation{quanlong,tanping,lichuan,tanping2,liu}
 \citation{quanlong}
 \citation{tanping}
 \citation{tanping2}
 \citation{lichuan}
 \citation{liu}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {6}{\ignorespaces 纵向合并枝干\relax }}{20}{algorithm.6}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {7}{\ignorespaces 横向合并枝干\relax }}{21}{algorithm.7}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}建模还原度}{22}{section.4.4}}
-\newlabel{sec:qualityevaluation}{{4.4}{22}{建模还原度\relax }{section.4.4}{}}
-\@writefile{thm}{\contentsline {definition}{{定义}{4.{1}}{}}{22}{definition.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}图像序列信息量}{22}{subsection.4.4.1}}
-\@writefile{thm}{\contentsline {definition}{{定义}{4.{2}}{}}{23}{definition.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}三维重建还原度}{24}{subsection.4.4.2}}
-\@writefile{thm}{\contentsline {definition}{{定义}{4.{3}}{}}{24}{definition.4.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}骨架抽取还原度}{24}{subsection.4.4.3}}
-\@writefile{thm}{\contentsline {definition}{{定义}{4.{4}}{}}{25}{definition.4.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}建模还原度计算}{25}{subsection.4.4.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}本章小节}{25}{section.4.5}}
-\newlabel{sec:conclusion}{{4.5}{25}{本章小节\relax }{section.4.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces 联合使用纵向和横向合并\relax }}{25}{figure.caption.15}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((a))}{\ignorespaces {输入枝干骨架}}}{25}{subfigure.4.3.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((b))}{\ignorespaces {纵向合并AC,CD}}}{25}{subfigure.4.3.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((c))}{\ignorespaces {横向合并DE,DF}}}{25}{subfigure.4.3.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((d))}{\ignorespaces {纵向合并AD,DE}}}{25}{subfigure.4.3.4}}
+\newlabel{fig:combine}{{4.3}{25}{联合使用纵向和横向合并\relax \relax }{figure.caption.15}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}建模还原度}{25}{section.4.4}}
+\newlabel{sec:qualityevaluation}{{4.4}{25}{建模还原度\relax }{section.4.4}{}}
+\@writefile{thm}{\contentsline {definition}{{定义}{4.{1}}{}}{26}{definition.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}图像序列信息量}{26}{subsection.4.4.1}}
+\@writefile{thm}{\contentsline {definition}{{定义}{4.{2}}{}}{27}{definition.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}三维重建还原度}{27}{subsection.4.4.2}}
+\@writefile{thm}{\contentsline {definition}{{定义}{4.{3}}{}}{27}{definition.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}骨架抽取还原度}{28}{subsection.4.4.3}}
+\@writefile{thm}{\contentsline {definition}{{定义}{4.{4}}{}}{28}{definition.4.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}建模还原度计算}{29}{subsection.4.4.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}本章小节}{29}{section.4.5}}
+\newlabel{sec:conclusion}{{4.5}{29}{本章小节\relax }{section.4.5}{}}
 \FN@pp@footnotehinttrue 
 \@setckpt{data/chap04}{
-\setcounter{page}{27}
+\setcounter{page}{30}
 \setcounter{equation}{12}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
@@ -83,13 +95,13 @@
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{0}
+\setcounter{figure}{3}
 \setcounter{table}{0}
 \setcounter{parentequation}{0}
 \setcounter{ContinuedFloat}{0}
 \setcounter{KVtest}{2}
 \setcounter{subfigure}{0}
-\setcounter{subfigure@save}{0}
+\setcounter{subfigure@save}{4}
 \setcounter{lofdepth}{1}
 \setcounter{subtable}{0}
 \setcounter{subtable@save}{0}
