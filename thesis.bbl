@@ -121,4 +121,14 @@ Bouguet J.
 \newblock Intel Corporation, Microprocessor Research Labs, 2000.
 \tongjidot
 
+\bibitem{liu}
+Liu J, Zhang X, Li H, et~al.
+\newblock Creation of tree models from freehand sketches by building 3D
+  skeleton point cloud.
+\newblock Proceedings of the Entertainment for education, and 5th international
+  conference on E-learning and games, Berlin, Heidelberg: Springer-Verlag,
+  2010.
+\newblock  621--632
+\tongjidot
+
 \end{thebibliography}
