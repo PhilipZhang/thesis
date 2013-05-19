@@ -717,9 +717,9 @@
   \normalsize%
   \begin{titlepage}
     \tongji@first@titlepage
-    \cleardoublepage\engcover
-    \cleardoublepage\tongji@authorization@mk
-    \cleardoublepage\tongji@declareshortname@mk
+    %\cleardoublepage\engcover
+    %\cleardoublepage\tongji@authorization@mk
+    %\cleardoublepage\tongji@declareshortname@mk
   \end{titlepage}
   \normalsize
   \tongji@makeabstract

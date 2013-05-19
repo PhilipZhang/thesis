@@ -3,7 +3,7 @@
 %%% TeX-master: t
 %%% End:
 
-\documentclass[master, openany]{tongjithesis}
+\documentclass[master, openany, oneside]{tongjithesis}
 %开始用了openright，但这样即每章都是奇数页开始，但实际上，只需要摘要、目录、英文摘要、正文第一章、
 %参考文献、附录、个人简历都从奇数页开始即可，正文内部章节可以从偶数页开始，因此用\cleardoublepage命令实现
 
@@ -90,8 +90,8 @@
 \makeatother
 
 % 致谢
-%\cleardoublepage
-%\include{data/ack}
+\cleardoublepage
+\include{data/ack}
 
 % 参考文献
 \cleardoublepage

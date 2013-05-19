@@ -196,9 +196,9 @@ LK光流法的迭代序列。通过这样多分辨率图层，使得邻域窗口
 的匹配是否是双向和可逆的。换句话说，本文之前定义的“相似”其实是单方面的$\mathbf{u}$相似于
 $\mathbf{v}$，而$\mathbf{v}$是否相似于$\mathbf{u}$还不得而知。因此，考虑到算法的完整性和鲁棒性，
 有必要进行反向的匹配来确定它们完全匹配。或者退一步，给出一个容错的区间，定义当差异度小于多少
-时，两个点“相似”。本文采用后一种容错的机制。下面给出了经过添加仿射变换支持和提高鲁棒性的PyrLK
+时，两个点“相似”。本文采用后一种容错的机制。算法表1给出了经过添加仿射变换支持和提高鲁棒性的PyrLK
 光流法算法的伪代码：\\
-\begin{algorithm}
+\begin{algorithm}[H]
 	\label{alg:pyrlk}
 	\caption{支持仿射变换和容错机制的PyrLK光流法}
 	\begin{algorithmic}[1]
@@ -254,12 +254,18 @@ $\mathbf{v}$，而$\mathbf{v}$是否相似于$\mathbf{u}$还不得而知。因�
 搜索，体素的位置就反映了点集的位置，因此不用每次搜索都遍历整个点云，而是只用将
 步长范围体素中的点集遍历即可。由于体素是我们处理的基本单位，所以体素的大小也
 直接决定了体素模型的精度，因此，在确保非空体素的空间连续性和效率允许的基础上，
-本文建议让体素尽可能的小，以保证模型的精度。
+本文建议让体素尽可能的小，以保证模型的精度。将点云模型转换为体素模型的伪代码
+在算法表2中给出。图\ref{fig:voxel}形象地展示了将空间体素化以后树木的点云模型
+在体素块中的分布情况。
 
-insertplace...图片。。。
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=8cm]{voxel.png}
+	\caption{三维体素模型}
+	\label{fig:voxel}
+\end{figure}
 
-伪代码。。。
-\begin{algorithm}
+\begin{algorithm}[H]
 	\caption{点云模型体素化}
 \begin{algorithmic}[1]
 	\Require 点云模型$M$
@@ -291,11 +297,25 @@ insertplace...图片。。。
 体素增加的比例，如果低于设置的阈值，则停止迭代，当前的邻域范围即为三维泛洪得到
 的当前节点的邻域范围。
 
-insertplace...图片。。。
+图\ref{fig:3dfld}展示了三维体素泛洪确定邻域的步骤。\ref{fig:3dfld}(a)为其初始状态，
+即邻域范围为当前体素。其中橙色的区域表示邻域范围，蓝色的区域表示未探索区域，灰色区域
+表示空的体素，而绿色区域表示已经在之前的枝干邻域。\ref{fig:3dfld}(b)表示体素泛洪经过
+一次迭代以后的状态，因为体素泛洪只会对与当前邻域范围相邻的未探索区域(蓝色方块)进行扩展，
+所以\ref{fig:3dfld}(a)只会向黄色箭头指向的体素进行扩展，从而得到\ref{fig:3dfld}(b)。在得到
+新的邻域后，首先会计算所新增的点的数量与之前的数量的比值有没有低于阈值，如果低于阈值，则停止
+邻域的扩张。最后将得到\ref{fig:3dfld}(c)中的邻域范围。
 
-三维体素泛洪确定邻域范围算法的伪代码如下：\\
+\begin{figure}[H]
+	\centering
+	\subfloat[初始状态(邻域范围为1个体素)]{\includegraphics[height=3cm]{fld1.jpg}}\hspace{4em}
+	\subfloat[第一次泛洪迭代(邻域范围为6个体素)]{\includegraphics[height=3cm]{fld2.jpg}}\hspace{4em}
+	\subfloat[第二次泛洪迭代(邻域范围为11个体素)]{\includegraphics[height=3cm]{fld3.jpg}}
+	\caption{体素泛洪示意图}
+	\label{fig:3dfld}
+\end{figure}
 
-\begin{algorithm} \label{alg:3dfld}
+三维体素泛洪确定邻域范围算法的伪代码在算法表3中给出。
+\begin{algorithm}[H] \label{alg:3dfld}
 	\caption{三维体素泛洪确定邻域范围}
 	\begin{algorithmic}[1]
 		\Require 当前体素$C$，三维体素数组$\mathbb{V}[1..d,1..d,1..d]$，
@@ -412,10 +432,10 @@ insertplace...图片。。。
 	\label{fig:fitting}
 \end{figure}
 
-下表是得到邻域信息后进行骨架抽取的伪代码，其中\textit{Least Squares Processing}表示运用最小二乘法进行
+算法表4中给出了得到邻域信息后进行骨架抽取的伪代码，其中\textit{Least Squares Processing}表示运用最小二乘法进行
 线性拟合。
 
-\begin{algorithm}
+\begin{algorithm}[H]
 	\caption{基于邻域的骨架抽取}
 	\begin{algorithmic}[1]
 		\Require 当前节点体素$V$
@@ -446,9 +466,9 @@ $i$个子枝的直径，$n$为子枝的数量。这个公式被广泛地用于�
 三维点云后，是需要进行一些修复工作的，本文用随机点填充的方法对该点云模型进行了实心化
 的修复。当点云分布满足均匀化时，在对某个骨架进行拟合之后，对于拟合出来的直线，来计算
 所有参加拟合该直线的点到该直线的平均距离$D_{avg}$，然后就可以计算该骨架的半径$R=D_{avg}*2$。
-由于点云分布均匀，所以半径显然就是平均距离的2倍。该算法的伪代码如下：\\
+由于点云分布均匀，所以半径显然就是平均距离的2倍。该算法的伪代码在算法表5中给出。\\
 
-\begin{algorithm}
+\begin{algorithm}[H]
 	\caption{骨架半径抽取}
 	\begin{algorithmic}[1]
 		\Require 拟合出的当前骨架直线$L$
@@ -464,7 +484,24 @@ $i$个子枝的直径，$n$为子枝的数量。这个公式被广泛地用于�
 	\end{algorithmic}
 \end{algorithm}
 
-insertplace...实验图片对比图(线性、2次方、平均距离)
+图\ref{fig:radius}给出了三种半径求解方法的效果对比。\ref{fig:radius}(a)给出了线性衰减方法
+的结果，该方法中子枝半径以父枝半径的线性倍衰减。\ref{fig:radius}(b)给出了前文提到的Leonardo
+ da Vinci规则所生成的半径情况。\ref{fig:radius}(c)则采用本文中基于线性拟合直线，再计算所有点
+ 到该直线平均距离的方法。从三者的效果中可以看出，线性衰减容易出现部分枝条生长不自然的现象，究其
+ 原因，还是因为一个单一的绝对的线性系数无法适用于所有的枝条，它对于某些枝条会偏大，对于另外一些
+ 枝条会偏小。 Leonardo规则虽然给出的是一种父子枝之间的相对关系，从一定程度上解决了线性系数单一
+ 绝对而导致的问题，但是它生成的树木枝干会出现过于均与化，而没有捕捉到现实中树木各个局部的特征。
+ 本文的方法则由于其基于对所有点的实际恢复坐标进行统计，而更加注重树木的实际局部特征情况，
+ 其效果也是三者之中最好的。
+ \begin{figure}[H]
+	\centering
+	\subfloat[样本图像]{\includegraphics[height=6cm]{rsample.jpg}}\hspace{4em}
+	\subfloat[线性衰减]{\includegraphics[height=6cm]{rlinear.png}}\hspace{4em}
+	\subfloat[Leonardo规则生成]{\includegraphics[height=6cm]{rsquare.png}}\hspace{4em}
+	\subfloat[基于拟合的半径抽取]{\includegraphics[height=6cm]{raffine.png}}\hspace{4em}
+	\caption{三种计算半径方法效果对比}
+	\label{fig:radius}
+\end{figure}
 
 %---------------------------------轻量化-----------------------------------
 \section{基于枝干合并的轻量化处理}
@@ -548,9 +585,9 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 和\textbf{CD}合并。在图\ref{fig:vert}(c)中，由于节点\textbf{D}有两个孩子，所以不对其进行合并
 操作。
 
-纵向合并算法的伪代码如下:\\
+纵向合并算法的伪代码在算法表6中给出。
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\subfloat[输入树枝骨架]{
 \includegraphics[height=5cm]{vert1.jpg}}
@@ -564,7 +601,7 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 	\label{fig:vert}
 \end{figure}
 
-\begin{algorithm}
+\begin{algorithm}[H]
 	\caption{纵向合并枝干}
 	\begin{algorithmic}[1]
 		%\Comment {根据纵向合并角度参数，以当前节点为发起点递归式地纵向合并枝干}
@@ -593,9 +630,10 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 
 横向合并指的是对叶子节点和与其夹角小于阈值的兄弟节点进行合并。之所以只对叶子节点进行合并，是
 因为非叶子节点下面都有若干棵子树，若对它们进行合并，必须对它们下面的子树也进行合并。而合并子树
-显然就使得真实感下降很大，因为这不只是局部微调，而是若干子树的变动。横向合并的伪代码如下：\\
+显然就使得真实感下降很大，因为这不只是局部微调，而是若干子树的变动。横向合并的伪代码在算法表7中
+给出。
 
-\begin{algorithm}
+\begin{algorithm}[H]
 	\caption{横向合并枝干}
 \begin{algorithmic}[1]
 	\Require 初始化横向合并角度$\beta$
@@ -632,7 +670,7 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 \ref{fig:combine}(b)中由于\textbf{D}有两个子节点，无法进行纵向合并，所以考虑进行横向
 合并\textbf{DE,DF}，并得到\ref{fig:combine}(c)。最后进行一次纵向合并得到\ref{fig:combine}(d)。
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\subfloat[输入枝干骨架]{
 	\includegraphics[height=3cm]{comb1.jpg}}

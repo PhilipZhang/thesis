@@ -20,28 +20,30 @@
 \contentsline {subsection}{\numberline {4.1.3}改进的PyrLK光流算法}{11}{subsection.4.1.3}
 \contentsline {subsubsection}{\numberline {4.1.3.1}加入放射变换}{11}{subsubsection.4.1.3.1}
 \contentsline {subsubsection}{\numberline {4.1.3.2}提高鲁棒性}{12}{subsubsection.4.1.3.2}
-\contentsline {section}{\numberline {4.2}基于三维体素泛洪与线性拟合的三维树木骨架抽取}{12}{section.4.2}
+\contentsline {section}{\numberline {4.2}基于三维体素泛洪与线性拟合的三维树木骨架抽取}{13}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}三维体素模型}{14}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}三维体素泛洪确定邻域范围}{14}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}通过最小二乘法线性拟合确定分支}{15}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}获取骨架半径}{18}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}基于枝干合并的轻量化处理}{20}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}L-System的尝试}{20}{subsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.1.1}L-System简介}{20}{subsubsection.4.3.1.1}
-\contentsline {subsubsection}{\numberline {4.3.1.2}树木模型的参数化L-System规则抽取}{20}{subsubsection.4.3.1.2}
-\contentsline {subsubsection}{\numberline {4.3.1.3}使用L-System进行树木轻量化建模遇到的问题}{21}{subsubsection.4.3.1.3}
-\contentsline {subsection}{\numberline {4.3.2}树木轻量化？枝干合并！}{21}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}建模还原度}{25}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}图像序列信息量}{26}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}三维重建还原度}{27}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}骨架抽取还原度}{28}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.2.2}三维体素泛洪确定邻域范围}{15}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}通过最小二乘法线性拟合确定分支}{17}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}获取骨架半径}{19}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}基于枝干合并的轻量化处理}{21}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}L-System的尝试}{21}{subsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.1.1}L-System简介}{21}{subsubsection.4.3.1.1}
+\contentsline {subsubsection}{\numberline {4.3.1.2}树木模型的参数化L-System规则抽取}{22}{subsubsection.4.3.1.2}
+\contentsline {subsubsection}{\numberline {4.3.1.3}使用L-System进行树木轻量化建模遇到的问题}{22}{subsubsection.4.3.1.3}
+\contentsline {subsection}{\numberline {4.3.2}树木轻量化？枝干合并！}{23}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}建模还原度}{26}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}图像序列信息量}{27}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}三维重建还原度}{28}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}骨架抽取还原度}{29}{subsection.4.4.3}
 \contentsline {subsection}{\numberline {4.4.4}建模还原度计算}{29}{subsection.4.4.4}
-\contentsline {section}{\numberline {4.5}本章小节}{29}{section.4.5}
-\contentsline {chapter}{\numberline {第\nobreakspace {}5\nobreakspace {}章}实验过程与分析}{30}{chapter.5}
-\contentsline {section}{\numberline {5.1}实验环境}{30}{section.5.1}
-\contentsline {section}{\numberline {5.2}实验结果与分析}{30}{section.5.2}
-\contentsline {chapter}{\numberline {第\nobreakspace {}6\nobreakspace {}章}总结与展望}{32}{chapter.6}
-\contentsline {section}{\numberline {6.1}总结}{32}{section.6.1}
-\contentsline {section}{\numberline {6.2}未来的工作}{32}{section.6.2}
-\contentsline {chapter}{参考文献}{35}{section*.20}
+\contentsline {section}{\numberline {4.5}本章小节}{30}{section.4.5}
+\contentsline {chapter}{\numberline {第\nobreakspace {}5\nobreakspace {}章}实验过程与分析}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}实验环境}{31}{section.5.1}
+\contentsline {section}{\numberline {5.2}实验结果与分析}{31}{section.5.2}
+\contentsline {section}{\numberline {5.3}本章小节}{40}{section.5.3}
+\contentsline {chapter}{\numberline {第\nobreakspace {}6\nobreakspace {}章}总结与展望}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}总结}{41}{section.6.1}
+\contentsline {section}{\numberline {6.2}未来的工作}{41}{section.6.2}
+\contentsline {chapter}{致\hspace {1em}谢}{43}{section*.32}
+\contentsline {chapter}{参考文献}{44}{section*.34}
 \contentsfinish 
