@@ -423,12 +423,12 @@ $\mathbf{v}$，而$\mathbf{v}$是否相似于$\mathbf{u}$还不得而知。因�
 
 在进行三维泛洪的时候，可以编程实现27个方向迭代过程的并行化，以提高算法的效率。
 
-\subsection{通过最小二乘法线性拟合确定分支}
+\subsection{通过最小二乘法线性拟合确定分支方向}
 \label{subsec:leastsquares}
 当得到邻域范围以后，便得到了邻域内体素在基于当前节点27个方向上的密度分布，而
 每个体素内又包含着若干的点，因此等于是得到了在当前节点邻域内的点云分布情况。
 接下来的工作就是怎样从各个方向的点云的分布情况抽取出核心的骨架。本文应用线性
-拟合的方法来从密集的点中抽取出一条线段，作为该部分的骨架。
+拟合的方法来从密集的点中抽取出一条直线，作为该部分的骨架方向。
 
 该方法首先要剔除掉那些点云密度很小的方向，以免每个节点都朝各个方向长出一些
 细碎的枝条。因为这些细碎的枝条就算在此步中不剔除，到后续的轻量化的时候也不容许
@@ -510,11 +510,11 @@ $\mathbf{v}$，而$\mathbf{v}$是否相似于$\mathbf{u}$还不得而知。因�
 	\label{fig:fitting}
 \end{figure}
 
-算法\ref{alg:sklextract}给出了得到邻域信息后进行骨架抽取的伪代码，其中\textit{Least Squares Processing}表示运用最小二乘法进行
+算法\ref{alg:sklextract}给出了得到邻域信息后进行骨架方向抽取的伪代码，其中\textit{Least Squares Processing}表示运用最小二乘法进行
 线性拟合。
 
 \begin{algorithm}[H]
-	\caption{基于邻域的骨架抽取}
+	\caption{基于邻域的骨架方向计算}
 	\label{alg:sklextract}
 	\begin{algorithmic}[1] 
 		\Require 当前节点体素$V$
@@ -528,9 +528,9 @@ $\mathbf{v}$，而$\mathbf{v}$是否相似于$\mathbf{u}$还不得而知。因�
 	\end{algorithmic}
 \end{algorithm}
 
-\subsection{获取骨架半径}
-树木骨架的半径对树木模型的真实感有着十分显著的贡献，所以尽可能准确的获得骨架的
-半径信息能够有助于重建出极具真实感的树木模型。对于树木半径的获取方法也有许多，
+\subsection{获取子枝长度和半径}
+树木骨架的长度和半径对树木模型的真实感有着十分显著的贡献，所以尽可能准确的获得子枝的长度和
+半径信息能够有助于重建出极具真实感的树木模型。对于树木枝干半径的获取方法有许多，
 主要分为根据规则生成半径和从树木点云结构中获取半径两种方式。
 
 对于基于规则来生成半径，最简单的方法是对树木半径进行线性地递减，即$r=cR$，其中
@@ -539,7 +539,7 @@ $r$为子枝半径，$R$是父枝半径，$c$为一个线性倍数，这个倍�
 的树木父子枝直径的关系公式：$D^2=\sum_{i=1}^n{d_i^2}$，其中$D$为父枝直径，$d_i$为第
 $i$个子枝的直径，$n$为子枝的数量。这个公式被广泛地用于树木枝干的半径模拟。
 
-区别于基于规则的半径生成方法，本文为了进一步提升真实感，选择在进行骨架抽取的同时，
+区别于基于规则的半径生成方法，本文为了进一步提升真实感，选择在进行子枝方向抽取的同时，
 同样进行半径抽取的方法。注意，用该方法的前提是点云分布须均匀化，然而基于图像进行三维重建
 得到的树木点云会呈现表皮化的现象，这是由于图片上的点都是树木的表皮点，所以在得到
 三维点云后，是需要进行一些修复工作的，本文用随机点填充的方法对该点云模型进行了实心化
@@ -551,15 +551,15 @@ $i$个子枝的直径，$n$为子枝的数量。这个公式被广泛地用于�
 	\caption{骨架半径抽取}
 	\label{alg:radius}
 	\begin{algorithmic}[1] 
-		\Require 拟合出的当前骨架直线$L$
-		\Require 当前骨架的点集$\mathbb{S}$
-		\Ensure 当前骨架半径$R$
-		\State 初始化距离和$D_{sum}=0$
+		\Require 拟合出的当前子枝所在直线$L$
+		\Require 当前子枝的点集$\mathbb{S}$
+		\Ensure 当前子枝半径$R$
+		\State 初始化点到直线距离之和$D_{sum}=0$
 		\ForAll{空间点$P \in \mathbb{S}$}
 		\State 点到直线距离$D_{sum}+=CalculateDistance(P, L)$
 		\EndFor
 		\State 平均距离$D_{avg}=D_{sum}/\mathbb{S}.Count$
-		\State 骨架半径$R=D_{avg}*2$
+		\State 子枝半径$R=D_{avg}*2$
 		\State \Return $R$
 	\end{algorithmic}
 \end{algorithm}
@@ -582,6 +582,31 @@ $i$个子枝的直径，$n$为子枝的数量。这个公式被广泛地用于�
 	\caption{三种计算半径方法效果对比}
 	\label{fig:radius}
 \end{figure}
+
+对于骨架长度的估计，基于规则的生成则并不那么具有实践性，因为树木枝干的长度往往并不像半径那样
+随着父子关系而递减。相反地，它地规则往往要复杂许多，而且并没有统一的规则。基于此考虑，本文并
+没有对基于规则的长度估计进行实践，而是直接用与半径类似的方法，根据已拟合出的直线，试图从统计
+的角度对其枝条长度做出合理的估计。一个直观而可行的方法，是将当前节点与所有该方向邻域的点的连线向量
+投影到拟合出的直线方向向量上，这个投影的平均值的2倍，则可以估计为该方向子枝的长度。本文也给出了
+子枝长度估计的伪代码，列在了算法\ref{alg:length}中。
+
+\begin{algorithm}[H]
+	\caption{子枝长度抽取}
+	\label{alg:length}
+	\begin{algorithmic}[1] 
+		\Require 拟合出的当前子枝方向向量$L$，父节点$N$
+		\Require 当前子枝的点集$\mathbb{S}$
+		\Ensure 当前子枝长度$L$
+		\State 初始化父节点到邻域点的向量投影长度之和$D_{sum}=0$
+		\ForAll{空间点$P \in \mathbb{S}$}
+		\State 父节点到$P$的向量$Dir=P$.Position-$N$.Position
+		\State $Dir$在$L$上的投影距离$D_{sum}+=$CalculateProjectionLength$(Dir, L)$
+		\EndFor
+		\State 平均距离$D_{avg}=D_{sum}/\mathbb{S}.Count$
+		\State 子枝长度$L=D_{avg}*2$
+		\State \Return $L$
+	\end{algorithmic}
+\end{algorithm}
 
 %---------------------------------轻量化-----------------------------------
 \clearpage

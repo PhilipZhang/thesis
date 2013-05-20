@@ -47,14 +47,14 @@
 \newlabel{fig:3dfld}{{4.3}{19}{体素泛洪示意图\relax \relax }{figure.caption.15}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces 三维体素泛洪确定邻域范围\relax }}{20}{algorithm.4}}
 \newlabel{alg:3dfld}{{4}{20}{三维体素泛洪确定邻域范围\relax \relax }{algorithm.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}通过最小二乘法线性拟合确定分支}{20}{subsection.4.2.3}}
-\newlabel{subsec:leastsquares}{{4.2.3}{20}{通过最小二乘法线性拟合确定分支\relax }{subsection.4.2.3}{}}
-\newlabel{eq:line}{{4.10}{21}{通过最小二乘法线性拟合确定分支\relax }{equation.4.2.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}通过最小二乘法线性拟合确定分支方向}{20}{subsection.4.2.3}}
+\newlabel{subsec:leastsquares}{{4.2.3}{20}{通过最小二乘法线性拟合确定分支方向\relax }{subsection.4.2.3}{}}
+\newlabel{eq:line}{{4.10}{21}{通过最小二乘法线性拟合确定分支方向\relax }{equation.4.2.10}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces 线性拟合计算分支方向\relax }}{22}{figure.caption.16}}
 \newlabel{fig:fitting}{{4.4}{22}{线性拟合计算分支方向\relax \relax }{figure.caption.16}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces 基于邻域的骨架抽取\relax }}{22}{algorithm.5}}
-\newlabel{alg:sklextract}{{5}{22}{基于邻域的骨架抽取\relax \relax }{algorithm.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}获取骨架半径}{22}{subsection.4.2.4}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces 基于邻域的骨架方向计算\relax }}{22}{algorithm.5}}
+\newlabel{alg:sklextract}{{5}{22}{基于邻域的骨架方向计算\relax \relax }{algorithm.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}获取子枝长度和半径}{22}{subsection.4.2.4}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {6}{\ignorespaces 骨架半径抽取\relax }}{23}{algorithm.6}}
 \newlabel{alg:radius}{{6}{23}{骨架半径抽取\relax \relax }{algorithm.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces 三种计算半径方法效果对比\relax }}{24}{figure.caption.17}}
@@ -63,54 +63,56 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{((c))}{\ignorespaces {Leonardo规则生成}}}{24}{subfigure.4.5.3}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{((d))}{\ignorespaces {基于拟合的半径抽取}}}{24}{subfigure.4.5.4}}
 \newlabel{fig:radius}{{4.5}{24}{三种计算半径方法效果对比\relax \relax }{figure.caption.17}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {7}{\ignorespaces 子枝长度抽取\relax }}{25}{algorithm.7}}
+\newlabel{alg:length}{{7}{25}{子枝长度抽取\relax \relax }{algorithm.7}{}}
 \FN@pp@footnotehinttrue 
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}基于枝干合并的轻量化处理}{25}{section.4.3}}
-\newlabel{sec:branchcombine}{{4.3}{25}{基于枝干合并的轻量化处理\relax }{section.4.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}L-System的尝试}{25}{subsection.4.3.1}}
-\newlabel{subsec:lsystem}{{4.3.1}{25}{L-System的尝试\relax }{subsection.4.3.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.1}L-System简介}{25}{subsubsection.4.3.1.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.2}树木模型的参数化L-System规则抽取}{25}{subsubsection.4.3.1.2}}
-\newlabel{eq:turtle}{{4.12}{26}{树木模型的参数化L-System规则抽取\relax }{equation.4.3.12}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.3}使用L-System进行树木轻量化建模遇到的问题}{26}{subsubsection.4.3.1.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}树木轻量化？枝干合并！}{26}{subsection.4.3.2}}
-\newlabel{subsec:branchmerge}{{4.3.2}{26}{树木轻量化？枝干合并！\relax }{subsection.4.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces 树枝简化过程\relax }}{27}{figure.caption.18}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{((a))}{\ignorespaces {输入树枝骨架}}}{27}{subfigure.4.6.1}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{((b))}{\ignorespaces {合并AB、BC}}}{27}{subfigure.4.6.2}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{((c))}{\ignorespaces {合并AC、CD}}}{27}{subfigure.4.6.3}}
-\newlabel{fig:vert}{{4.6}{27}{树枝简化过程\relax \relax }{figure.caption.18}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {7}{\ignorespaces 纵向合并枝干\relax }}{28}{algorithm.7}}
-\newlabel{alg:vertical}{{7}{28}{纵向合并枝干\relax \relax }{algorithm.7}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {8}{\ignorespaces 横向合并枝干\relax }}{29}{algorithm.8}}
-\newlabel{alg:hori}{{8}{29}{横向合并枝干\relax \relax }{algorithm.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}基于枝干合并的轻量化处理}{26}{section.4.3}}
+\newlabel{sec:branchcombine}{{4.3}{26}{基于枝干合并的轻量化处理\relax }{section.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}L-System的尝试}{26}{subsection.4.3.1}}
+\newlabel{subsec:lsystem}{{4.3.1}{26}{L-System的尝试\relax }{subsection.4.3.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.1}L-System简介}{26}{subsubsection.4.3.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.2}树木模型的参数化L-System规则抽取}{26}{subsubsection.4.3.1.2}}
+\newlabel{eq:turtle}{{4.12}{27}{树木模型的参数化L-System规则抽取\relax }{equation.4.3.12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.3}使用L-System进行树木轻量化建模遇到的问题}{27}{subsubsection.4.3.1.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}树木轻量化？枝干合并！}{27}{subsection.4.3.2}}
+\newlabel{subsec:branchmerge}{{4.3.2}{27}{树木轻量化？枝干合并！\relax }{subsection.4.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces 树枝简化过程\relax }}{28}{figure.caption.18}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((a))}{\ignorespaces {输入树枝骨架}}}{28}{subfigure.4.6.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((b))}{\ignorespaces {合并AB、BC}}}{28}{subfigure.4.6.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((c))}{\ignorespaces {合并AC、CD}}}{28}{subfigure.4.6.3}}
+\newlabel{fig:vert}{{4.6}{28}{树枝简化过程\relax \relax }{figure.caption.18}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {8}{\ignorespaces 纵向合并枝干\relax }}{29}{algorithm.8}}
+\newlabel{alg:vertical}{{8}{29}{纵向合并枝干\relax \relax }{algorithm.8}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {9}{\ignorespaces 横向合并枝干\relax }}{30}{algorithm.9}}
+\newlabel{alg:hori}{{9}{30}{横向合并枝干\relax \relax }{algorithm.9}{}}
 \citation{quanlong,tanping,lichuan,tanping2,liu}
 \citation{quanlong}
 \citation{tanping}
 \citation{tanping2}
 \citation{lichuan}
 \citation{liu}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces 联合使用纵向和横向合并\relax }}{30}{figure.caption.19}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{((a))}{\ignorespaces {输入枝干骨架}}}{30}{subfigure.4.7.1}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{((b))}{\ignorespaces {纵向合并AC,CD}}}{30}{subfigure.4.7.2}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{((c))}{\ignorespaces {横向合并DE,DF}}}{30}{subfigure.4.7.3}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{((d))}{\ignorespaces {纵向合并AD,DE}}}{30}{subfigure.4.7.4}}
-\newlabel{fig:combine}{{4.7}{30}{联合使用纵向和横向合并\relax \relax }{figure.caption.19}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}建模还原度}{30}{section.4.4}}
-\newlabel{sec:qualityevaluation}{{4.4}{30}{建模还原度\relax }{section.4.4}{}}
-\@writefile{thm}{\contentsline {definition}{{定义}{4.{1}}{}}{30}{definition.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}图像序列信息量}{31}{subsection.4.4.1}}
-\@writefile{thm}{\contentsline {definition}{{定义}{4.{2}}{}}{31}{definition.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}三维重建还原度}{32}{subsection.4.4.2}}
-\@writefile{thm}{\contentsline {definition}{{定义}{4.{3}}{}}{32}{definition.4.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}骨架抽取还原度}{33}{subsection.4.4.3}}
-\@writefile{thm}{\contentsline {definition}{{定义}{4.{4}}{}}{33}{definition.4.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}建模还原度计算}{33}{subsection.4.4.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces 联合使用纵向和横向合并\relax }}{31}{figure.caption.19}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((a))}{\ignorespaces {输入枝干骨架}}}{31}{subfigure.4.7.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((b))}{\ignorespaces {纵向合并AC,CD}}}{31}{subfigure.4.7.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((c))}{\ignorespaces {横向合并DE,DF}}}{31}{subfigure.4.7.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{((d))}{\ignorespaces {纵向合并AD,DE}}}{31}{subfigure.4.7.4}}
+\newlabel{fig:combine}{{4.7}{31}{联合使用纵向和横向合并\relax \relax }{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}建模还原度}{31}{section.4.4}}
+\newlabel{sec:qualityevaluation}{{4.4}{31}{建模还原度\relax }{section.4.4}{}}
+\@writefile{thm}{\contentsline {definition}{{定义}{4.{1}}{}}{31}{definition.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}图像序列信息量}{32}{subsection.4.4.1}}
+\@writefile{thm}{\contentsline {definition}{{定义}{4.{2}}{}}{32}{definition.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}三维重建还原度}{33}{subsection.4.4.2}}
+\@writefile{thm}{\contentsline {definition}{{定义}{4.{3}}{}}{33}{definition.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}骨架抽取还原度}{34}{subsection.4.4.3}}
+\@writefile{thm}{\contentsline {definition}{{定义}{4.{4}}{}}{34}{definition.4.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}建模还原度计算}{34}{subsection.4.4.4}}
 \FN@pp@footnotehinttrue 
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}本章小节}{34}{section.4.5}}
-\newlabel{sec:conclusion}{{4.5}{34}{本章小节\relax }{section.4.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}本章小节}{35}{section.4.5}}
+\newlabel{sec:conclusion}{{4.5}{35}{本章小节\relax }{section.4.5}{}}
 \FN@pp@footnotehinttrue 
 \@setckpt{data/chap04}{
-\setcounter{page}{35}
+\setcounter{page}{36}
 \setcounter{equation}{13}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
@@ -138,7 +140,7 @@
 \setcounter{lotdepth}{1}
 \setcounter{pp@next@reset}{1}
 \setcounter{@fnserial}{0}
-\setcounter{endNonectr}{55}
+\setcounter{endNonectr}{57}
 \setcounter{currNonectr}{0}
 \setcounter{LT@tables}{0}
 \setcounter{LT@chunks}{0}
@@ -196,6 +198,6 @@
 \setcounter{ALG@blocknr}{10}
 \setcounter{ALG@storecount}{0}
 \setcounter{ALG@tmpcounter}{0}
-\setcounter{algorithm}{8}
+\setcounter{algorithm}{9}
 \setcounter{section@level}{0}
 }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.3.8)  20 MAY 2013 20:24
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.3.8)  20 MAY 2013 22:13
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -2209,12 +2209,16 @@ Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 
 [24 <./figures/rsample.jpg> <./figures/rlinear.png> <./figures/rsquare.png> <./
 figures/raffine.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 598--600
+Overfull \vbox (0.67021pt too high) has occurred while \output is active []
+
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 623--625
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--603
+Underfull \hbox (badness 10000) in paragraph at lines 625--628
 
  []
 
@@ -2222,7 +2226,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 600--603
 Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 
 
-[25
+[26
 
 ]
 Missing character: There is no Œ in font txr!
@@ -2231,57 +2235,53 @@ Missing character: There is no Œ in font txr!
 Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 
 
-[26] <figures/vert1.jpg, id=948, 207.977pt x 347.38875pt>
+[27] <figures/vert1.jpg, id=954, 207.977pt x 347.38875pt>
 File: figures/vert1.jpg Graphic file (type jpg)
 
-<use figures/vert1.jpg> <figures/vert2.jpg, id=949, 271.0125pt x 427.5975pt>
+<use figures/vert1.jpg> <figures/vert2.jpg, id=955, 271.0125pt x 427.5975pt>
 File: figures/vert2.jpg Graphic file (type jpg)
 
-<use figures/vert2.jpg> <figures/vert3.jpg, id=950, 266.9975pt x 430.60875pt>
+<use figures/vert2.jpg> <figures/vert3.jpg, id=956, 266.9975pt x 430.60875pt>
 File: figures/vert3.jpg Graphic file (type jpg)
 
 <use figures/vert3.jpg>
 Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 
 
-[27 <./figures/vert1.jpg> <./figures/vert2.jpg> <./figures/vert3.jpg>]
+[28 <./figures/vert1.jpg> <./figures/vert2.jpg> <./figures/vert3.jpg>]
 Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 
 
-[28] <figures/comb1.jpg, id=972, 220.825pt x 428.60126pt>
+[29] <figures/comb1.jpg, id=978, 220.825pt x 428.60126pt>
 File: figures/comb1.jpg Graphic file (type jpg)
 
-<use figures/comb1.jpg> <figures/comb2.jpg, id=973, 220.825pt x 428.60126pt>
+<use figures/comb1.jpg> <figures/comb2.jpg, id=979, 220.825pt x 428.60126pt>
 File: figures/comb2.jpg Graphic file (type jpg)
 
-<use figures/comb2.jpg> <figures/comb3.jpg, id=974, 220.825pt x 428.60126pt>
+<use figures/comb2.jpg> <figures/comb3.jpg, id=980, 220.825pt x 428.60126pt>
 File: figures/comb3.jpg Graphic file (type jpg)
 
-<use figures/comb3.jpg> <figures/comb4.jpg, id=975, 220.825pt x 428.60126pt>
+<use figures/comb3.jpg> <figures/comb4.jpg, id=981, 220.825pt x 428.60126pt>
 File: figures/comb4.jpg Graphic file (type jpg)
 
 <use figures/comb4.jpg>
 Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 
 
-[29]
+[30]
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
-nput line 792.
+nput line 817.
 
 Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 
 
-[30 <./figures/comb1.jpg> <./figures/comb2.jpg> <./figures/comb3.jpg> <./figure
+[31 <./figures/comb1.jpg> <./figures/comb2.jpg> <./figures/comb3.jpg> <./figure
 s/comb4.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 807--817
+Underfull \hbox (badness 10000) in paragraph at lines 832--842
 
  []
 
 
-Overfull \vbox (0.67021pt too high) has occurred while \output is active []
-
-
-[31]
 Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 
 
@@ -2289,148 +2289,152 @@ Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 
 
-[33]<<c7087.cmap>>)
+[33]
 Overfull \vbox (0.67021pt too high) has occurred while \output is active []
 
 
-[34
+[34]<<c7087.cmap>>)
+Overfull \vbox (0.67021pt too high) has occurred while \output is active []
+
+
+[35
 
 ]
 \openout2 = `data/chap05.aux'.
 
  (./data/chap05.tex
-<figures/sample1_1.jpg, id=1026, 161.60374pt x 214.8025pt>
+<figures/sample1_1.jpg, id=1032, 161.60374pt x 214.8025pt>
 File: figures/sample1_1.jpg Graphic file (type jpg)
 
 <use figures/sample1_1.jpg>
-<figures/sample1_2.jpg, id=1027, 161.60374pt x 214.8025pt>
+<figures/sample1_2.jpg, id=1033, 161.60374pt x 214.8025pt>
 File: figures/sample1_2.jpg Graphic file (type jpg)
 
 <use figures/sample1_2.jpg>
-<figures/sample1_3.jpg, id=1028, 161.60374pt x 214.8025pt>
+<figures/sample1_3.jpg, id=1034, 161.60374pt x 214.8025pt>
 File: figures/sample1_3.jpg Graphic file (type jpg)
 
 <use figures/sample1_3.jpg>
-<figures/sample1_4.jpg, id=1029, 161.60374pt x 214.8025pt>
+<figures/sample1_4.jpg, id=1035, 161.60374pt x 214.8025pt>
 File: figures/sample1_4.jpg Graphic file (type jpg)
 
 <use figures/sample1_4.jpg>
-<figures/sample1_5.jpg, id=1030, 161.60374pt x 214.8025pt>
+<figures/sample1_5.jpg, id=1036, 161.60374pt x 214.8025pt>
 File: figures/sample1_5.jpg Graphic file (type jpg)
 
 <use figures/sample1_5.jpg>
-<figures/sample1_6.jpg, id=1031, 161.60374pt x 214.8025pt>
+<figures/sample1_6.jpg, id=1037, 161.60374pt x 214.8025pt>
 File: figures/sample1_6.jpg Graphic file (type jpg)
 
 <use figures/sample1_6.jpg>
-<figures/sample1_7.jpg, id=1032, 161.60374pt x 214.8025pt>
+<figures/sample1_7.jpg, id=1038, 161.60374pt x 214.8025pt>
 File: figures/sample1_7.jpg Graphic file (type jpg)
 
 <use figures/sample1_7.jpg>
-<figures/sample1_8.jpg, id=1033, 161.60374pt x 214.8025pt>
+<figures/sample1_8.jpg, id=1039, 161.60374pt x 214.8025pt>
 File: figures/sample1_8.jpg Graphic file (type jpg)
 
 <use figures/sample1_8.jpg>
-<figures/sample1_9.jpg, id=1034, 161.60374pt x 214.8025pt>
+<figures/sample1_9.jpg, id=1040, 161.60374pt x 214.8025pt>
 File: figures/sample1_9.jpg Graphic file (type jpg)
 
 <use figures/sample1_9.jpg>
-<figures/sample1_10.jpg, id=1035, 161.60374pt x 214.8025pt>
+<figures/sample1_10.jpg, id=1041, 161.60374pt x 214.8025pt>
 File: figures/sample1_10.jpg Graphic file (type jpg)
 
 <use figures/sample1_10.jpg>
-<figures/sample1_11.jpg, id=1036, 161.60374pt x 214.8025pt>
+<figures/sample1_11.jpg, id=1042, 161.60374pt x 214.8025pt>
 File: figures/sample1_11.jpg Graphic file (type jpg)
 
 <use figures/sample1_11.jpg>
-<figures/sample1_12.jpg, id=1037, 161.60374pt x 214.8025pt>
+<figures/sample1_12.jpg, id=1043, 161.60374pt x 214.8025pt>
 File: figures/sample1_12.jpg Graphic file (type jpg)
 
 <use figures/sample1_12.jpg>
-<figures/sample1_13.jpg, id=1038, 161.60374pt x 214.8025pt>
+<figures/sample1_13.jpg, id=1044, 161.60374pt x 214.8025pt>
 File: figures/sample1_13.jpg Graphic file (type jpg)
 
 <use figures/sample1_13.jpg>
-<figures/sample1_14.jpg, id=1039, 161.60374pt x 214.8025pt>
+<figures/sample1_14.jpg, id=1045, 161.60374pt x 214.8025pt>
 File: figures/sample1_14.jpg Graphic file (type jpg)
 
 <use figures/sample1_14.jpg>
-<figures/sample1_15.jpg, id=1040, 161.60374pt x 214.8025pt>
+<figures/sample1_15.jpg, id=1046, 161.60374pt x 214.8025pt>
 File: figures/sample1_15.jpg Graphic file (type jpg)
 
 <use figures/sample1_15.jpg>
-<figures/sample1_16.jpg, id=1041, 161.60374pt x 214.8025pt>
+<figures/sample1_16.jpg, id=1047, 161.60374pt x 214.8025pt>
 File: figures/sample1_16.jpg Graphic file (type jpg)
 
 <use figures/sample1_16.jpg>
-<figures/sample1_17.jpg, id=1042, 161.60374pt x 214.8025pt>
+<figures/sample1_17.jpg, id=1048, 161.60374pt x 214.8025pt>
 File: figures/sample1_17.jpg Graphic file (type jpg)
 
 <use figures/sample1_17.jpg>
-<figures/sample1_18.jpg, id=1043, 161.60374pt x 214.8025pt>
+<figures/sample1_18.jpg, id=1049, 161.60374pt x 214.8025pt>
 File: figures/sample1_18.jpg Graphic file (type jpg)
 
 <use figures/sample1_18.jpg>
-<figures/sample1_19.jpg, id=1044, 161.60374pt x 214.8025pt>
+<figures/sample1_19.jpg, id=1050, 161.60374pt x 214.8025pt>
 File: figures/sample1_19.jpg Graphic file (type jpg)
 
 <use figures/sample1_19.jpg>
-<figures/sample1_20.jpg, id=1045, 161.60374pt x 214.8025pt>
+<figures/sample1_20.jpg, id=1051, 161.60374pt x 214.8025pt>
 File: figures/sample1_20.jpg Graphic file (type jpg)
 
 <use figures/sample1_20.jpg>
-<figures/sample2_1.jpg, id=1046, 161.60374pt x 214.8025pt>
+<figures/sample2_1.jpg, id=1052, 161.60374pt x 214.8025pt>
 File: figures/sample2_1.jpg Graphic file (type jpg)
 
 <use figures/sample2_1.jpg>
-<figures/sample2_2.jpg, id=1047, 161.60374pt x 214.8025pt>
+<figures/sample2_2.jpg, id=1053, 161.60374pt x 214.8025pt>
 File: figures/sample2_2.jpg Graphic file (type jpg)
 
 <use figures/sample2_2.jpg>
-<figures/sample2_3.jpg, id=1048, 161.60374pt x 214.8025pt>
+<figures/sample2_3.jpg, id=1054, 161.60374pt x 214.8025pt>
 File: figures/sample2_3.jpg Graphic file (type jpg)
 
 <use figures/sample2_3.jpg>
-<figures/sample2_4.jpg, id=1049, 161.60374pt x 214.8025pt>
+<figures/sample2_4.jpg, id=1055, 161.60374pt x 214.8025pt>
 File: figures/sample2_4.jpg Graphic file (type jpg)
 
 <use figures/sample2_4.jpg>
-<figures/sample2_5.jpg, id=1050, 161.60374pt x 214.8025pt>
+<figures/sample2_5.jpg, id=1056, 161.60374pt x 214.8025pt>
 File: figures/sample2_5.jpg Graphic file (type jpg)
 
 <use figures/sample2_5.jpg>
-<figures/sample2_6.jpg, id=1051, 161.60374pt x 214.8025pt>
+<figures/sample2_6.jpg, id=1057, 161.60374pt x 214.8025pt>
 File: figures/sample2_6.jpg Graphic file (type jpg)
 
 <use figures/sample2_6.jpg>
-<figures/sample2_7.jpg, id=1052, 161.60374pt x 214.8025pt>
+<figures/sample2_7.jpg, id=1058, 161.60374pt x 214.8025pt>
 File: figures/sample2_7.jpg Graphic file (type jpg)
 
 <use figures/sample2_7.jpg>
-<figures/sample2_8.jpg, id=1053, 161.60374pt x 214.8025pt>
+<figures/sample2_8.jpg, id=1059, 161.60374pt x 214.8025pt>
 File: figures/sample2_8.jpg Graphic file (type jpg)
 
 <use figures/sample2_8.jpg>
-<figures/sample2_9.jpg, id=1054, 161.60374pt x 214.8025pt>
+<figures/sample2_9.jpg, id=1060, 161.60374pt x 214.8025pt>
 File: figures/sample2_9.jpg Graphic file (type jpg)
 
 <use figures/sample2_9.jpg>
-<figures/sample2_10.jpg, id=1055, 161.60374pt x 214.8025pt>
+<figures/sample2_10.jpg, id=1061, 161.60374pt x 214.8025pt>
 File: figures/sample2_10.jpg Graphic file (type jpg)
 
 <use figures/sample2_10.jpg>
-<figures/sample2_11.jpg, id=1056, 161.60374pt x 214.8025pt>
+<figures/sample2_11.jpg, id=1062, 161.60374pt x 214.8025pt>
 File: figures/sample2_11.jpg Graphic file (type jpg)
 
 <use figures/sample2_11.jpg>
-<figures/sample2_12.jpg, id=1057, 161.60374pt x 214.8025pt>
+<figures/sample2_12.jpg, id=1063, 161.60374pt x 214.8025pt>
 File: figures/sample2_12.jpg Graphic file (type jpg)
 
 <use figures/sample2_12.jpg>
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[35
+[36
 
 
 
@@ -2441,119 +2445,119 @@ Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 <./figures/sample1_13.jpg> <./figures/sample1_14.jpg> <./figures/sample1_15.jpg
 > <./figures/sample1_16.jpg> <./figures/sample1_17.jpg> <./figures/sample1_18.j
 pg> <./figures/sample1_19.jpg> <./figures/sample1_20.jpg>]
-<figures/sample3_1.jpg, id=1090, 161.60374pt x 214.8025pt>
+<figures/sample3_1.jpg, id=1096, 161.60374pt x 214.8025pt>
 File: figures/sample3_1.jpg Graphic file (type jpg)
 
 <use figures/sample3_1.jpg>
-<figures/sample3_2.jpg, id=1091, 161.60374pt x 214.8025pt>
+<figures/sample3_2.jpg, id=1097, 161.60374pt x 214.8025pt>
 File: figures/sample3_2.jpg Graphic file (type jpg)
 
 <use figures/sample3_2.jpg>
-<figures/sample3_3.jpg, id=1092, 161.60374pt x 214.8025pt>
+<figures/sample3_3.jpg, id=1098, 161.60374pt x 214.8025pt>
 File: figures/sample3_3.jpg Graphic file (type jpg)
 
 <use figures/sample3_3.jpg>
-<figures/sample3_4.jpg, id=1093, 161.60374pt x 214.8025pt>
+<figures/sample3_4.jpg, id=1099, 161.60374pt x 214.8025pt>
 File: figures/sample3_4.jpg Graphic file (type jpg)
 
 <use figures/sample3_4.jpg>
-<figures/sample3_5.jpg, id=1094, 161.60374pt x 214.8025pt>
+<figures/sample3_5.jpg, id=1100, 161.60374pt x 214.8025pt>
 File: figures/sample3_5.jpg Graphic file (type jpg)
 
 <use figures/sample3_5.jpg>
-<figures/sample3_6.jpg, id=1095, 161.60374pt x 214.8025pt>
+<figures/sample3_6.jpg, id=1101, 161.60374pt x 214.8025pt>
 File: figures/sample3_6.jpg Graphic file (type jpg)
 
 <use figures/sample3_6.jpg>
-<figures/sample3_7.jpg, id=1096, 161.60374pt x 214.8025pt>
+<figures/sample3_7.jpg, id=1102, 161.60374pt x 214.8025pt>
 File: figures/sample3_7.jpg Graphic file (type jpg)
 
 <use figures/sample3_7.jpg>
-<figures/sample3_8.jpg, id=1097, 161.60374pt x 214.8025pt>
+<figures/sample3_8.jpg, id=1103, 161.60374pt x 214.8025pt>
 File: figures/sample3_8.jpg Graphic file (type jpg)
 
 <use figures/sample3_8.jpg>
-<figures/sample3_9.jpg, id=1098, 161.60374pt x 214.8025pt>
+<figures/sample3_9.jpg, id=1104, 161.60374pt x 214.8025pt>
 File: figures/sample3_9.jpg Graphic file (type jpg)
 
 <use figures/sample3_9.jpg>
-<figures/sample3_10.jpg, id=1099, 161.60374pt x 214.8025pt>
+<figures/sample3_10.jpg, id=1105, 161.60374pt x 214.8025pt>
 File: figures/sample3_10.jpg Graphic file (type jpg)
 
 <use figures/sample3_10.jpg>
-<figures/sample3_11.jpg, id=1100, 161.60374pt x 214.8025pt>
+<figures/sample3_11.jpg, id=1106, 161.60374pt x 214.8025pt>
 File: figures/sample3_11.jpg Graphic file (type jpg)
 
 <use figures/sample3_11.jpg>
-<figures/sample3_12.jpg, id=1101, 161.60374pt x 214.8025pt>
+<figures/sample3_12.jpg, id=1107, 161.60374pt x 214.8025pt>
 File: figures/sample3_12.jpg Graphic file (type jpg)
 
 <use figures/sample3_12.jpg>
-<figures/sample3_13.jpg, id=1102, 161.60374pt x 214.8025pt>
+<figures/sample3_13.jpg, id=1108, 161.60374pt x 214.8025pt>
 File: figures/sample3_13.jpg Graphic file (type jpg)
 
 <use figures/sample3_13.jpg>
-<figures/sample3_14.jpg, id=1103, 161.60374pt x 214.8025pt>
+<figures/sample3_14.jpg, id=1109, 161.60374pt x 214.8025pt>
 File: figures/sample3_14.jpg Graphic file (type jpg)
 
 <use figures/sample3_14.jpg>
-<figures/sample3_15.jpg, id=1104, 161.60374pt x 214.8025pt>
+<figures/sample3_15.jpg, id=1110, 161.60374pt x 214.8025pt>
 File: figures/sample3_15.jpg Graphic file (type jpg)
 
 <use figures/sample3_15.jpg>
-<figures/sample3_16.jpg, id=1105, 161.60374pt x 214.8025pt>
+<figures/sample3_16.jpg, id=1111, 161.60374pt x 214.8025pt>
 File: figures/sample3_16.jpg Graphic file (type jpg)
 
 <use figures/sample3_16.jpg>
-<figures/sample3_17.jpg, id=1106, 161.60374pt x 214.8025pt>
+<figures/sample3_17.jpg, id=1112, 161.60374pt x 214.8025pt>
 File: figures/sample3_17.jpg Graphic file (type jpg)
 
 <use figures/sample3_17.jpg>
-<figures/sample3_18.jpg, id=1107, 161.60374pt x 214.8025pt>
+<figures/sample3_18.jpg, id=1113, 161.60374pt x 214.8025pt>
 File: figures/sample3_18.jpg Graphic file (type jpg)
 
 <use figures/sample3_18.jpg>
-<figures/sample3_19.jpg, id=1108, 161.60374pt x 214.8025pt>
+<figures/sample3_19.jpg, id=1114, 161.60374pt x 214.8025pt>
 File: figures/sample3_19.jpg Graphic file (type jpg)
 
 <use figures/sample3_19.jpg>
-<figures/sample3_20.jpg, id=1109, 161.60374pt x 214.8025pt>
+<figures/sample3_20.jpg, id=1115, 161.60374pt x 214.8025pt>
 File: figures/sample3_20.jpg Graphic file (type jpg)
 
 <use figures/sample3_20.jpg>
-<figures/s1img1.jpg, id=1116, 645.41125pt x 861.2175pt>
+<figures/s1img1.jpg, id=1122, 645.41125pt x 861.2175pt>
 File: figures/s1img1.jpg Graphic file (type jpg)
 
 <use figures/s1img1.jpg>
-<figures/s1point1.png, id=1117, 578.16pt x 980.66376pt>
+<figures/s1point1.png, id=1123, 578.16pt x 980.66376pt>
 File: figures/s1point1.png Graphic file (type png)
 
 <use figures/s1point1.png>
-<figures/s1skl1.png, id=1118, 580.1675pt x 993.7125pt>
+<figures/s1skl1.png, id=1124, 580.1675pt x 993.7125pt>
 File: figures/s1skl1.png Graphic file (type png)
 
-<use figures/s1skl1.png> <figures/s1lw1.png, id=1119, 574.145pt x 996.72375pt>
+<use figures/s1skl1.png> <figures/s1lw1.png, id=1125, 574.145pt x 996.72375pt>
 File: figures/s1lw1.png Graphic file (type png)
 
 <use figures/s1lw1.png>
-<figures/s1img2.jpg, id=1120, 645.41125pt x 861.2175pt>
+<figures/s1img2.jpg, id=1126, 645.41125pt x 861.2175pt>
 File: figures/s1img2.jpg Graphic file (type jpg)
 
 <use figures/s1img2.jpg>
-<figures/s1point2.png, id=1121, 409.53pt x 968.61874pt>
+<figures/s1point2.png, id=1127, 409.53pt x 968.61874pt>
 File: figures/s1point2.png Graphic file (type png)
 
 <use figures/s1point2.png>
-<figures/s1skl2.png, id=1122, 440.64626pt x 987.69pt>
+<figures/s1skl2.png, id=1128, 440.64626pt x 987.69pt>
 File: figures/s1skl2.png Graphic file (type png)
  <use figures/s1skl2.png>
-<figures/s1lw2.png, id=1123, 425.59pt x 989.6975pt>
+<figures/s1lw2.png, id=1129, 425.59pt x 989.6975pt>
 File: figures/s1lw2.png Graphic file (type png)
  <use figures/s1lw2.png>
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[36 <./figures/sample2_1.jpg> <./figures/sample2_2.jpg> <./figures/sample2_3.jp
+[37 <./figures/sample2_1.jpg> <./figures/sample2_2.jpg> <./figures/sample2_3.jp
 g> <./figures/sample2_4.jpg> <./figures/sample2_5.jpg> <./figures/sample2_6.jpg
 > <./figures/sample2_7.jpg> <./figures/sample2_8.jpg> <./figures/sample2_9.jpg>
  <./figures/sample2_10.jpg> <./figures/sample2_11.jpg> <./figures/sample2_12.jp
@@ -2564,94 +2568,94 @@ g> <./figures/sample3_1.jpg> <./figures/sample3_2.jpg> <./figures/sample3_3.jpg
 > <./figures/sample3_13.jpg> <./figures/sample3_14.jpg> <./figures/sample3_15.j
 pg> <./figures/sample3_16.jpg> <./figures/sample3_17.jpg> <./figures/sample3_18
 .jpg> <./figures/sample3_19.jpg> <./figures/sample3_20.jpg>]
-<figures/s2img1.jpg, id=1166, 645.41125pt x 861.2175pt>
+<figures/s2img1.jpg, id=1172, 645.41125pt x 861.2175pt>
 File: figures/s2img1.jpg Graphic file (type jpg)
 
 <use figures/s2img1.jpg>
-<figures/s2point1.png, id=1167, 847.165pt x 969.6225pt>
+<figures/s2point1.png, id=1173, 847.165pt x 969.6225pt>
 File: figures/s2point1.png Graphic file (type png)
 
 <use figures/s2point1.png>
-<figures/s2skl1.png, id=1168, 832.10875pt x 976.64874pt>
+<figures/s2skl1.png, id=1174, 832.10875pt x 976.64874pt>
 File: figures/s2skl1.png Graphic file (type png)
 
-<use figures/s2skl1.png> <figures/s2lw1.png, id=1169, 823.075pt x 972.63374pt>
+<use figures/s2skl1.png> <figures/s2lw1.png, id=1175, 823.075pt x 972.63374pt>
 File: figures/s2lw1.png Graphic file (type png)
 
 <use figures/s2lw1.png>
-<figures/s2img2.jpg, id=1170, 645.41125pt x 861.2175pt>
+<figures/s2img2.jpg, id=1176, 645.41125pt x 861.2175pt>
 File: figures/s2img2.jpg Graphic file (type jpg)
 
 <use figures/s2img2.jpg>
-<figures/s2point2.png, id=1171, 664.4825pt x 849.1725pt>
+<figures/s2point2.png, id=1177, 664.4825pt x 849.1725pt>
 File: figures/s2point2.png Graphic file (type png)
 
 <use figures/s2point2.png>
-<figures/s2skl2.png, id=1172, 659.46375pt x 839.135pt>
+<figures/s2skl2.png, id=1178, 659.46375pt x 839.135pt>
 File: figures/s2skl2.png Graphic file (type png)
 
 <use figures/s2skl2.png>
-<figures/s2lw2.png, id=1173, 659.46375pt x 830.10126pt>
+<figures/s2lw2.png, id=1179, 659.46375pt x 830.10126pt>
 File: figures/s2lw2.png Graphic file (type png)
 
 <use figures/s2lw2.png>
-<figures/s3img1.jpg, id=1174, 645.41125pt x 861.2175pt>
+<figures/s3img1.jpg, id=1180, 645.41125pt x 861.2175pt>
 File: figures/s3img1.jpg Graphic file (type jpg)
 
 <use figures/s3img1.jpg>
-<figures/s3point1.png, id=1175, 892.33376pt x 934.49126pt>
+<figures/s3point1.png, id=1181, 892.33376pt x 934.49126pt>
 File: figures/s3point1.png Graphic file (type png)
 
-<use figures/s3point1.png> <figures/s3skl1.png, id=1176, 746.79pt x 847.165pt>
+<use figures/s3point1.png> <figures/s3skl1.png, id=1182, 746.79pt x 847.165pt>
 File: figures/s3skl1.png Graphic file (type png)
 
 <use figures/s3skl1.png>
-<figures/s3lw1.png, id=1177, 884.30376pt x 949.5475pt>
+<figures/s3lw1.png, id=1183, 884.30376pt x 949.5475pt>
 File: figures/s3lw1.png Graphic file (type png)
  <use figures/s3lw1.png>
-<figures/s3img2.jpg, id=1178, 645.41125pt x 861.2175pt>
+<figures/s3img2.jpg, id=1184, 645.41125pt x 861.2175pt>
 File: figures/s3img2.jpg Graphic file (type jpg)
 
 <use figures/s3img2.jpg>
-<figures/s3point2.png, id=1179, 685.56125pt x 925.4575pt>
+<figures/s3point2.png, id=1185, 685.56125pt x 925.4575pt>
 File: figures/s3point2.png Graphic file (type png)
 
 <use figures/s3point2.png>
-<figures/s3skl2.png, id=1180, 709.65125pt x 955.57pt>
+<figures/s3skl2.png, id=1186, 709.65125pt x 955.57pt>
 File: figures/s3skl2.png Graphic file (type png)
  <use figures/s3skl2.png>
-<figures/s3lw2.png, id=1181, 686.565pt x 935.495pt>
+<figures/s3lw2.png, id=1187, 686.565pt x 935.495pt>
 File: figures/s3lw2.png Graphic file (type png)
  <use figures/s3lw2.png>
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[37 <./figures/s1img1.jpg> <./figures/s1point1.png> <./figures/s1skl1.png> <./f
+[38 <./figures/s1img1.jpg> <./figures/s1point1.png> <./figures/s1skl1.png> <./f
 igures/s1lw1.png>]
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[38 <./figures/s1img2.jpg> <./figures/s1point2.png> <./figures/s1skl2.png> <./f
+[39 <./figures/s1img2.jpg> <./figures/s1point2.png> <./figures/s1skl2.png> <./f
 igures/s1lw2.png>]
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[39 <./figures/s2img1.jpg> <./figures/s2point1.png> <./figures/s2skl1.png> <./f
+[40 <./figures/s2img1.jpg> <./figures/s2point1.png> <./figures/s2skl1.png> <./f
 igures/s2lw1.png>]
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[40 <./figures/s2img2.jpg> <./figures/s2point2.png> <./figures/s2skl2.png> <./f
+[41 <./figures/s2img2.jpg> <./figures/s2point2.png> <./figures/s2skl2.png> <./f
 igures/s2lw2.png>]
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[41 <./figures/s3img1.jpg> <./figures/s3point1.png> <./figures/s3skl1.png> <./f
+[42 <./figures/s3img1.jpg> <./figures/s3point1.png> <./figures/s3skl1.png> <./f
 igures/s3lw1.png>]
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[42 <./figures/s3img2.jpg> <./figures/s3point2.png> <./figures/s3skl2.png> <./f
+[43 <./figures/s3img2.jpg> <./figures/s3point2.png> <./figures/s3skl2.png> <./f
 igures/s3lw2.png>]
 LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 27
 1.
@@ -2674,11 +2678,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 280--298
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[43])
+[44])
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[44]
+[45]
 \openout2 = `data/chap06.aux'.
 
  (./data/chap06.tex
@@ -2690,7 +2694,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 Overfull \vbox (0.61754pt too high) has occurred while \output is active []
 
 
-[45
+[46
 
 
 
@@ -2698,14 +2702,14 @@ Overfull \vbox (0.61754pt too high) has occurred while \output is active []
 Overfull \vbox (0.61754pt too high) has occurred while \output is active []
 
 
-[46]
+[47]
 \openout2 = `data/ack.aux'.
 
  (./data/ack.tex)
 Overfull \vbox (0.99731pt too high) has occurred while \output is active []
 
 
-[47
+[48
 
 
 
@@ -2717,7 +2721,7 @@ Overfull \vbox (0.99731pt too high) has occurred while \output is active []
 Overfull \vbox (0.99731pt too high) has occurred while \output is active []
 
 
-[48
+[49
 
 
 
@@ -2733,7 +2737,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
 (./data/chap04.aux) (./data/chap05.aux) (./data/chap06.aux) (./data/ack.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: DF524DE75A28BC0AE10F02A74B4573F2;8372.
+(rerunfilecheck)             Checksum: B87285BCD60EF7818BC07863B7B05895;8412.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2741,15 +2745,18 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 32800 strings out of 495046
- 621000 string characters out of 3181473
- 739124 words of memory out of 3000000
- 33630 multiletter control sequences out of 15000+200000
- 191337 words of font info for 571 fonts, out of 3000000 for 9000
+ 32810 strings out of 495046
+ 621157 string characters out of 3181473
+ 739226 words of memory out of 3000000
+ 33636 multiletter control sequences out of 15000+200000
+ 191635 words of font info for 572 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  56i,12n,76p,669b,2114s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{algorithm.8} has been referenced but does not exi
+pdfTeX warning (dest): name{algorithm.9} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{algorithm.8} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{algorithm.7} has been referenced but does not exist
 , replaced by a fixed one
@@ -3018,9 +3025,9 @@ ve-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong9c.pfb></usr/share
 ff.pfb></usr/share/texlive-bin/current/texmf-dist/fonts/type1/urw/times/utmb8a.
 pfb></usr/share/texlive-bin/current/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/share/texlive-bin/current/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (53 pages, 17522361 bytes).
+Output written on thesis.pdf (54 pages, 17527493 bytes).
 PDF statistics:
- 2039 PDF objects out of 2073 (max. 8388607)
- 276 named destinations out of 1000 (max. 500000)
+ 2046 PDF objects out of 2073 (max. 8388607)
+ 278 named destinations out of 1000 (max. 500000)
  1565 words of extra memory for PDF output out of 10000 (max. 10000000)
 
