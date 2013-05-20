@@ -128,9 +128,9 @@ $\mathbf{u}$和$\mathbf{v}$在邻域窗口大小内的差异最小化。
 LK光流法的迭代序列。通过这样多分辨率图层，使得邻域窗口的大小在低分辨率图像对应的区域可以映射到高
 分辨率图像的更大的像素区域，从而支持了大块运动。
 
-\subsection{改进的PyrLK光流算法}
+\subsection{PyrLK光流算法的改进}
 \label{subsec:revisedpyrlk}
-\subsubsection{加入放射变换}
+\subsubsection{加入仿射变换}
 对于PyrLK光流算法，已经能够很好的解决几乎任何像素块大小由平移主导的匹配。然而，这并不足以完美地
 解决树木上点的匹配问题。因为相邻的两帧图像要求在空间形成一定的夹角进行拍摄，这样在两帧图像上，
 也一定会产生由空间旋转投影过后带来的平面旋转。而这样的变换在PyrLK光流算法里是无法解决的，因为PyrLK
@@ -189,20 +189,92 @@ LK光流法的迭代序列。通过这样多分辨率图层，使得邻域窗口
 \end{equation}
 
 
-\subsubsection{提高鲁棒性}
+\subsubsection{反向追踪与中值过滤以提高鲁棒性}
 本文前面几个小节一直在探讨如何改进和完善匹配的方法，从而提高精度和匹配可信度。然而，
 这其中有一个问题，单方向的去追踪匹配点是否就能确定该两个匹配点真正的匹配呢？其实不然，
 要确定两个点完全符合之前算法描述的特点，还需要反向进行检查，看$\mathbf{u}$和$\mathbf{v}$之间
 的匹配是否是双向和可逆的。换句话说，本文之前定义的“相似”其实是单方面的$\mathbf{u}$相似于
 $\mathbf{v}$，而$\mathbf{v}$是否相似于$\mathbf{u}$还不得而知。因此，考虑到算法的完整性和鲁棒性，
-有必要进行反向的匹配来确定它们完全匹配。或者退一步，给出一个容错的区间，定义当差异度小于多少
-时，两个点“相似”。本文采用后一种容错的机制。算法表1给出了经过添加仿射变换支持和提高鲁棒性的PyrLK
-光流法算法的伪代码：\\
+有必要进行反向的匹配来确定它们完全匹配。或者退一步，给出一个容错的区间，定义当差异度小于阈值
+时，两个点“相似”。基于此出发点，本文提出了基于反向追踪来对匹配对进行验证的思想。
+
+另外，对于任何的匹配算法，不可能真正地达到完美和全部匹配。所以对于用金字塔LK光流法进行匹配过后，
+应该进行一定地筛选措施，以除去一些“边缘化”的匹配，使得所有匹配对都能有更高的可信度，而不是完全
+依赖于算法的实际表现情况。本文提出了基于中值过滤的筛选方法，该方法将对两个步骤进行中值滤值：\\
+\begin{itemize}
+	\item \textbf{邻域相似度中值过滤}: 在实施过光流算法以后，对于每两个匹配的点，计算其归一化相关系数，作为其相似度。归一化相关
+		系数的计算式如下:
+		\begin{equation} \label{eq:ccoeff}
+			R(x,y) = \frac{\sum_{x',y'}(T'(x',y')\cdot I'(x + x', y + y'))}
+			{\sqrt{\sum_{x', y'}T'(x',y')^2\cdot \sum_{x',y'}I'(x+x',y+y')^2}}
+		\end{equation}
+		然后计算所有匹配对的相似度中值，对于低于这个中值的点对，本文将
+		视其为不满足可信度的点对而剔除掉。
+	\item \textbf{反向追踪差异度中值过滤}: 在进行反向追踪过后，每个点对将得到一个差异值，表示从后一帧图片的点到
+		反向追踪得到的点与前一帧图像的对应点的空间位置差。本文对于反向追踪差异度低于中值的点对进行剔除，
+		视其为不满足可信度的点对。
+\end{itemize}
+
+经过反向追踪和中值过滤还剩下的匹配点对，本文视为可信的匹配点对，该步骤对于提高算法的鲁棒性尤为
+重要。算法\ref{alg:backtrack}给出了反向追踪和中值过滤的伪代码:\\
 \begin{algorithm}[H]
-	\label{alg:pyrlk}
-	\caption{支持仿射变换和容错机制的PyrLK光流法}
+	\caption{反向追踪\&中值过滤}
+	\label{alg:backtrack}
 	\begin{algorithmic}[1]
-		\Require 图像$I$,$J$,图像$I$中的点$\mathbf{u}$,容错阈值$\mu$
+	\Require 反向追踪差异度数组$\mathbb{B}[1..n]$,邻域相似度数组$\mathbb{S}[1..n]$
+	\Require 源匹配点对数组$\mathbb{P}$
+	\Ensure 过滤后匹配点对数组$\mathbb{Q}$
+	\State 初始化反向追踪差异度中值mb,邻域相似度中值ms
+	\State SortArray($\mathbb{B}[1..n]$)
+	\State SortArray($\mathbb{S}[1..n]$)
+	\State $mid=(n+1)/2$
+	\State $mb=\mathbb{B}[mid],\quad ms=\mathbb{S}[mid]$
+	\For{$i=1$ to $n$}
+	\If{$\mathbb{B}[i] < mb \cap \mathbb{S}[i] > ms$}
+		\State $\mathbb{Q}.AddMatch(\mathbb{P}[i])$
+	\EndIf
+	\EndFor
+	\State \Return $\mathbb{Q}$
+	\end{algorithmic}
+\end{algorithm}
+
+\subsection{支持仿射变换和提高鲁棒性的的PyrLK光流法}
+经过仿射变换支持和提高鲁棒性的PyrLK光流法比起传统的PyrLK光流法，其适应性和稳定性都有
+大大的提升。其主要表现在：\\
+\begin{itemize}
+	\item \textbf{对旋转的支持}: 加入了仿射变换意味着新的匹配算法能够很好的适应从三维场景
+		旋转而投影形成的二维的旋转，而本文对树木的拍摄每一帧都是在上一帧的基础上进行三维的
+		空间旋转，所以对旋转的支持可以大大提升匹配的准确性。
+	\item \textbf{匹配验证}: 对于每一对匹配点，本文运用归一化相关系数对它们的邻域的相似性
+		做进一步验证，只有通过相似匹配验证的点对，本文才认为是真正相似的点对。
+	\item \textbf{剔除不稳定匹配}: 单方向的匹配不能确认两个点真正的匹配，所以本文的反向追踪
+		可以对匹配进行双向的确认，从而剔除不满足反向追踪匹配的点对。以进一步提高算法的鲁棒性。
+\end{itemize}
+
+图\ref{fig:pyrlk}展示了传统的PyrLK光流法与本文的改进版本的对比。这里的图片用了不同的颜色通道来表示，
+其中绿色通道代表源图片，紫色通道代表目的图片，用红色的线段表示图片间点的匹配关系。从图\ref{fig:pyrlk}(a)中可以发现，
+传统的PyrLK光流算法几乎没有任何的验证措施，所以导致其出现了大量的错误匹配。比如图中远处的树林，
+由于其离观察原点比较远，所以视角的转动会导致其运动位移较大，然而图\ref{fig:pyrlk}(a)中所示远处森里的光流值并不大，还有图中
+近处的树木样本的匹配也非常不准确，有相当一部分点匹配到了背景上面去，这必然会使重建过程中由于错误信息
+而重建出错误的点云。而图\ref{fig:pyrlk}(b)总，无论是远处大位移的树林还是近处的树木
+枝条，光流值的大小都比较合适，而且匹配度是相当高的。可见改进版本比传统版本对于树木特征点的匹配有明显的提高，
+由于图片特征点匹配是重建步骤中的第一步，所以准确和稳定的匹配对于后期的重建工作至关重要，它将使得后期的工作事半功倍。
+\begin{figure}[H]
+	\centering
+	\subfloat[传统PyrLK光流法]{\includegraphics[height=10cm]{old.png}}\hspace{4em}
+	\subfloat[改进的PyrLK光流法]{\includegraphics[height=10cm]{new.png}}
+	\caption{支持仿射变换和提高鲁棒性的PyrLK光流法与传统光流法对比图}
+	\label{fig:pyrlk}
+\end{figure}
+
+
+\clearpage
+算法\ref{alg:pyrlk}给出了经过添加仿射变换支持和提高鲁棒性的PyrLK光流法算法的伪代码：\\
+\begin{algorithm}[H]
+	\caption{支持仿射变换和容错机制的PyrLK光流法}
+	\label{alg:pyrlk}
+	\begin{algorithmic}[1]
+		\Require 图像$I$,$J$,图像$I$中的点$\mathbf{u}$
 		\Ensure 图像$J$中对应点$\mathbf{v}$
 		\State 构建图像$I$和$J$的金字塔表示: $\{I^L\}_{L=0,...,L_m}$和$\{J^L\}_{L=0,...,L_m}$
 		\State 初始化金字塔估计值: $g^{L_{m}}=(g_x^{L_m}, g_y^{L_m})=(0,0)$
@@ -218,9 +290,12 @@ $\mathbf{v}$，而$\mathbf{v}$是否相似于$\mathbf{u}$还不得而知。因�
 		\EndFor
 		\State 最终光流向量: $\mathbf{d}=\mathbf{g^0}+\mathbf{d^0}$
 		\State $\mathbf{v}=\mathbf{u+d}$
-		\State 将$\mathbf{v}$作为输入点求出对应点$\mathbf{u'}$
-		\If{Distance$(\mathbf{u,u'})<\mu$}
-			\State \Return $\mathbf{v}$
+		\If{BackwardTrack$(\mathbf{v})$ = true}
+			\If{MedianFilter$(\mathbf{v})$ = true}
+				\State \Return $\mathbf{v}$
+			\Else
+				\State \Return NULL
+			\EndIf
 		\Else
 			\State \Return NULL
 		\EndIf
@@ -232,6 +307,7 @@ $\mathbf{v}$，而$\mathbf{v}$是否相似于$\mathbf{u}$还不得而知。因�
 %\label{sec:3drec}
 
 %---------------------------------骨架抽取-----------------------------------
+\clearpage
 \section{基于三维体素泛洪与线性拟合的三维树木骨架抽取}
 \label{sec:sklextract}
 在获取了精确的点云模型之后，出于后续轻量化的考虑，需要将模型的存储方式由
@@ -255,7 +331,7 @@ $\mathbf{v}$，而$\mathbf{v}$是否相似于$\mathbf{u}$还不得而知。因�
 步长范围体素中的点集遍历即可。由于体素是我们处理的基本单位，所以体素的大小也
 直接决定了体素模型的精度，因此，在确保非空体素的空间连续性和效率允许的基础上，
 本文建议让体素尽可能的小，以保证模型的精度。将点云模型转换为体素模型的伪代码
-在算法表2中给出。图\ref{fig:voxel}形象地展示了将空间体素化以后树木的点云模型
+在算法\ref{alg:voxel}中给出。图\ref{fig:voxel}形象地展示了将空间体素化以后树木的点云模型
 在体素块中的分布情况。
 
 \begin{figure}[H]
@@ -267,7 +343,8 @@ $\mathbf{v}$，而$\mathbf{v}$是否相似于$\mathbf{u}$还不得而知。因�
 
 \begin{algorithm}[H]
 	\caption{点云模型体素化}
-\begin{algorithmic}[1]
+	\label{alg:voxel}
+	\begin{algorithmic}[1] 
 	\Require 点云模型$M$
 	\Require 体素维度$d$
 	\Ensure 三维体素数组$\mathbb{V}[1..d,1..d,1..d]$
@@ -314,9 +391,10 @@ $\mathbf{v}$，而$\mathbf{v}$是否相似于$\mathbf{u}$还不得而知。因�
 	\label{fig:3dfld}
 \end{figure}
 
-三维体素泛洪确定邻域范围算法的伪代码在算法表3中给出。
-\begin{algorithm}[H] \label{alg:3dfld}
+三维体素泛洪确定邻域范围算法的伪代码在算法\ref{alg:3dfld}中给出。
+\begin{algorithm}[H] 
 	\caption{三维体素泛洪确定邻域范围}
+	\label{alg:3dfld}
 	\begin{algorithmic}[1]
 		\Require 当前体素$C$，三维体素数组$\mathbb{V}[1..d,1..d,1..d]$，
 		泛洪方向数组$\mathbb{D}[1..27]$，邻域范围增长比例阈值$\lambda$
@@ -432,12 +510,13 @@ $\mathbf{v}$，而$\mathbf{v}$是否相似于$\mathbf{u}$还不得而知。因�
 	\label{fig:fitting}
 \end{figure}
 
-算法表4中给出了得到邻域信息后进行骨架抽取的伪代码，其中\textit{Least Squares Processing}表示运用最小二乘法进行
+算法\ref{alg:sklextract}给出了得到邻域信息后进行骨架抽取的伪代码，其中\textit{Least Squares Processing}表示运用最小二乘法进行
 线性拟合。
 
 \begin{algorithm}[H]
 	\caption{基于邻域的骨架抽取}
-	\begin{algorithmic}[1]
+	\label{alg:sklextract}
+	\begin{algorithmic}[1] 
 		\Require 当前节点体素$V$
 		\Require 骨架方向数组$\mathbb{D}[1..n]$
 		\Ensure 当前节点子节点集合$\mathbb{S}$
@@ -466,11 +545,12 @@ $i$个子枝的直径，$n$为子枝的数量。这个公式被广泛地用于�
 三维点云后，是需要进行一些修复工作的，本文用随机点填充的方法对该点云模型进行了实心化
 的修复。当点云分布满足均匀化时，在对某个骨架进行拟合之后，对于拟合出来的直线，来计算
 所有参加拟合该直线的点到该直线的平均距离$D_{avg}$，然后就可以计算该骨架的半径$R=D_{avg}*2$。
-由于点云分布均匀，所以半径显然就是平均距离的2倍。该算法的伪代码在算法表5中给出。\\
+由于点云分布均匀，所以半径显然就是平均距离的2倍。该算法的伪代码在算法\ref{alg:radius}中给出。\\
 
 \begin{algorithm}[H]
 	\caption{骨架半径抽取}
-	\begin{algorithmic}[1]
+	\label{alg:radius}
+	\begin{algorithmic}[1] 
 		\Require 拟合出的当前骨架直线$L$
 		\Require 当前骨架的点集$\mathbb{S}$
 		\Ensure 当前骨架半径$R$
@@ -504,6 +584,7 @@ $i$个子枝的直径，$n$为子枝的数量。这个公式被广泛地用于�
 \end{figure}
 
 %---------------------------------轻量化-----------------------------------
+\clearpage
 \section{基于枝干合并的轻量化处理}
 \label{sec:branchcombine}
 用基于多方向迭代与步长探索得到的三维树木骨架通常是很细致和准确的，尽管它相对于
@@ -585,7 +666,7 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 和\textbf{CD}合并。在图\ref{fig:vert}(c)中，由于节点\textbf{D}有两个孩子，所以不对其进行合并
 操作。
 
-纵向合并算法的伪代码在算法表6中给出。
+纵向合并算法的伪代码在算法\ref{alg:vertical}中给出。
 
 \begin{figure}[H]
 	\centering
@@ -603,7 +684,8 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 
 \begin{algorithm}[H]
 	\caption{纵向合并枝干}
-	\begin{algorithmic}[1]
+	\label{alg:vertical}
+	\begin{algorithmic}[1] 
 		%\Comment {根据纵向合并角度参数，以当前节点为发起点递归式地纵向合并枝干}
 		\Require 纵向合并角度$\alpha$
 		\Require 当前节点$N$
@@ -630,12 +712,13 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 
 横向合并指的是对叶子节点和与其夹角小于阈值的兄弟节点进行合并。之所以只对叶子节点进行合并，是
 因为非叶子节点下面都有若干棵子树，若对它们进行合并，必须对它们下面的子树也进行合并。而合并子树
-显然就使得真实感下降很大，因为这不只是局部微调，而是若干子树的变动。横向合并的伪代码在算法表7中
+显然就使得真实感下降很大，因为这不只是局部微调，而是若干子树的变动。横向合并的伪代码在算法\ref{alg:hori}中
 给出。
 
 \begin{algorithm}[H]
 	\caption{横向合并枝干}
-\begin{algorithmic}[1]
+	\label{alg:hori}
+	\begin{algorithmic}[1] 
 	\Require 初始化横向合并角度$\beta$
 	\Require 设定当前节点$N$
 	\Ensure None
@@ -795,6 +878,7 @@ $i$张图像上在树木轮廓外的点的数量，因此$P_i+O_i$自然就表�
 	\mathbb{Q}= (1-(\frac{a}{b})^n)\cdot \frac{1}{n}\sum_{i=1}^n \frac{P_i}{P_i+O_i} \cdot \frac{S}{N}
 \end{equation}
 
+\clearpage
 \section{本章小节}
 \label{sec:conclusion}
 本章具体阐述了基于图像树木轻量化建模所涉及的一些算法。
