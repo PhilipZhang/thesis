@@ -1,307 +1,308 @@
+\chapter{基于三维体素泛洪与线性拟合的三维树木骨架抽取}
+\label{sec:sklextract}
+在获取了精确的点云模型之后，出于后续轻量化的考虑，需要将模型的存储方式由
+密集的点云转化为逻辑的父子结构。用树形的数据结构来表达现实的树结构，这是很
+自然的想法，相对于面片结构，树形结构也是一种更为轻量化的存储方式。每个节点表示
+树枝的起点，存储着该节点的空间位置，半径和该节点的父子枝信息以及兄弟信息。一个
+节点和它的一个子节点形成一个空间线段，若干空间线段组成一条连续的树枝。
 
-\chapter{实验过程与分析}
+本文从树的生长规律入手，从根节点往子节点生长。生长的依据则为当前节点所在邻域
+内的空间点云分布，节点邻域大小由步长来控制，步长会探索式地递增，直到达到了增长的阈值，
+邻域大小才确定下来。然后从其点云分布拟合出各个分支的方向，从而生长出新的子节点，
+并递归地生长下去直到点云的边界。
 
-\section{实验环境}
-对于前面提出的基于图像的树木轻量化建模方法，本文做了大量实验验证了其可行性。
-本文使用的拍摄工具是高分辨率安卓手机索尼LT26ii，该手机最高分辨率能达到4000x3000，
-已经足够实验的需求。拍摄地点为同济大学嘉定校区以及某住宅小区。本文实验所使用计算机
-操作系统平台为XUbuntu 12.04，CPU为双核Intel(R) Core(TM) i5-3230M @ 2.60GHz。显卡为
-NVidia GeForce GT750M。 所有实验程序均使用C/C++语言完成，使用g++编译器进行编译，
-同时使用OpenGL version 4.3图形硬件接口来完成可视化工作。
+\section{三维体素模型}
+前面三维重建步骤得到的结果是一个点云模型，该模型中的点数量庞大，不适于后续的
+邻域搜索，因此我们需要对点云进行体素化处理。所谓体素化，就是将点云占据的空间
+划分成一个个的小立方体，每一个立方体称之为一个体素。
 
-\section{实验结果与分析}
-本文以三棵树的建模结果作为展示和分析的依据，其中第一棵树拍摄帧数为20帧，见图\ref{fig:sample1}。
-第二棵树的拍摄帧数为12帧，见图\ref{fig:sample2}。第三棵树的拍摄帧数为20帧，见图\ref{fig:sample3}。
+在将点云模型转化为体素模型以后，对于点云的邻域搜索便转化为了对于空间临近体素的
+搜索，体素的位置就反映了点集的位置，因此不用每次搜索都遍历整个点云，而是只用将
+步长范围体素中的点集遍历即可。由于体素是我们处理的基本单位，所以体素的大小也
+直接决定了体素模型的精度，因此，在确保非空体素的空间连续性和效率允许的基础上，
+本文建议让体素尽可能的小，以保证模型的精度。将点云模型转换为体素模型的伪代码
+在算法\ref{alg:voxel}中给出。图\ref{fig:voxel}形象地展示了将空间体素化以后树木的点云模型
+在体素块中的分布情况。
 
-% sample 1
-\begin{figure}[H]
-	\captionsetup[subfigure]{labelformat=empty}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_1.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_2.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_3.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_4.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_5.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_6.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_7.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_8.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_9.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_10.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_11.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_12.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_13.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_14.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_15.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_16.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_17.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_18.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_19.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample1_20.jpg}}
-	\hspace{1mm}
-	\caption{树木1图像序列，帧数为20帧，拍摄地点为某住宅小区}
-	\label{fig:sample1}
-\end{figure}
-
-% sample 2
-\begin{figure}[H]
-	\captionsetup[subfigure]{labelformat=empty}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample2_1.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample2_2.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample2_3.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample2_4.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample2_5.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample2_6.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample2_7.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample2_8.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample2_9.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample2_10.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample2_11.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample2_12.jpg}}
-	\caption{树木2图像序列，帧数为12帧，拍摄地点为同济大学嘉定校区}
-	\label{fig:sample2}
-\end{figure}
-
-
-% sample 3
-\begin{figure}[H]
-	\captionsetup[subfigure]{labelformat=empty}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_1.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_2.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_3.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_4.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_5.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_6.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_7.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_8.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_9.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_10.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_11.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_12.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_13.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_14.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_15.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_16.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_17.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_18.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_19.jpg}}
-	\hspace{1mm}
-	\subfloat[]{
-	\includegraphics[height=2cm]{sample3_20.jpg}}
-	\hspace{1mm}
-	\caption{树木3图像序列，帧数为20帧，拍摄地点为同济大学嘉定校区}
-	\label{fig:sample3}
-\end{figure}
-
-本文还给出了每个图片序列三维重建出的点云模型、从点云模型中直接抽取的骨架模型以及
-经过枝干合并方法轻量化得到的骨架模型。为了从直观上比较重建模型和图片序列的相似度，
-本文从正面和侧面对所得模型进行投影，以方便从二维的视角判断其相似程度。图\ref{fig:s1proj1}和
-图\ref{fig:s1proj2}分别给出了树木样本1在正面投影和侧面投影的比对情况。图\ref{fig:s2proj1}和
-图\ref{fig:s2proj2}分别给出了树木样本2在正面投影和侧面投影的比对情况。图\ref{fig:s3proj1}和
-图\ref{fig:s3proj2}分别给出了树木样本3在正面投影和侧面投影的比对情况。
 \begin{figure}[H]
 	\centering
-	\subfloat[树木正面图像]{\includegraphics[width=6cm]{s1img1.jpg}}\hspace{3em}
-	\subfloat[树木点云模型]{\includegraphics[width=6cm]{s1point1.png}}\hspace{3em}
-	\subfloat[树木骨架模型]{\includegraphics[width=6cm]{s1skl1.png}}\hspace{3em}
-	\subfloat[树木轻量化骨架模型]{\includegraphics[width=6cm]{s1lw1.png}}\hspace{3em}
-	\caption{树木样本1正面投影比对}
-	\label{fig:s1proj1}
-\end{figure}
-\begin{figure}
-	\centering
-	\subfloat[树木侧面图像]{\includegraphics[width=4.5cm]{s1img2.jpg}}\hspace{3em}
-	\subfloat[树木点云模型]{\includegraphics[width=4.5cm]{s1point2.png}}\hspace{3em}
-	\subfloat[树木骨架模型]{\includegraphics[width=4.5cm]{s1skl2.png}}\hspace{3em}
-	\subfloat[树木轻量化骨架模型]{\includegraphics[width=4.5cm]{s1lw2.png}}\hspace{3em}
-	\caption{树木样本1侧面投影比对}
-	\label{fig:s1proj2}
-\end{figure}
-\begin{figure}
-	\centering
-	\subfloat[树木正面图像]{\includegraphics[width=6cm]{s2img1.jpg}}\hspace{3em}
-	\subfloat[树木点云模型]{\includegraphics[width=6cm]{s2point1.png}}\hspace{3em}
-	\subfloat[树木骨架模型]{\includegraphics[width=6cm]{s2skl1.png}}\hspace{3em}
-	\subfloat[树木轻量化骨架模型]{\includegraphics[width=6cm]{s2lw1.png}}\hspace{3em}
-	\caption{树木样本2正面投影比对}
-	\label{fig:s2proj1}
-\end{figure}
-\begin{figure}
-	\centering
-	\subfloat[树木侧面图像]{\includegraphics[width=6cm]{s2img2.jpg}}\hspace{3em}
-	\subfloat[树木点云模型]{\includegraphics[width=6cm]{s2point2.png}}\hspace{3em}
-	\subfloat[树木骨架模型]{\includegraphics[width=6cm]{s2skl2.png}}\hspace{3em}
-	\subfloat[树木轻量化骨架模型]{\includegraphics[width=6cm]{s2lw2.png}}\hspace{3em}
-	\caption{树木样本2侧面投影比对}
-	\label{fig:s2proj2}
-\end{figure}
-\begin{figure}
-	\centering
-	\subfloat[树木正面图像]{\includegraphics[width=6cm]{s3img1.jpg}}\hspace{3em}
-	\subfloat[树木点云模型]{\includegraphics[width=6cm]{s3point1.png}}\hspace{3em}
-	\subfloat[树木骨架模型]{\includegraphics[width=6cm]{s3skl1.png}}\hspace{3em}
-	\subfloat[树木轻量化骨架模型]{\includegraphics[width=6cm]{s3lw1.png}}\hspace{3em}
-	\caption{树木样本3正面投影比对}
-	\label{fig:s3proj1}
-\end{figure}
-\begin{figure}
-	\centering
-	\subfloat[树木侧面图像]{\includegraphics[width=6cm]{s3img2.jpg}}\hspace{3em}
-	\subfloat[树木点云模型]{\includegraphics[width=6cm]{s3point2.png}}\hspace{3em}
-	\subfloat[树木骨架模型]{\includegraphics[width=6cm]{s3skl2.png}}\hspace{3em}
-	\subfloat[树木轻量化骨架模型]{\includegraphics[width=6cm]{s3lw2.png}}\hspace{3em}
-	\caption{树木样本3侧面投影比对}
-	\label{fig:s3proj2}
+	\includegraphics[height=8cm]{voxel.png}
+	\caption{三维体素模型}
+	\label{fig:voxel}
 \end{figure}
 
-可以看出，无论从正面还是侧面，通过本文轻量化建模方法所得到的树木模型都具有很高的还原
-性。由于树木1和树木的细小枝干比较多，所以对于其细节部分的还原度还有待提升。但是类似
-树木3这种不含太多细小枝干的树木，本文可以给出很高的还原度。从另一方面来看，由于本文
-的方法是轻量化建模，对于细小的枝干的舍弃也是无法避免的，所以从总体来看本文的方法对于
-真实树木的轻量化建模效果还是十分客观的。
+\begin{algorithm}[H]
+	\caption{点云模型体素化}
+	\label{alg:voxel}
+	\begin{algorithmic}[1] 
+	\Require 点云模型$M$
+	\Require 体素维度$d$
+	\Ensure 三维体素数组$\mathbb{V}[1..d,1..d,1..d]$
+	\State 初始化点云边界值$X_{max}=Y_{max}=Z_{max}=MIN\uline\quad FLOAT,X_{min}=Y_{min}=Z_{min}=MAX\uline\quad FLOAT$
+	\ForAll{空间点$P(P_x,P_y,P_z) \in M$}
+		\State $CheckBoundary(P)$
+	\EndFor
+\ForAll{空间点$P(P_x,P_y,P_z) \in M$}
+\State $V_x = \frac{P_x-X_{min}}{X_{max}-X_{min}}\cdot d$
+\State $V_y = \frac{P_y-Y_{min}}{Y_{max}-Y_{min}}\cdot d$
+\State $V_z = \frac{P_z-Z_{min}}{Z_{max}-Z_{min}}\cdot d$
+\State $\mathbb{V}[V_x, V_y, V_z] = \mathbb{V}[V_x, V_y, V_z] \bigcup \{P\} $
+	\EndFor
+\end{algorithmic}
+\end{algorithm}
 
-表\ref{tab:restore}分别对图片序列信息量、三维重建还原度、骨架抽取还原度以及总的还原度给出了量化
-的实验计算结果。注意，图片序列信息量的计算，本文根据实验所得的最佳$a/b=0.8$的结果来进行计算。
-从表中可以看出，树木样本3的还原度最高，而树木样本2的还原度最低。分别比较它们的三维重建还原
-度和骨架抽取还原度可以看出，图片数量的越多，样本结构越简单，则三维还原度的还原度就越高。
-而对于树木结构复杂的树木，骨架抽取是一个难点，因为树木分支结构的复杂性容易引起骨架抽取的
-二义性从而导致抽取不准确，所以对于样本3这样结构简单的树木来说，骨架抽取还原度最高，而对于
-结构最复杂，细枝最多的样本2来说，骨架抽取还原度最低。
-\\
-\begin{table}[H]
-	\caption{树木样本还原度统计}
-	\centering
-\begin{tabular}{c|cccc} \label{tab:restore}
-	树木样本& 图片序列信息量 & 三维重建还原度 & 骨架抽取还原度 & 总还原度\\
-	\hline
-	1		& 0.988			 & 0.892		  & 0.871		   & 0.767\\
-	2		& 0.931			 & 0.849		  & 0.852		   & 0.673\\
-	3		& 0.988			 & 0.935		  & 0.953		   & 0.881\\
-\end{tabular}
-\end{table}
+\section{三维体素泛洪确定邻域范围}
+在确定了三维体素模型以后，便需要从根到叶，自底向上地对树的骨架结构进行生长。
+生长的依据是已经得到的体素模型，将体素模型中点的分布作用于骨架的分支，便可以
+张成骨架模型。
 
-表\ref{tab:lw}从轻量化的角度，对比了三个树木样本从三维重建得到的点云数据文件的体积、
-骨架抽取后得到的文件体积和经过轻量化以后得到的文件体积。从表中可以看出，三个样本从
-点云数据到骨架数据体积都大大的减小了，对于以KB为单位的骨架体积，已经可以普及到一般的
-Web应用来。对于后一步轻量化的步骤，主要是为了满足更高的应用需求，可以看出，对于骨架
-结构中细枝较多的样本1和样本2，其轻量化所减小的模型体积比例要大于结构简单的样本3，这是
-因为模型的轻量化主要是建立在对树木结构进行简化，而本来就比较简单的结构，这种轻量化的
-程度就会减弱。
-\\
-\begin{table}[H]
-	\caption{树木建模各阶段文件体积对比}
+具体方法是将根节点置为当前节点，对其进行三维泛洪，首先对其相邻的26个体素进行泛洪，若
+体素不为空，则将其加入邻域范围，若为空，则停止向该方向进行迭代。同时将加入邻域
+范围的体素置为无效，表示其已经参与了泛洪，不再参与骨架的重建，这样不仅可以对算法
+的结束有一个很好的约束条件，同时也可以减少重复处理的次数，加快算法的完成。然后进行下一次迭代，
+对新加入的体素进行26方向的泛洪，并把有效的体素加入到邻域范围。接着比较两次迭代
+体素增加的比例，如果低于设置的阈值，则停止迭代，当前的邻域范围即为三维泛洪得到
+的当前节点的邻域范围。
+
+图\ref{fig:3dfld}展示了三维体素泛洪确定邻域的步骤，三张图都延空间z轴正向投影到2D平面。
+\ref{fig:3dfld}(a)为其初始状态，
+即邻域范围为当前体素。其中橙色的区域表示邻域范围，蓝色的区域表示未探索区域，灰色区域
+表示空的体素，而绿色区域表示已经在之前的枝干邻域。\ref{fig:3dfld}(b)表示体素泛洪经过
+一次迭代以后的状态，因为体素泛洪只会对与当前邻域范围相邻的未探索区域(蓝色方块)进行扩展，
+所以\ref{fig:3dfld}(a)只会向黄色箭头指向的体素进行扩展，从而得到\ref{fig:3dfld}(b)。在得到
+新的邻域后，首先会计算所新增的点的数量与之前的数量的比值有没有低于阈值，如果低于阈值，则停止
+邻域的扩张。最后将得到\ref{fig:3dfld}(c)中的邻域范围。
+
+\begin{figure}[H]
 	\centering
-	\begin{tabular}{c|ccc} \label{tab:lw}
-		树木样本	&	三维重建点云体积	& 原骨架体积	& 轻量化骨架体积\\
-		\hline
-		1			&   2.5M				& 50.3K			& 8.2K\\
-		2			&	4.4M				& 103.1K		& 15.1K\\
-		3			&	2.2M				& 31.5K			& 7.3K\\
-	\end{tabular}
-\end{table}
+	\subfloat[初始状态(邻域范围为1个体素)]{\includegraphics[height=3cm]{fld1.jpg}}\hspace{4em}
+	\subfloat[第一次泛洪迭代(邻域范围为6个体素)]{\includegraphics[height=3cm]{fld2.jpg}}\hspace{4em}
+	\subfloat[第二次泛洪迭代(邻域范围为11个体素)]{\includegraphics[height=3cm]{fld3.jpg}}
+	\caption{体素泛洪示意图}
+	\label{fig:3dfld}
+\end{figure}
+
+三维体素泛洪确定邻域范围算法的伪代码在算法\ref{alg:3dfld}中给出。
+\begin{algorithm}[H] 
+	\caption{三维体素泛洪确定邻域范围}
+	\label{alg:3dfld}
+	\begin{algorithmic}[1]
+		\Require 当前体素$C$，三维体素数组$\mathbb{V}[1..d,1..d,1..d]$，
+		泛洪方向数组$\mathbb{D}[1..26]$，邻域范围增长比例阈值$\lambda$
+		%\Require 三维体素数组$\mathbb{V}[1..d,1..d,1..d]$
+		%\Require 泛洪方向数组$\mathbb{D}[1..27]$
+		%\Require 邻域范围增长比例阈值$\lambda$
+		\Ensure	邻域范围内体素集合$\mathbb{S}$
+		\State 初始化单次迭代新增体素集合$\mathbb{S'}$
+		\State $\mathbb{S'}.AddVoxel($根节点所在体素$)$
+		\ForAll{泛洪方向$Direction \in \mathbb{D}$}
+			\State $NewIndex = C.Index + Direction$
+			\State $NewVoxel = \mathbb{V}[NewIndex.x,NewIndex.y,NewIndex.z]$
+			\If{$NewVoxel$非空$\bigcap NewVoxel$有效}
+				\State $\mathbb{S'}.AddVoxel(NewVoxel)$
+			\EndIf
+		\EndFor
+		\State 体素增长比例$\mu=\frac{\mathbb{S'}.VoxelCount}{\mathbb{S}.VoxelCount}$
+		\If{$\mu > \lambda$}
+			\ForAll{$voxel \in \mathbb{S'}$}
+				\State 把$voxel$作为当前体素进行递归调用
+			\EndFor
+		\EndIf
+		\State \Return $\mathbb{S}$
+	\end{algorithmic}
+\end{algorithm}
+
+在进行三维泛洪的时候，可以编程实现26个方向迭代过程的并行化，以提高算法的效率。
+
+\section{通过最小二乘法线性拟合确定分支方向}
+\label{subsec:leastsquares}
+当得到邻域范围以后，便得到了邻域内体素在基于当前节点26个方向上的密度分布，而
+每个体素内又包含着若干的点，因此等于是得到了在当前节点邻域内的点云分布情况。
+接下来的工作就是怎样从各个方向的点云的分布情况抽取出核心的骨架。本文应用线性
+拟合的方法来从密集的点中抽取出一条直线，作为该部分的骨架方向。
+
+该方法首先要剔除掉那些点云密度很小的方向，以免每个节点都朝各个方向长出一些
+细碎的枝条。因为这些细碎的枝条就算在此步中不剔除，到后续的轻量化的时候也不容许
+它们的存在。
+
+然后对于剩下的若干方向$d_1,d_2...d_k$，每个方向都对应着树木的一个骨架。在处理
+某个方向$d_i$时，将其包含的体素中的所有点抽取出来，得到一个密集的点集$S_i$。
+然后采用待定方程的办法，设直线方程为：
+\begin{equation}
+	\mathbf{x} = \mathbf{x_0} + \mathbf{d}t,\quad(t \in [0,\infty))
+\end{equation}
+
+其中$\mathbf{x_0}$是当前节点的坐标，$\mathbf{d}$是待拟合的直线方向。我们假设
+点集$S_i$中的点$P_1,P_2,...P_m$都在直线上，则可以得到以下方程组：\\
+
+\begin{equation} \label{eq:line}
+	\left\{ 
+		\begin{array}{lll}
+			a_{11}d_x+a_{12}d_y+a_{13}d_z & = & b1\\
+			a_{21}d_x+a_{22}d_y+a_{23}d_z & = & b2\\
+			... & & \\
+			a_{n1}d_x+a_{n2}d_y+a_{n3}d_z & = & bn
+		\end{array}
+	\right.
+\end{equation}
+
+其中具体数值未给出，注意这里的$n=3m$，因为每个点$P$可以提供三个方向的方程式。
+在这个方程组中，令\\
+\begin{displaymath}
+	\mathbf{U}=
+\left(
+\begin{array}{ccc}
+	a_{11} & a_{12} & a_{13}\\
+	a_{21} & a_{22} & a_{23}\\
+	... & ... & ...\\
+	a_{n1} & a_{n2} & a_{n3}\\
+\end{array}
+\right)
+,\quad
+\mathbf{d}=
+\left(
+\begin{array}{c}
+	d_x\\
+	d_y\\
+	d_z
+\end{array}
+\right)
+,\quad
+\mathbf{b}=
+\left(
+\begin{array}{c}
+	b_1\\
+	b_2\\
+	...\\
+	b_n
+\end{array}
+\right)
+\end{displaymath}
+
+
+在实践中，由于筛选方向上的点数较多且发散分布，由线性代数的理论知，$\mathbf{U}$是过约束的，
+即$n>r$,其中$r$是矩阵$\mathbf{U}$的秩。这种情况下没有标准的解，只能找到使误差最小的向量$\mathbf{d}$，
+误差定义为:\\
+\begin{equation}
+	E\xlongequal{def} \sum_{i=1}^n(\mathbf{d}t_i - \mathbf{x_i} + \mathbf{x_0})^2=|\mathbf{Ud}-\mathbf{b}|^2
+\end{equation}
+
+由于$E$正比于方程的均方误差，因此只要E达到最小值，那么点集相对于该直线的波动就最
+小。换句话说，也就是该直线最好的模拟了该点集所表示的骨架。由线性代数的方法很容易
+可以解得$\mathbf{d}=\mathbf{[(U^TU)^{-1}U^T]b}$。图\ref{fig:fitting}展示了由当前
+节点(蓝色节点)分别向两个点云集合拟合出的两条直线(红色线段)，这两条直线将被作为两个
+分支的方向。从图中可以看出线性拟合的方法可以很好的估计出树木分枝的方向，从而准确的
+恢复出树木的父子结构。
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=5cm]{branch.png}
+	\caption{线性拟合计算分支方向}
+	\label{fig:fitting}
+\end{figure}
+
+算法\ref{alg:sklextract}给出了得到邻域信息后进行骨架方向抽取的伪代码，其中\textit{Least Squares Processing}表示运用最小二乘法进行
+线性拟合。
+
+\begin{algorithm}[H]
+	\caption{基于邻域的骨架方向计算}
+	\label{alg:sklextract}
+	\begin{algorithmic}[1] 
+		\Require 当前节点体素$V$
+		\Require 骨架方向数组$\mathbb{D}[1..n]$
+		\Ensure 当前节点子节点集合$\mathbb{S}$
+		\ForAll{骨架方向$d\in D$}
+			\State $NewChild\gets Least Squares Processing$
+			\State $\mathbb{S}.AddChild(NewChild)$
+		\EndFor
+		\State \Return $\mathbb{S}$
+	\end{algorithmic}
+\end{algorithm}
+
+\section{获取子枝长度和半径}
+树木骨架的长度和半径对树木模型的真实感有着十分显著的贡献，所以尽可能准确的获得子枝的长度和
+半径信息能够有助于重建出极具真实感的树木模型。对于树木枝干半径的获取方法有许多，
+主要分为根据规则生成半径和从树木点云结构中获取半径两种方式。
+
+对于基于规则来生成半径，最简单的方法是对树木半径进行线性地递减，即$r=cR$，其中
+$r$为子枝半径，$R$是父枝半径，$c$为一个线性倍数，这个倍数可以固定，也可以进行
+随机的扰动从而增进多样性。Leonardo da Vinci在经过大量观察后总结出了一种更符合自然规律
+的树木父子枝直径的关系公式：$D^2=\sum_{i=1}^n{d_i^2}$，其中$D$为父枝直径，$d_i$为第
+$i$个子枝的直径，$n$为子枝的数量。这个公式被广泛地用于树木枝干的半径模拟。
+
+区别于基于规则的半径生成方法，本文为了进一步提升真实感，选择在进行子枝方向抽取的同时，
+同样进行半径抽取的方法。注意，用该方法的前提是点云分布须均匀化，然而基于图像进行三维重建
+得到的树木点云会呈现表皮化的现象，这是由于图片上的点都是树木的表皮点，所以在得到
+三维点云后，是需要进行一些修复工作的，本文用随机点填充的方法对该点云模型进行了实心化
+的修复。当点云分布满足均匀化时，在对某个骨架进行拟合之后，对于拟合出来的直线，来计算
+所有参加拟合该直线的点到该直线的平均距离$D_{avg}$，然后就可以计算该骨架的半径$R=D_{avg}*2$。
+由于点云分布均匀，所以半径显然就是平均距离的2倍。该算法的伪代码在算法\ref{alg:radius}中给出。\\
+
+\begin{algorithm}[H]
+	\caption{骨架半径抽取}
+	\label{alg:radius}
+	\begin{algorithmic}[1] 
+		\Require 拟合出的当前子枝所在直线$L$
+		\Require 当前子枝的点集$\mathbb{S}$
+		\Ensure 当前子枝半径$R$
+		\State 初始化点到直线距离之和$D_{sum}=0$
+		\ForAll{空间点$P \in \mathbb{S}$}
+		\State 点到直线距离$D_{sum}+=CalculateDistance(P, L)$
+		\EndFor
+		\State 平均距离$D_{avg}=D_{sum}/\mathbb{S}.Count$
+		\State 子枝半径$R=D_{avg}*2$
+		\State \Return $R$
+	\end{algorithmic}
+\end{algorithm}
+
+图\ref{fig:radius}给出了三种半径求解方法的效果对比。\ref{fig:radius}(a)给出了线性衰减方法
+的结果，该方法中子枝半径以父枝半径的线性倍衰减。\ref{fig:radius}(b)给出了前文提到的Leonardo
+ da Vinci规则所生成的半径情况。\ref{fig:radius}(c)则采用本文中基于线性拟合直线，再计算所有点
+ 到该直线平均距离的方法。从三者的效果中可以看出，线性衰减容易出现部分枝条生长不自然的现象，究其
+ 原因，还是因为一个单一的绝对的线性系数无法适用于所有的枝条，它对于某些枝条会偏大，对于另外一些
+ 枝条会偏小。 Leonardo规则虽然给出的是一种父子枝之间的相对关系，从一定程度上解决了线性系数单一
+ 绝对而导致的问题，但是它生成的树木枝干会出现过于均与化，而没有捕捉到现实中树木各个局部的特征。
+ 本文的方法则由于其基于对所有点的实际恢复坐标进行统计，而更加注重树木的实际局部特征情况，
+ 其效果也是三者之中最好的。
+ \begin{figure}[H]
+	\centering
+	\subfloat[样本图像]{\includegraphics[height=6cm]{rsample.jpg}}\hspace{4em}
+	\subfloat[线性衰减(线性衰减系数为0.6)]{\includegraphics[height=6cm]{rlinear.png}}\hspace{4em}
+	\subfloat[Leonardo规则生成($D^2=\sum_{i=1}^n{d_i^2}$)]{\includegraphics[height=6cm]{rsquare.png}}\hspace{4em}
+	\subfloat[基于拟合的半径抽取]{\includegraphics[height=6cm]{raffine.png}}\hspace{4em}
+	\caption{三种计算半径方法效果对比}
+	\label{fig:radius}
+\end{figure}
+
+对于骨架长度的估计，基于规则的生成则并不那么具有实践性，因为树木枝干的长度往往并不像半径那样
+随着父子关系而递减。相反地，它地规则往往要复杂许多，而且并没有统一的规则。基于此考虑，本文并
+没有对基于规则的长度估计进行实践，而是直接用与半径类似的方法，根据已拟合出的直线，试图从统计
+的角度对其枝条长度做出合理的估计。一个直观而可行的方法，是将当前节点与所有该方向邻域的点的连线向量
+投影到拟合出的直线方向向量上，这个投影的平均值的2倍，则可以估计为该方向子枝的长度。本文也给出了
+子枝长度估计的伪代码，列在了算法\ref{alg:length}中。
+
+\begin{algorithm}[H]
+	\caption{子枝长度抽取}
+	\label{alg:length}
+	\begin{algorithmic}[1] 
+		\Require 拟合出的当前子枝方向向量$L$，父节点$N$
+		\Require 当前子枝的点集$\mathbb{S}$
+		\Ensure 当前子枝长度$L$
+		\State 初始化父节点到邻域点的向量投影长度之和$D_{sum}=0$
+		\ForAll{空间点$P \in \mathbb{S}$}
+		\State 父节点到$P$的向量$Dir=P$.Position-$N$.Position
+		\State $Dir$在$L$上的投影距离$D_{sum}+=$CalculateProjectionLength$(Dir, L)$
+		\EndFor
+		\State 平均距离$D_{avg}=D_{sum}/\mathbb{S}.Count$
+		\State 子枝长度$L=D_{avg}*2$
+		\State \Return $L$
+	\end{algorithmic}
+\end{algorithm}
 
 \section{本章小节}
-本章首先交代了本文所进行实验的软硬件平台等实验环境。然后给出了3个样本的实验结果，
-从模型正面和侧面进行投影并从直观上比较了重建模型与输入图像序列的相似度。然后进一步运用
-前一章给出的建模还原度的计算式，对三个样本进行了量化的计算，并分析了影响建模还原度
-的一些因素。最后给出了3个样本重建模型的轻量化数据，并基于该分析了影响树木模型轻量化
-的一些因素。从最后的实验结果，我们可以看出，本文提出的基于图像的轻量化建模方法具有
-可行性和十分客观的重建效果。
 
+三维体素泛洪是计算机图形学中二维像素泛洪的扩展，它将三维体素按洪水泛滥一般进行空间的扩展。本章利用三维体素泛洪实现了节点
+对邻域的探索，该方法可以有效的避免枝条间的干扰，并提高邻域探索的效率。然后在该邻域的范围内对方向进行分割，将每个分割方向上
+的点集根据最小二乘法进行拟合，得出该方向上骨架具体的直线方程。
+然后根据点集内点到对应直线方程的距离大小，算出该骨架的半径大小，根据点集与当前节点连线在直线方向上的投影长度，来估算出枝干长度。
+从而得到具有完整信息的骨架结构。

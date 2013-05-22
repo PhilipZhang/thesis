@@ -6,13 +6,16 @@ A level-1 auxiliary file: data/chap03.aux
 A level-1 auxiliary file: data/chap04.aux
 A level-1 auxiliary file: data/chap05.aux
 A level-1 auxiliary file: data/chap06.aux
+A level-1 auxiliary file: data/chap07.aux
+A level-1 auxiliary file: data/chap08.aux
+A level-1 auxiliary file: data/chap09.aux
 A level-1 auxiliary file: data/ack.aux
 The style file: tongjibib.bst
 Database file #1: ref/refs.bib
 Warning--empty booktitle in lk
 You've used 19 entries,
             2221 wiz_defined-function locations,
-            669 strings with 7899 characters,
+            672 strings with 7944 characters,
 and the built_in function-call counts, 9758 in all, are:
 = -- 991
 > -- 236
