@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.3.8)  22 MAY 2013 20:39
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.3.8)  23 MAY 2013 22:37
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -1795,7 +1795,7 @@ LaTeX Font Info:    Try loading font information for C70+song on input line 51.
  (/usr/share/texlive-bin/current/../texmf-local/tex/latex/cjk/UTF8/c70song.fd
 File: c70zhsong.fd 2009/09/23 4.8.2
 )<<c7030.cmap>> (./data/cover.tex)
-<figures/tongji-logo-cover.jpg, id=233, 789.95125pt x 204.765pt>
+<figures/tongji-logo-cover.jpg, id=265, 789.95125pt x 204.765pt>
 File: figures/tongji-logo-cover.jpg Graphic file (type jpg)
 
 <use figures/tongji-logo-cover.jpg>
@@ -1922,7 +1922,7 @@ Overfull \vbox (0.99731pt too high) has occurred while \output is active []
 [3
 
 
-]<<c708c.cmap>>)
+]<<c706f.cmap>><<c708c.cmap>>)
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1986,7 +1986,7 @@ m/n/12.045/54 ^^N \C70/song/m/n/12.045/57 (\OT1/txr/m/n/12.045 90\C70/song/m/n/
 /12.045/ff ^^L|
  []
 
-<<c706f.cmap>><<c7084.cmap>>
+<<c7084.cmap>>
 Overfull \vbox (0.64914pt too high) has occurred while \output is active []
 
 
@@ -1999,16 +1999,16 @@ Overfull \vbox (0.64914pt too high) has occurred while \output is active []
 
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 71--76
+Underfull \hbox (badness 10000) in paragraph at lines 73--78
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 76.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 78.
 (/usr/share/texlive-bin/current/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12.045> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 76.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 78.
 )
 Overfull \vbox (0.64914pt too high) has occurred while \output is active []
 
@@ -2031,7 +2031,7 @@ Overfull \vbox (0.64914pt too high) has occurred while \output is active []
 
 
 
-]<<c7094.cmap>> <figures/techroute.jpg, id=769, 757.83125pt x 1429.34pt>
+]<<c7094.cmap>> <figures/techroute.jpg, id=817, 757.83125pt x 1429.34pt>
 File: figures/techroute.jpg Graphic file (type jpg)
 
 <use figures/techroute.jpg>)
@@ -2102,10 +2102,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--249
 Overfull \vbox (1.76103pt too high) has occurred while \output is active []
 
 
-[14] <figures/old.png, id=858, 799.98875pt x 1021.8175pt>
+[14] <figures/old.png, id=906, 799.98875pt x 1021.8175pt>
 File: figures/old.png Graphic file (type png)
 
-<use figures/old.png> <figures/new.png, id=860, 797.98125pt x 1022.82124pt>
+<use figures/old.png> <figures/new.png, id=908, 797.98125pt x 1022.82124pt>
 File: figures/new.png Graphic file (type png)
 
 <use figures/new.png>
@@ -2134,7 +2134,7 @@ Overfull \vbox (1.76103pt too high) has occurred while \output is active []
 [18]
 \openout2 = `data/chap05.aux'.
 
- (./data/chap05.tex <figures/voxel.png, id=888, 634.37pt x 543.02875pt>
+ (./data/chap05.tex <figures/voxel.png, id=936, 634.37pt x 543.02875pt>
 File: figures/voxel.png Graphic file (type png)
 
 <use figures/voxel.png>
@@ -2152,10 +2152,10 @@ LaTeX Warning: File ot151.cmap not found on input line 59.
 Overfull \vbox (0.607pt too high) has occurred while \output is active []
 
  [20 <./figures/voxel.png>]<<c709e.cmap>>
-<figures/fld1.jpg, id=918, 16116.21pt x 13586.76pt>
+<figures/fld1.jpg, id=966, 16116.21pt x 13586.76pt>
 File: figures/fld1.jpg Graphic file (type jpg)
  <use figures/fld1.jpg>
-<figures/fld2.jpg, id=919, 16116.21pt x 13586.76pt>
+<figures/fld2.jpg, id=967, 16116.21pt x 13586.76pt>
 File: figures/fld2.jpg Graphic file (type jpg)
  <use figures/fld2.jpg>
 Underfull \hbox (badness 6157) in paragraph at lines 79--79
@@ -2164,7 +2164,7 @@ Underfull \hbox (badness 6157) in paragraph at lines 79--79
 0.53937/6d * \C70/song/m/n/10.53937/8f í
  []
 
-<figures/fld3.jpg, id=920, 16116.21pt x 13586.76pt>
+<figures/fld3.jpg, id=968, 16116.21pt x 13586.76pt>
 File: figures/fld3.jpg Graphic file (type jpg)
  <use figures/fld3.jpg>
 Underfull \hbox (badness 6658) in paragraph at lines 80--80
@@ -2189,7 +2189,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--151
 
  []
 
-<figures/branch.png, id=937, 234.1247pt x 240.9pt>
+<figures/branch.png, id=985, 234.1247pt x 240.9pt>
 File: figures/branch.png Graphic file (type png)
  <use figures/branch.png>
 Overfull \vbox (0.607pt too high) has occurred while \output is active []
@@ -2202,12 +2202,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 233--240
 
 Overfull \vbox (0.607pt too high) has occurred while \output is active []
 
- [24 <./figures/branch.png>] <figures/rsample.jpg, id=958, 3228.06pt x 4304.08p
-t>
+ [24 <./figures/branch.png>] <figures/rsample.jpg, id=1006, 3228.06pt x 4304.08
+pt>
 File: figures/rsample.jpg Graphic file (type jpg)
 
 <use figures/rsample.jpg>
-<figures/rlinear.png, id=959, 448.67625pt x 526.96875pt>
+<figures/rlinear.png, id=1007, 448.67625pt x 526.96875pt>
 File: figures/rlinear.png Graphic file (type png)
 
 <use figures/rlinear.png>
@@ -2219,7 +2219,7 @@ Underfull \hbox (badness 1721) in paragraph at lines 270--270
 /10.53937/65 p
  []
 
-<figures/rsquare.png, id=960, 452.69125pt x 520.94624pt>
+<figures/rsquare.png, id=1008, 452.69125pt x 520.94624pt>
 File: figures/rsquare.png Graphic file (type png)
 
 <use figures/rsquare.png>
@@ -2237,7 +2237,7 @@ Underfull \hbox (badness 5189) in paragraph at lines 271--271
 /txr/m/n/10.53937 ($\OML/txmi/m/it/10.53937 D[] \OT1/txr/m/n/10.53937 =
  []
 
-<figures/raffine.png, id=961, 455.7025pt x 537.00626pt>
+<figures/raffine.png, id=1009, 455.7025pt x 537.00626pt>
 File: figures/raffine.png Graphic file (type png)
 
 <use figures/raffine.png>
@@ -2283,13 +2283,13 @@ LaTeX Warning: File ot168.cmap not found on input line 70.
 Overfull \vbox (0.64914pt too high) has occurred while \output is active []
 
 
-[29] <figures/vert1.jpg, id=1005, 269.005pt x 429.605pt>
+[29] <figures/vert1.jpg, id=1053, 269.005pt x 429.605pt>
 File: figures/vert1.jpg Graphic file (type jpg)
 
-<use figures/vert1.jpg> <figures/vert2.jpg, id=1006, 276.03125pt x 427.5975pt>
+<use figures/vert1.jpg> <figures/vert2.jpg, id=1054, 276.03125pt x 427.5975pt>
 File: figures/vert2.jpg Graphic file (type jpg)
 
-<use figures/vert2.jpg> <figures/vert3.jpg, id=1007, 251.94125pt x 427.5975pt>
+<use figures/vert2.jpg> <figures/vert3.jpg, id=1055, 251.94125pt x 427.5975pt>
 File: figures/vert3.jpg Graphic file (type jpg)
 
 <use figures/vert3.jpg>
@@ -2300,17 +2300,17 @@ Overfull \vbox (0.64914pt too high) has occurred while \output is active []
 Overfull \vbox (0.64914pt too high) has occurred while \output is active []
 
 
-[31] <figures/comb1.jpg, id=1029, 248.93pt x 435.6275pt>
+[31] <figures/comb1.jpg, id=1077, 248.93pt x 435.6275pt>
 File: figures/comb1.jpg Graphic file (type jpg)
 
-<use figures/comb1.jpg> <figures/comb2.jpg, id=1030, 266.9975pt x 434.62375pt>
+<use figures/comb1.jpg> <figures/comb2.jpg, id=1078, 266.9975pt x 434.62375pt>
 File: figures/comb2.jpg Graphic file (type jpg)
 
 <use figures/comb2.jpg>
-<figures/comb3.jpg, id=1031, 239.89626pt x 414.54875pt>
+<figures/comb3.jpg, id=1079, 239.89626pt x 414.54875pt>
 File: figures/comb3.jpg Graphic file (type jpg)
 
-<use figures/comb3.jpg> <figures/comb4.jpg, id=1032, 206.7725pt x 422.57875pt>
+<use figures/comb3.jpg> <figures/comb4.jpg, id=1080, 206.7725pt x 422.57875pt>
 File: figures/comb4.jpg Graphic file (type jpg)
 
 <use figures/comb4.jpg>
@@ -2363,15 +2363,10 @@ Overfull \vbox (0.64914pt too high) has occurred while \output is active []
 \openout2 = `data/chap08.aux'.
 
  (./data/chap08.tex
+<figures/usecase.jpg, id=1129, 579.16376pt x 314.17375pt>
+File: figures/usecase.jpg Graphic file (type jpg)
 
-LaTeX Warning: Reference `fig:usecase' on page 38 undefined on input line 8.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-)
+<use figures/usecase.jpg>
 Overfull \vbox (0.64914pt too high) has occurred while \output is active []
 
 
@@ -2379,106 +2374,223 @@ Overfull \vbox (0.64914pt too high) has occurred while \output is active []
 
 
 
-]
+ <./figures/usecase.jpg>]
+<figures/uc1.png, id=1139, 583.17876pt x 517.935pt>
+File: figures/uc1.png Graphic file (type png)
+ <use figures/uc1.png>
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 36
+.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.52061> not available
+(Font)              size <6> substituted on input line 36.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+[]|\OT1/txr/m/n/11.04124 2. \C70/song/m/n/11.04124/7c û \C70/song/m/n/11.04124/
+7e ß \C70/song/m/n/11.04124/53 »\OT1/txr/m/n/11.04124 ./Models/\C70/song/m/n/11
+.04124/65 ‡ \C70/song/m/n/11.04124/4e ö \C70/song/m/n/11.04124/59 9 \C70/song/m
+/n/11.04124/4e  \C70/song/m/n/11.04124/64 ^^\ \C70/song/m/n/11.04124/7d " \C70
+/song/m/n/11.04124/54 ^^M
+ []
+
+
+Overfull \vbox (0.64914pt too high) has occurred while \output is active []
+
+
+[39
+
+ <./figures/uc1.png>] <figures/uc2.png, id=1149, 540.0175pt x 531.9875pt>
+File: figures/uc2.png Graphic file (type png)
+
+<use figures/uc2.png>
+Overfull \vbox (0.64914pt too high) has occurred while \output is active []
+
+
+[40
+
+ <./figures/uc2.png>] <figures/uc3.png, id=1159, 451.6875pt x 487.8225pt>
+File: figures/uc3.png Graphic file (type png)
+
+<use figures/uc3.png>
+Overfull \vbox (0.64914pt too high) has occurred while \output is active []
+
+
+[41
+
+ <./figures/uc3.png>] <figures/uc4.png, id=1168, 465.74pt x 477.785pt>
+File: figures/uc4.png Graphic file (type png)
+
+<use figures/uc4.png>
+Overfull \vbox (0.64914pt too high) has occurred while \output is active []
+
+
+[42
+
+ <./figures/uc4.png>]
+<figures/uc5_ins1.png, id=1177, 451.6875pt x 467.7475pt>
+File: figures/uc5_ins1.png Graphic file (type png)
+
+<use figures/uc5_ins1.png>
+<figures/uc5_rm1.png, id=1178, 485.815pt x 473.77pt>
+File: figures/uc5_rm1.png Graphic file (type png)
+ <use figures/uc5_rm1.png>
+<figures/uc5_mv1.png, id=1179, 434.62375pt x 464.73625pt>
+File: figures/uc5_mv1.png Graphic file (type png)
+
+<use figures/uc5_mv1.png>
+<figures/uc5_ins2.png, id=1180, 472.76625pt x 473.77pt>
+File: figures/uc5_ins2.png Graphic file (type png)
+
+<use figures/uc5_ins2.png>
+<figures/uc5_rm2.png, id=1181, 355.3275pt x 459.7175pt>
+File: figures/uc5_rm2.png Graphic file (type png)
+
+<use figures/uc5_rm2.png>
+<figures/uc5_mv2.png, id=1182, 454.69875pt x 482.80376pt>
+File: figures/uc5_mv2.png Graphic file (type png)
+
+<use figures/uc5_mv2.png>
+Overfull \vbox (0.64914pt too high) has occurred while \output is active []
+
+
+[43
+
+ <./figures/uc5_ins1.png> <./figures/uc5_rm1.png> <./figures/uc5_mv1.png> <./fi
+gures/uc5_ins2.png> <./figures/uc5_rm2.png> <./figures/uc5_mv2.png>]
+<figures/uc6_1.png, id=1203, 494.84875pt x 570.13pt>
+File: figures/uc6_1.png Graphic file (type png)
+ <use figures/uc6_1.png>
+<figures/uc6_2.png, id=1204, 500.87125pt x 569.12625pt>
+File: figures/uc6_2.png Graphic file (type png)
+
+<use figures/uc6_2.png>
+Overfull \vbox (0.64914pt too high) has occurred while \output is active []
+
+
+[44
+
+ <./figures/uc6_1.png> <./figures/uc6_2.png>]
+<figures/uc7_1.png, id=1218, 448.67625pt x 466.74374pt>
+File: figures/uc7_1.png Graphic file (type png)
+
+<use figures/uc7_1.png> <figures/uc7_2.png, id=1219, 449.68pt x 472.76625pt>
+File: figures/uc7_2.png Graphic file (type png)
+
+<use figures/uc7_2.png> <figures/uc7_3.png, id=1220, 448.67625pt x 481.8pt>
+File: figures/uc7_3.png Graphic file (type png)
+
+<use figures/uc7_3.png>
+<figures/uc7_4.png, id=1221, 454.69875pt x 478.78876pt>
+File: figures/uc7_4.png Graphic file (type png)
+
+<use figures/uc7_4.png>)
+Overfull \vbox (0.64914pt too high) has occurred while \output is active []
+
+
+[45
+
+ <./figures/uc7_1.png> <./figures/uc7_2.png> <./figures/uc7_3.png> <./figures/u
+c7_4.png>]
 \openout2 = `data/chap09.aux'.
 
  (./data/chap09.tex
-<figures/sample1_1.jpg, id=1091, 161.60374pt x 214.8025pt>
+<figures/sample1_1.jpg, id=1241, 161.60374pt x 214.8025pt>
 File: figures/sample1_1.jpg Graphic file (type jpg)
 
 <use figures/sample1_1.jpg>
-<figures/sample1_2.jpg, id=1092, 161.60374pt x 214.8025pt>
+<figures/sample1_2.jpg, id=1242, 161.60374pt x 214.8025pt>
 File: figures/sample1_2.jpg Graphic file (type jpg)
 
 <use figures/sample1_2.jpg>
-<figures/sample1_3.jpg, id=1093, 161.60374pt x 214.8025pt>
+<figures/sample1_3.jpg, id=1243, 161.60374pt x 214.8025pt>
 File: figures/sample1_3.jpg Graphic file (type jpg)
 
 <use figures/sample1_3.jpg>
-<figures/sample1_4.jpg, id=1094, 161.60374pt x 214.8025pt>
+<figures/sample1_4.jpg, id=1244, 161.60374pt x 214.8025pt>
 File: figures/sample1_4.jpg Graphic file (type jpg)
 
 <use figures/sample1_4.jpg>
-<figures/sample1_5.jpg, id=1095, 161.60374pt x 214.8025pt>
+<figures/sample1_5.jpg, id=1245, 161.60374pt x 214.8025pt>
 File: figures/sample1_5.jpg Graphic file (type jpg)
 
 <use figures/sample1_5.jpg>
-<figures/sample1_6.jpg, id=1096, 161.60374pt x 214.8025pt>
+<figures/sample1_6.jpg, id=1246, 161.60374pt x 214.8025pt>
 File: figures/sample1_6.jpg Graphic file (type jpg)
 
 <use figures/sample1_6.jpg>
-<figures/sample1_7.jpg, id=1097, 161.60374pt x 214.8025pt>
+<figures/sample1_7.jpg, id=1247, 161.60374pt x 214.8025pt>
 File: figures/sample1_7.jpg Graphic file (type jpg)
 
 <use figures/sample1_7.jpg>
-<figures/sample1_8.jpg, id=1098, 161.60374pt x 214.8025pt>
+<figures/sample1_8.jpg, id=1248, 161.60374pt x 214.8025pt>
 File: figures/sample1_8.jpg Graphic file (type jpg)
 
 <use figures/sample1_8.jpg>
-<figures/sample1_9.jpg, id=1099, 161.60374pt x 214.8025pt>
+<figures/sample1_9.jpg, id=1249, 161.60374pt x 214.8025pt>
 File: figures/sample1_9.jpg Graphic file (type jpg)
 
 <use figures/sample1_9.jpg>
-<figures/sample1_10.jpg, id=1100, 161.60374pt x 214.8025pt>
+<figures/sample1_10.jpg, id=1250, 161.60374pt x 214.8025pt>
 File: figures/sample1_10.jpg Graphic file (type jpg)
 
 <use figures/sample1_10.jpg>
-<figures/sample1_11.jpg, id=1101, 161.60374pt x 214.8025pt>
+<figures/sample1_11.jpg, id=1251, 161.60374pt x 214.8025pt>
 File: figures/sample1_11.jpg Graphic file (type jpg)
 
 <use figures/sample1_11.jpg>
-<figures/sample2_1.jpg, id=1102, 161.60374pt x 214.8025pt>
+<figures/sample2_1.jpg, id=1252, 161.60374pt x 214.8025pt>
 File: figures/sample2_1.jpg Graphic file (type jpg)
 
 <use figures/sample2_1.jpg>
-<figures/sample2_2.jpg, id=1103, 161.60374pt x 214.8025pt>
+<figures/sample2_2.jpg, id=1253, 161.60374pt x 214.8025pt>
 File: figures/sample2_2.jpg Graphic file (type jpg)
 
 <use figures/sample2_2.jpg>
-<figures/sample2_3.jpg, id=1104, 161.60374pt x 214.8025pt>
+<figures/sample2_3.jpg, id=1254, 161.60374pt x 214.8025pt>
 File: figures/sample2_3.jpg Graphic file (type jpg)
 
 <use figures/sample2_3.jpg>
-<figures/sample2_4.jpg, id=1105, 161.60374pt x 214.8025pt>
+<figures/sample2_4.jpg, id=1255, 161.60374pt x 214.8025pt>
 File: figures/sample2_4.jpg Graphic file (type jpg)
 
 <use figures/sample2_4.jpg>
-<figures/sample2_5.jpg, id=1106, 161.60374pt x 214.8025pt>
+<figures/sample2_5.jpg, id=1256, 161.60374pt x 214.8025pt>
 File: figures/sample2_5.jpg Graphic file (type jpg)
 
 <use figures/sample2_5.jpg>
-<figures/sample2_6.jpg, id=1107, 161.60374pt x 214.8025pt>
+<figures/sample2_6.jpg, id=1257, 161.60374pt x 214.8025pt>
 File: figures/sample2_6.jpg Graphic file (type jpg)
 
 <use figures/sample2_6.jpg>
-<figures/sample2_7.jpg, id=1108, 161.60374pt x 214.8025pt>
+<figures/sample2_7.jpg, id=1258, 161.60374pt x 214.8025pt>
 File: figures/sample2_7.jpg Graphic file (type jpg)
 
 <use figures/sample2_7.jpg>
-<figures/sample2_8.jpg, id=1109, 161.60374pt x 214.8025pt>
+<figures/sample2_8.jpg, id=1259, 161.60374pt x 214.8025pt>
 File: figures/sample2_8.jpg Graphic file (type jpg)
 
 <use figures/sample2_8.jpg>
-<figures/sample2_9.jpg, id=1110, 161.60374pt x 214.8025pt>
+<figures/sample2_9.jpg, id=1260, 161.60374pt x 214.8025pt>
 File: figures/sample2_9.jpg Graphic file (type jpg)
 
 <use figures/sample2_9.jpg>
-<figures/sample2_10.jpg, id=1111, 161.60374pt x 214.8025pt>
+<figures/sample2_10.jpg, id=1261, 161.60374pt x 214.8025pt>
 File: figures/sample2_10.jpg Graphic file (type jpg)
 
 <use figures/sample2_10.jpg>
-<figures/sample2_11.jpg, id=1112, 161.60374pt x 214.8025pt>
+<figures/sample2_11.jpg, id=1262, 161.60374pt x 214.8025pt>
 File: figures/sample2_11.jpg Graphic file (type jpg)
 
 <use figures/sample2_11.jpg>
-<figures/sample2_12.jpg, id=1113, 161.60374pt x 214.8025pt>
+<figures/sample2_12.jpg, id=1263, 161.60374pt x 214.8025pt>
 File: figures/sample2_12.jpg Graphic file (type jpg)
 
 <use figures/sample2_12.jpg>
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[39
+[46
 
 
 
@@ -2486,117 +2598,117 @@ Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 <./figures/sample1_4.jpg> <./figures/sample1_5.jpg> <./figures/sample1_6.jpg> <
 ./figures/sample1_7.jpg> <./figures/sample1_8.jpg> <./figures/sample1_9.jpg> <.
 /figures/sample1_10.jpg> <./figures/sample1_11.jpg>]
-<figures/sample3_1.jpg, id=1136, 161.60374pt x 214.8025pt>
+<figures/sample3_1.jpg, id=1286, 161.60374pt x 214.8025pt>
 File: figures/sample3_1.jpg Graphic file (type jpg)
 
 <use figures/sample3_1.jpg>
-<figures/sample3_2.jpg, id=1137, 161.60374pt x 214.8025pt>
+<figures/sample3_2.jpg, id=1287, 161.60374pt x 214.8025pt>
 File: figures/sample3_2.jpg Graphic file (type jpg)
 
 <use figures/sample3_2.jpg>
-<figures/sample3_3.jpg, id=1138, 161.60374pt x 214.8025pt>
+<figures/sample3_3.jpg, id=1288, 161.60374pt x 214.8025pt>
 File: figures/sample3_3.jpg Graphic file (type jpg)
 
 <use figures/sample3_3.jpg>
-<figures/sample3_4.jpg, id=1139, 161.60374pt x 214.8025pt>
+<figures/sample3_4.jpg, id=1289, 161.60374pt x 214.8025pt>
 File: figures/sample3_4.jpg Graphic file (type jpg)
 
 <use figures/sample3_4.jpg>
-<figures/sample3_5.jpg, id=1140, 161.60374pt x 214.8025pt>
+<figures/sample3_5.jpg, id=1290, 161.60374pt x 214.8025pt>
 File: figures/sample3_5.jpg Graphic file (type jpg)
 
 <use figures/sample3_5.jpg>
-<figures/sample3_6.jpg, id=1141, 161.60374pt x 214.8025pt>
+<figures/sample3_6.jpg, id=1291, 161.60374pt x 214.8025pt>
 File: figures/sample3_6.jpg Graphic file (type jpg)
 
 <use figures/sample3_6.jpg>
-<figures/sample3_7.jpg, id=1142, 161.60374pt x 214.8025pt>
+<figures/sample3_7.jpg, id=1292, 161.60374pt x 214.8025pt>
 File: figures/sample3_7.jpg Graphic file (type jpg)
 
 <use figures/sample3_7.jpg>
-<figures/sample3_8.jpg, id=1143, 161.60374pt x 214.8025pt>
+<figures/sample3_8.jpg, id=1293, 161.60374pt x 214.8025pt>
 File: figures/sample3_8.jpg Graphic file (type jpg)
 
 <use figures/sample3_8.jpg>
-<figures/sample3_9.jpg, id=1144, 161.60374pt x 214.8025pt>
+<figures/sample3_9.jpg, id=1294, 161.60374pt x 214.8025pt>
 File: figures/sample3_9.jpg Graphic file (type jpg)
 
 <use figures/sample3_9.jpg>
-<figures/sample3_10.jpg, id=1145, 161.60374pt x 214.8025pt>
+<figures/sample3_10.jpg, id=1295, 161.60374pt x 214.8025pt>
 File: figures/sample3_10.jpg Graphic file (type jpg)
 
 <use figures/sample3_10.jpg>
-<figures/sample3_11.jpg, id=1146, 161.60374pt x 214.8025pt>
+<figures/sample3_11.jpg, id=1296, 161.60374pt x 214.8025pt>
 File: figures/sample3_11.jpg Graphic file (type jpg)
 
 <use figures/sample3_11.jpg>
-<figures/sample3_12.jpg, id=1147, 161.60374pt x 214.8025pt>
+<figures/sample3_12.jpg, id=1297, 161.60374pt x 214.8025pt>
 File: figures/sample3_12.jpg Graphic file (type jpg)
 
 <use figures/sample3_12.jpg>
-<figures/sample3_13.jpg, id=1148, 161.60374pt x 214.8025pt>
+<figures/sample3_13.jpg, id=1298, 161.60374pt x 214.8025pt>
 File: figures/sample3_13.jpg Graphic file (type jpg)
 
 <use figures/sample3_13.jpg>
-<figures/sample3_14.jpg, id=1149, 161.60374pt x 214.8025pt>
+<figures/sample3_14.jpg, id=1299, 161.60374pt x 214.8025pt>
 File: figures/sample3_14.jpg Graphic file (type jpg)
 
 <use figures/sample3_14.jpg>
-<figures/sample3_15.jpg, id=1150, 161.60374pt x 214.8025pt>
+<figures/sample3_15.jpg, id=1300, 161.60374pt x 214.8025pt>
 File: figures/sample3_15.jpg Graphic file (type jpg)
 
 <use figures/sample3_15.jpg>
-<figures/sample3_16.jpg, id=1151, 161.60374pt x 214.8025pt>
+<figures/sample3_16.jpg, id=1301, 161.60374pt x 214.8025pt>
 File: figures/sample3_16.jpg Graphic file (type jpg)
 
 <use figures/sample3_16.jpg>
-<figures/sample3_17.jpg, id=1152, 161.60374pt x 214.8025pt>
+<figures/sample3_17.jpg, id=1302, 161.60374pt x 214.8025pt>
 File: figures/sample3_17.jpg Graphic file (type jpg)
 
 <use figures/sample3_17.jpg>
-<figures/sample3_18.jpg, id=1153, 161.60374pt x 214.8025pt>
+<figures/sample3_18.jpg, id=1303, 161.60374pt x 214.8025pt>
 File: figures/sample3_18.jpg Graphic file (type jpg)
 
 <use figures/sample3_18.jpg>
-<figures/sample3_19.jpg, id=1154, 161.60374pt x 214.8025pt>
+<figures/sample3_19.jpg, id=1304, 161.60374pt x 214.8025pt>
 File: figures/sample3_19.jpg Graphic file (type jpg)
 
 <use figures/sample3_19.jpg>
-<figures/sample3_20.jpg, id=1155, 161.60374pt x 214.8025pt>
+<figures/sample3_20.jpg, id=1305, 161.60374pt x 214.8025pt>
 File: figures/sample3_20.jpg Graphic file (type jpg)
 
 <use figures/sample3_20.jpg>
-<figures/s1img1.jpg, id=1162, 645.41125pt x 861.2175pt>
+<figures/s1img1.jpg, id=1312, 645.41125pt x 861.2175pt>
 File: figures/s1img1.jpg Graphic file (type jpg)
 
 <use figures/s1img1.jpg>
-<figures/s1point1.png, id=1163, 592.2125pt x 913.4125pt>
+<figures/s1point1.png, id=1313, 592.2125pt x 913.4125pt>
 File: figures/s1point1.png Graphic file (type png)
 
 <use figures/s1point1.png>
-<figures/s1skl1.png, id=1164, 554.07pt x 926.46124pt>
+<figures/s1skl1.png, id=1314, 554.07pt x 926.46124pt>
 File: figures/s1skl1.png Graphic file (type png)
  <use figures/s1skl1.png>
-<figures/s1lw1.png, id=1165, 590.205pt x 936.49875pt>
+<figures/s1lw1.png, id=1315, 590.205pt x 936.49875pt>
 File: figures/s1lw1.png Graphic file (type png)
  <use figures/s1lw1.png>
-<figures/s1img2.jpg, id=1166, 645.41125pt x 861.2175pt>
+<figures/s1img2.jpg, id=1316, 645.41125pt x 861.2175pt>
 File: figures/s1img2.jpg Graphic file (type jpg)
 
-<use figures/s1img2.jpg> <figures/s1point2.png, id=1167, 654.445pt x 939.51pt>
+<use figures/s1img2.jpg> <figures/s1point2.png, id=1317, 654.445pt x 939.51pt>
 File: figures/s1point2.png Graphic file (type png)
 
 <use figures/s1point2.png>
-<figures/s1skl2.png, id=1168, 692.5875pt x 967.615pt>
+<figures/s1skl2.png, id=1318, 692.5875pt x 967.615pt>
 File: figures/s1skl2.png Graphic file (type png)
  <use figures/s1skl2.png>
-<figures/s1lw2.png, id=1169, 625.33624pt x 947.54pt>
+<figures/s1lw2.png, id=1319, 625.33624pt x 947.54pt>
 File: figures/s1lw2.png Graphic file (type png)
  <use figures/s1lw2.png>
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[40 <./figures/sample2_1.jpg> <./figures/sample2_2.jpg> <./figures/sample2_3.jp
+[47 <./figures/sample2_1.jpg> <./figures/sample2_2.jpg> <./figures/sample2_3.jp
 g> <./figures/sample2_4.jpg> <./figures/sample2_5.jpg> <./figures/sample2_6.jpg
 > <./figures/sample2_7.jpg> <./figures/sample2_8.jpg> <./figures/sample2_9.jpg>
  <./figures/sample2_10.jpg> <./figures/sample2_11.jpg> <./figures/sample2_12.jp
@@ -2607,105 +2719,97 @@ g> <./figures/sample3_1.jpg> <./figures/sample3_2.jpg> <./figures/sample3_3.jpg
 > <./figures/sample3_13.jpg> <./figures/sample3_14.jpg> <./figures/sample3_15.j
 pg> <./figures/sample3_16.jpg> <./figures/sample3_17.jpg> <./figures/sample3_18
 .jpg> <./figures/sample3_19.jpg> <./figures/sample3_20.jpg>]
-<figures/s2img1.jpg, id=1212, 645.41125pt x 861.2175pt>
+<figures/s2img1.jpg, id=1362, 645.41125pt x 861.2175pt>
 File: figures/s2img1.jpg Graphic file (type jpg)
 
 <use figures/s2img1.jpg>
-<figures/s2point1.png, id=1213, 847.165pt x 969.6225pt>
+<figures/s2point1.png, id=1363, 847.165pt x 969.6225pt>
 File: figures/s2point1.png Graphic file (type png)
 
 <use figures/s2point1.png>
-<figures/s2skl1.png, id=1214, 832.10875pt x 976.64874pt>
+<figures/s2skl1.png, id=1364, 832.10875pt x 976.64874pt>
 File: figures/s2skl1.png Graphic file (type png)
 
-<use figures/s2skl1.png> <figures/s2lw1.png, id=1215, 823.075pt x 972.63374pt>
+<use figures/s2skl1.png> <figures/s2lw1.png, id=1365, 823.075pt x 972.63374pt>
 File: figures/s2lw1.png Graphic file (type png)
 
 <use figures/s2lw1.png>
-<figures/s2img2.jpg, id=1216, 645.41125pt x 861.2175pt>
+<figures/s2img2.jpg, id=1366, 645.41125pt x 861.2175pt>
 File: figures/s2img2.jpg Graphic file (type jpg)
 
 <use figures/s2img2.jpg>
-<figures/s2point2.png, id=1217, 664.4825pt x 849.1725pt>
+<figures/s2point2.png, id=1367, 664.4825pt x 849.1725pt>
 File: figures/s2point2.png Graphic file (type png)
 
 <use figures/s2point2.png>
-<figures/s2skl2.png, id=1218, 659.46375pt x 839.135pt>
+<figures/s2skl2.png, id=1368, 659.46375pt x 839.135pt>
 File: figures/s2skl2.png Graphic file (type png)
 
 <use figures/s2skl2.png>
-<figures/s2lw2.png, id=1219, 659.46375pt x 830.10126pt>
+<figures/s2lw2.png, id=1369, 659.46375pt x 830.10126pt>
 File: figures/s2lw2.png Graphic file (type png)
 
 <use figures/s2lw2.png>
-<figures/s3img1.jpg, id=1220, 645.41125pt x 861.2175pt>
+<figures/s3img1.jpg, id=1370, 645.41125pt x 861.2175pt>
 File: figures/s3img1.jpg Graphic file (type jpg)
 
 <use figures/s3img1.jpg>
-<figures/s3point1.png, id=1221, 718.685pt x 799.98875pt>
+<figures/s3point1.png, id=1371, 718.685pt x 799.98875pt>
 File: figures/s3point1.png Graphic file (type png)
 
 <use figures/s3point1.png>
-<figures/s3skl1.png, id=1222, 671.50874pt x 815.045pt>
+<figures/s3skl1.png, id=1372, 671.50874pt x 815.045pt>
 File: figures/s3skl1.png Graphic file (type png)
 
 <use figures/s3skl1.png>
-<figures/s3lw1.png, id=1223, 671.50874pt x 800.9925pt>
+<figures/s3lw1.png, id=1373, 671.50874pt x 800.9925pt>
 File: figures/s3lw1.png Graphic file (type png)
  <use figures/s3lw1.png>
-<figures/s3img2.jpg, id=1224, 645.41125pt x 861.2175pt>
+<figures/s3img2.jpg, id=1374, 645.41125pt x 861.2175pt>
 File: figures/s3img2.jpg Graphic file (type jpg)
 
 <use figures/s3img2.jpg>
-<figures/s3point2.png, id=1225, 532.99126pt x 765.86125pt>
+<figures/s3point2.png, id=1375, 532.99126pt x 765.86125pt>
 File: figures/s3point2.png Graphic file (type png)
 
-<use figures/s3point2.png> <figures/s3skl2.png, id=1226, 542.025pt x 794.97pt>
+<use figures/s3point2.png> <figures/s3skl2.png, id=1376, 542.025pt x 794.97pt>
 File: figures/s3skl2.png Graphic file (type png)
 
 <use figures/s3skl2.png>
-<figures/s3lw2.png, id=1227, 522.95375pt x 773.89125pt>
+<figures/s3lw2.png, id=1377, 522.95375pt x 773.89125pt>
 File: figures/s3lw2.png Graphic file (type png)
 
 <use figures/s3lw2.png>
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[41 <./figures/s1img1.jpg> <./figures/s1point1.png> <./figures/s1skl1.png> <./f
+[48 <./figures/s1img1.jpg> <./figures/s1point1.png> <./figures/s1skl1.png> <./f
 igures/s1lw1.png>]
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[42 <./figures/s1img2.jpg> <./figures/s1point2.png> <./figures/s1skl2.png> <./f
+[49 <./figures/s1img2.jpg> <./figures/s1point2.png> <./figures/s1skl2.png> <./f
 igures/s1lw2.png>]
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[43 <./figures/s2img1.jpg> <./figures/s2point1.png> <./figures/s2skl1.png> <./f
+[50 <./figures/s2img1.jpg> <./figures/s2point1.png> <./figures/s2skl1.png> <./f
 igures/s2lw1.png>]
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[44 <./figures/s2img2.jpg> <./figures/s2point2.png> <./figures/s2skl2.png> <./f
+[51 <./figures/s2img2.jpg> <./figures/s2point2.png> <./figures/s2skl2.png> <./f
 igures/s2lw2.png>]
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[45 <./figures/s3img1.jpg> <./figures/s3point1.png> <./figures/s3skl1.png> <./f
+[52 <./figures/s3img1.jpg> <./figures/s3point1.png> <./figures/s3skl1.png> <./f
 igures/s3lw1.png>]
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[46 <./figures/s3img2.jpg> <./figures/s3point2.png> <./figures/s3skl2.png> <./f
+[53 <./figures/s3img2.jpg> <./figures/s3point2.png> <./figures/s3skl2.png> <./f
 igures/s3lw2.png>]
-LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 24
-4.
-
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.52061> not available
-(Font)              size <6> substituted on input line 244.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 233--251
 
  []
@@ -2719,20 +2823,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--271
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[47
+[54
 
 ])
 Overfull \vbox (0.62807pt too high) has occurred while \output is active []
 
 
-[48]
+[55]
 \openout2 = `data/ack.aux'.
 
  (./data/ack.tex)
 Overfull \vbox (0.99731pt too high) has occurred while \output is active []
 
 
-[49
+[56
 
 
 
@@ -2744,7 +2848,7 @@ Overfull \vbox (0.99731pt too high) has occurred while \output is active []
 Overfull \vbox (0.99731pt too high) has occurred while \output is active []
 
 
-[50
+[57
 
 
 
@@ -2761,24 +2865,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
 (./data/chap08.aux) (./data/chap09.aux) (./data/ack.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 867B6A70077A454265AD3D43372FF787;8584.
+(rerunfilecheck)             Checksum: 96F694AED7AB992B0BD314446A0FD13C;9584.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.22pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 32961 strings out of 495046
- 623266 string characters out of 3181473
- 744003 words of memory out of 3000000
- 33721 multiletter control sequences out of 15000+200000
- 208879 words of font info for 619 fonts, out of 3000000 for 9000
+ 33301 strings out of 495046
+ 629380 string characters out of 3181473
+ 748385 words of memory out of 3000000
+ 33896 multiletter control sequences out of 15000+200000
+ 224016 words of font info for 670 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 56i,12n,76p,669b,2124s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,12n,76p,669b,2140s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{algorithm.9} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -2949,130 +3050,135 @@ e1/cjk/unihei/unihei6a.pfb></usr/share/texlive-bin/current/../texmf-local/fonts
 /type1/cjk/unihei/unihei6c.pfb></usr/share/texlive-bin/current/../texmf-local/f
 onts/type1/cjk/unihei/unihei6d.pfb></usr/share/texlive-bin/current/../texmf-loc
 al/fonts/type1/cjk/unihei/unihei6e.pfb></usr/share/texlive-bin/current/../texmf
--local/fonts/type1/cjk/unihei/unihei72.pfb></usr/share/texlive-bin/current/../t
-exmf-local/fonts/type1/cjk/unihei/unihei73.pfb></usr/share/texlive-bin/current/
-../texmf-local/fonts/type1/cjk/unihei/unihei75.pfb></usr/share/texlive-bin/curr
-ent/../texmf-local/fonts/type1/cjk/unihei/unihei76.pfb></usr/share/texlive-bin/
-current/../texmf-local/fonts/type1/cjk/unihei/unihei78.pfb></usr/share/texlive-
-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei7a.pfb></usr/share/texl
-ive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei7b.pfb></usr/share/
-texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei7d.pfb></usr/sh
-are/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei7e.pfb></us
-r/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei80.pfb>
-</usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei81.
+-local/fonts/type1/cjk/unihei/unihei6f.pfb></usr/share/texlive-bin/current/../t
+exmf-local/fonts/type1/cjk/unihei/unihei70.pfb></usr/share/texlive-bin/current/
+../texmf-local/fonts/type1/cjk/unihei/unihei72.pfb></usr/share/texlive-bin/curr
+ent/../texmf-local/fonts/type1/cjk/unihei/unihei73.pfb></usr/share/texlive-bin/
+current/../texmf-local/fonts/type1/cjk/unihei/unihei75.pfb></usr/share/texlive-
+bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei76.pfb></usr/share/texl
+ive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei78.pfb></usr/share/
+texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei79.pfb></usr/sh
+are/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei7a.pfb></us
+r/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei7b.pfb>
+</usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei7d.
 pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihe
-i82.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/u
-nihei83.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unih
-ei/unihei86.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/
-unihei/unihei88.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/
-cjk/unihei/unihei89.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/ty
-pe1/cjk/unihei/unihei8b.pfb></usr/share/texlive-bin/current/../texmf-local/font
-s/type1/cjk/unihei/unihei8c.pfb></usr/share/texlive-bin/current/../texmf-local/
-fonts/type1/cjk/unihei/unihei8d.pfb></usr/share/texlive-bin/current/../texmf-lo
-cal/fonts/type1/cjk/unihei/unihei8e.pfb></usr/share/texlive-bin/current/../texm
-f-local/fonts/type1/cjk/unihei/unihei8f.pfb></usr/share/texlive-bin/current/../
-texmf-local/fonts/type1/cjk/unihei/unihei90.pfb></usr/share/texlive-bin/current
-/../texmf-local/fonts/type1/cjk/unihei/unihei91.pfb></usr/share/texlive-bin/cur
-rent/../texmf-local/fonts/type1/cjk/unihei/unihei95.pfb></usr/share/texlive-bin
-/current/../texmf-local/fonts/type1/cjk/unihei/unihei98.pfb></usr/share/texlive
--bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei9a.pfb></usr/share/tex
-live-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei9c.pfb></usr/share
-/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/uniheiff.pfb></usr/s
-hare/texlive-bin/current/../texmf-local/fonts/type1/cjk/unili/unili4e.pfb></usr
-/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unili/unili65.pfb></u
-sr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unili/unili6b.pfb><
-/usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unili/unili8b.pfb
-></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong
-20.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/u
-nisong30.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uni
-song/unisong4e.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/c
-jk/unisong/unisong4f.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/t
-ype1/cjk/unisong/unisong50.pfb></usr/share/texlive-bin/current/../texmf-local/f
-onts/type1/cjk/unisong/unisong51.pfb></usr/share/texlive-bin/current/../texmf-l
-ocal/fonts/type1/cjk/unisong/unisong52.pfb></usr/share/texlive-bin/current/../t
-exmf-local/fonts/type1/cjk/unisong/unisong53.pfb></usr/share/texlive-bin/curren
-t/../texmf-local/fonts/type1/cjk/unisong/unisong54.pfb></usr/share/texlive-bin/
-current/../texmf-local/fonts/type1/cjk/unisong/unisong55.pfb></usr/share/texliv
-e-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong56.pfb></usr/share/
-texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong57.pfb></usr/
-share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong58.pfb>
-</usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong5
-9.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/un
-isong5b.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unis
-ong/unisong5c.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cj
-k/unisong/unisong5d.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/ty
-pe1/cjk/unisong/unisong5e.pfb></usr/share/texlive-bin/current/../texmf-local/fo
-nts/type1/cjk/unisong/unisong5f.pfb></usr/share/texlive-bin/current/../texmf-lo
-cal/fonts/type1/cjk/unisong/unisong60.pfb></usr/share/texlive-bin/current/../te
-xmf-local/fonts/type1/cjk/unisong/unisong61.pfb></usr/share/texlive-bin/current
-/../texmf-local/fonts/type1/cjk/unisong/unisong62.pfb></usr/share/texlive-bin/c
-urrent/../texmf-local/fonts/type1/cjk/unisong/unisong63.pfb></usr/share/texlive
--bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong64.pfb></usr/share/t
-exlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong65.pfb></usr/s
-hare/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong66.pfb><
-/usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong67
-.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/uni
-song68.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uniso
-ng/unisong69.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk
-/unisong/unisong6a.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/typ
-e1/cjk/unisong/unisong6b.pfb></usr/share/texlive-bin/current/../texmf-local/fon
-ts/type1/cjk/unisong/unisong6c.pfb></usr/share/texlive-bin/current/../texmf-loc
-al/fonts/type1/cjk/unisong/unisong6d.pfb></usr/share/texlive-bin/current/../tex
-mf-local/fonts/type1/cjk/unisong/unisong6e.pfb></usr/share/texlive-bin/current/
-../texmf-local/fonts/type1/cjk/unisong/unisong6f.pfb></usr/share/texlive-bin/cu
-rrent/../texmf-local/fonts/type1/cjk/unisong/unisong70.pfb></usr/share/texlive-
-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong71.pfb></usr/share/te
-xlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong72.pfb></usr/sh
-are/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong73.pfb></
-usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong74.
+i7e.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/u
+nihei7f.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unih
+ei/unihei80.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/
+unihei/unihei81.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/
+cjk/unihei/unihei82.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/ty
+pe1/cjk/unihei/unihei83.pfb></usr/share/texlive-bin/current/../texmf-local/font
+s/type1/cjk/unihei/unihei86.pfb></usr/share/texlive-bin/current/../texmf-local/
+fonts/type1/cjk/unihei/unihei88.pfb></usr/share/texlive-bin/current/../texmf-lo
+cal/fonts/type1/cjk/unihei/unihei89.pfb></usr/share/texlive-bin/current/../texm
+f-local/fonts/type1/cjk/unihei/unihei8b.pfb></usr/share/texlive-bin/current/../
+texmf-local/fonts/type1/cjk/unihei/unihei8c.pfb></usr/share/texlive-bin/current
+/../texmf-local/fonts/type1/cjk/unihei/unihei8d.pfb></usr/share/texlive-bin/cur
+rent/../texmf-local/fonts/type1/cjk/unihei/unihei8e.pfb></usr/share/texlive-bin
+/current/../texmf-local/fonts/type1/cjk/unihei/unihei8f.pfb></usr/share/texlive
+-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei90.pfb></usr/share/tex
+live-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei91.pfb></usr/share
+/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei95.pfb></usr/s
+hare/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei98.pfb></u
+sr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei9a.pfb
+></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unihei9c
+.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unihei/unih
+eiff.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unili/u
+nili4e.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unili
+/unili65.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uni
+li/unili6b.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/u
+nili/unili8b.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk
+/unisong/unisong20.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/typ
+e1/cjk/unisong/unisong30.pfb></usr/share/texlive-bin/current/../texmf-local/fon
+ts/type1/cjk/unisong/unisong4e.pfb></usr/share/texlive-bin/current/../texmf-loc
+al/fonts/type1/cjk/unisong/unisong4f.pfb></usr/share/texlive-bin/current/../tex
+mf-local/fonts/type1/cjk/unisong/unisong50.pfb></usr/share/texlive-bin/current/
+../texmf-local/fonts/type1/cjk/unisong/unisong51.pfb></usr/share/texlive-bin/cu
+rrent/../texmf-local/fonts/type1/cjk/unisong/unisong52.pfb></usr/share/texlive-
+bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong53.pfb></usr/share/te
+xlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong54.pfb></usr/sh
+are/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong55.pfb></
+usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong56.
 pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unis
-ong75.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unison
-g/unisong76.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/
-unisong/unisong77.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type
-1/cjk/unisong/unisong78.pfb></usr/share/texlive-bin/current/../texmf-local/font
-s/type1/cjk/unisong/unisong79.pfb></usr/share/texlive-bin/current/../texmf-loca
-l/fonts/type1/cjk/unisong/unisong7a.pfb></usr/share/texlive-bin/current/../texm
-f-local/fonts/type1/cjk/unisong/unisong7b.pfb></usr/share/texlive-bin/current/.
-./texmf-local/fonts/type1/cjk/unisong/unisong7c.pfb></usr/share/texlive-bin/cur
-rent/../texmf-local/fonts/type1/cjk/unisong/unisong7d.pfb></usr/share/texlive-b
-in/current/../texmf-local/fonts/type1/cjk/unisong/unisong7e.pfb></usr/share/tex
-live-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong7f.pfb></usr/sha
-re/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong80.pfb></u
-sr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong81.p
+ong57.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unison
+g/unisong58.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/
+unisong/unisong59.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type
+1/cjk/unisong/unisong5b.pfb></usr/share/texlive-bin/current/../texmf-local/font
+s/type1/cjk/unisong/unisong5c.pfb></usr/share/texlive-bin/current/../texmf-loca
+l/fonts/type1/cjk/unisong/unisong5d.pfb></usr/share/texlive-bin/current/../texm
+f-local/fonts/type1/cjk/unisong/unisong5e.pfb></usr/share/texlive-bin/current/.
+./texmf-local/fonts/type1/cjk/unisong/unisong5f.pfb></usr/share/texlive-bin/cur
+rent/../texmf-local/fonts/type1/cjk/unisong/unisong60.pfb></usr/share/texlive-b
+in/current/../texmf-local/fonts/type1/cjk/unisong/unisong61.pfb></usr/share/tex
+live-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong62.pfb></usr/sha
+re/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong63.pfb></u
+sr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong64.p
 fb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/uniso
-ng82.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong
-/unisong83.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/u
-nisong/unisong84.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1
-/cjk/unisong/unisong86.pfb></usr/share/texlive-bin/current/../texmf-local/fonts
-/type1/cjk/unisong/unisong87.pfb></usr/share/texlive-bin/current/../texmf-local
-/fonts/type1/cjk/unisong/unisong88.pfb></usr/share/texlive-bin/current/../texmf
--local/fonts/type1/cjk/unisong/unisong89.pfb></usr/share/texlive-bin/current/..
-/texmf-local/fonts/type1/cjk/unisong/unisong8a.pfb></usr/share/texlive-bin/curr
-ent/../texmf-local/fonts/type1/cjk/unisong/unisong8b.pfb></usr/share/texlive-bi
-n/current/../texmf-local/fonts/type1/cjk/unisong/unisong8c.pfb></usr/share/texl
-ive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong8d.pfb></usr/shar
-e/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong8e.pfb></us
-r/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong8f.pf
+ng65.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong
+/unisong66.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/u
+nisong/unisong67.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1
+/cjk/unisong/unisong68.pfb></usr/share/texlive-bin/current/../texmf-local/fonts
+/type1/cjk/unisong/unisong69.pfb></usr/share/texlive-bin/current/../texmf-local
+/fonts/type1/cjk/unisong/unisong6a.pfb></usr/share/texlive-bin/current/../texmf
+-local/fonts/type1/cjk/unisong/unisong6b.pfb></usr/share/texlive-bin/current/..
+/texmf-local/fonts/type1/cjk/unisong/unisong6c.pfb></usr/share/texlive-bin/curr
+ent/../texmf-local/fonts/type1/cjk/unisong/unisong6d.pfb></usr/share/texlive-bi
+n/current/../texmf-local/fonts/type1/cjk/unisong/unisong6e.pfb></usr/share/texl
+ive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong6f.pfb></usr/shar
+e/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong70.pfb></us
+r/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong71.pf
 b></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unison
-g90.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/
-unisong91.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/un
-isong/unisong94.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/
-cjk/unisong/unisong95.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/
-type1/cjk/unisong/unisong96.pfb></usr/share/texlive-bin/current/../texmf-local/
-fonts/type1/cjk/unisong/unisong97.pfb></usr/share/texlive-bin/current/../texmf-
-local/fonts/type1/cjk/unisong/unisong98.pfb></usr/share/texlive-bin/current/../
-texmf-local/fonts/type1/cjk/unisong/unisong99.pfb></usr/share/texlive-bin/curre
-nt/../texmf-local/fonts/type1/cjk/unisong/unisong9a.pfb></usr/share/texlive-bin
-/current/../texmf-local/fonts/type1/cjk/unisong/unisong9c.pfb></usr/share/texli
-ve-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong9e.pfb></usr/share
-/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong9f.pfb></usr
-/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisongff.pfb
-></usr/share/texlive-bin/current/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
-usr/share/texlive-bin/current/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
-/share/texlive-bin/current/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (55 pages, 17797454 bytes).
+g72.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/
+unisong73.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/un
+isong/unisong74.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/
+cjk/unisong/unisong75.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/
+type1/cjk/unisong/unisong76.pfb></usr/share/texlive-bin/current/../texmf-local/
+fonts/type1/cjk/unisong/unisong77.pfb></usr/share/texlive-bin/current/../texmf-
+local/fonts/type1/cjk/unisong/unisong78.pfb></usr/share/texlive-bin/current/../
+texmf-local/fonts/type1/cjk/unisong/unisong79.pfb></usr/share/texlive-bin/curre
+nt/../texmf-local/fonts/type1/cjk/unisong/unisong7a.pfb></usr/share/texlive-bin
+/current/../texmf-local/fonts/type1/cjk/unisong/unisong7b.pfb></usr/share/texli
+ve-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong7c.pfb></usr/share
+/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong7d.pfb></usr
+/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong7e.pfb
+></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong
+7f.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/u
+nisong80.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uni
+song/unisong81.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/c
+jk/unisong/unisong82.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/t
+ype1/cjk/unisong/unisong83.pfb></usr/share/texlive-bin/current/../texmf-local/f
+onts/type1/cjk/unisong/unisong84.pfb></usr/share/texlive-bin/current/../texmf-l
+ocal/fonts/type1/cjk/unisong/unisong86.pfb></usr/share/texlive-bin/current/../t
+exmf-local/fonts/type1/cjk/unisong/unisong87.pfb></usr/share/texlive-bin/curren
+t/../texmf-local/fonts/type1/cjk/unisong/unisong88.pfb></usr/share/texlive-bin/
+current/../texmf-local/fonts/type1/cjk/unisong/unisong89.pfb></usr/share/texliv
+e-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong8a.pfb></usr/share/
+texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong8b.pfb></usr/
+share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong8c.pfb>
+</usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong8
+d.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/un
+isong8e.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unis
+ong/unisong8f.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cj
+k/unisong/unisong90.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/ty
+pe1/cjk/unisong/unisong91.pfb></usr/share/texlive-bin/current/../texmf-local/fo
+nts/type1/cjk/unisong/unisong94.pfb></usr/share/texlive-bin/current/../texmf-lo
+cal/fonts/type1/cjk/unisong/unisong95.pfb></usr/share/texlive-bin/current/../te
+xmf-local/fonts/type1/cjk/unisong/unisong96.pfb></usr/share/texlive-bin/current
+/../texmf-local/fonts/type1/cjk/unisong/unisong97.pfb></usr/share/texlive-bin/c
+urrent/../texmf-local/fonts/type1/cjk/unisong/unisong98.pfb></usr/share/texlive
+-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong99.pfb></usr/share/t
+exlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong9a.pfb></usr/s
+hare/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong9c.pfb><
+/usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/unisong9e
+.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/unisong/uni
+song9f.pfb></usr/share/texlive-bin/current/../texmf-local/fonts/type1/cjk/uniso
+ng/unisongff.pfb></usr/share/texlive-bin/current/texmf-dist/fonts/type1/urw/tim
+es/utmb8a.pfb></usr/share/texlive-bin/current/texmf-dist/fonts/type1/urw/times/
+utmr8a.pfb></usr/share/texlive-bin/current/texmf-dist/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on thesis.pdf (62 pages, 18482972 bytes).
 PDF statistics:
- 2122 PDF objects out of 2487 (max. 8388607)
- 276 named destinations out of 1000 (max. 500000)
- 1544 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2292 PDF objects out of 2487 (max. 8388607)
+ 318 named destinations out of 1000 (max. 500000)
+ 1693 words of extra memory for PDF output out of 10000 (max. 10000000)
 
