@@ -3,34 +3,34 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {第\nobreakspace  {}5\nobreakspace  {}章}基于三维体素泛洪与线性拟合的三维树木骨架抽取}{19}{chapter.5}}
 \newlabel{sec:sklextract}{{5}{19}{基于三维体素泛洪与线性拟合的三维树木骨架抽取\relax }{chapter.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.1}三维体素模型}{19}{section.5.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces 三维体素模型\relax }}{20}{figure.caption.15}}
-\newlabel{fig:voxel}{{5.1}{20}{三维体素模型\relax \relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces 三维体素模型\relax }}{20}{figure.caption.16}}
+\newlabel{fig:voxel}{{5.1}{20}{三维体素模型\relax \relax }{figure.caption.16}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces 点云模型体素化\relax }}{20}{algorithm.3}}
 \newlabel{alg:voxel}{{3}{20}{点云模型体素化\relax \relax }{algorithm.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.2}三维体素泛洪确定邻域范围}{20}{section.5.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces 体素泛洪示意图\relax }}{21}{figure.caption.16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces 体素泛洪示意图\relax }}{21}{figure.caption.17}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{((a))}{\ignorespaces {初始状态(邻域范围为1个体素)}}}{21}{subfigure.5.2.1}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{((b))}{\ignorespaces {第一次泛洪迭代(邻域范围为6个体素)}}}{21}{subfigure.5.2.2}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{((c))}{\ignorespaces {第二次泛洪迭代(邻域范围为11个体素)}}}{21}{subfigure.5.2.3}}
-\newlabel{fig:3dfld}{{5.2}{21}{体素泛洪示意图\relax \relax }{figure.caption.16}{}}
+\newlabel{fig:3dfld}{{5.2}{21}{体素泛洪示意图\relax \relax }{figure.caption.17}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces 三维体素泛洪确定邻域范围\relax }}{22}{algorithm.4}}
 \newlabel{alg:3dfld}{{4}{22}{三维体素泛洪确定邻域范围\relax \relax }{algorithm.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.3}通过最小二乘法线性拟合确定分支方向}{22}{section.5.3}}
 \newlabel{subsec:leastsquares}{{5.3}{22}{通过最小二乘法线性拟合确定分支方向\relax }{section.5.3}{}}
 \newlabel{eq:line}{{5.2}{23}{通过最小二乘法线性拟合确定分支方向\relax }{equation.5.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces 线性拟合计算分支方向\relax }}{24}{figure.caption.17}}
-\newlabel{fig:fitting}{{5.3}{24}{线性拟合计算分支方向\relax \relax }{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces 线性拟合计算分支方向\relax }}{24}{figure.caption.18}}
+\newlabel{fig:fitting}{{5.3}{24}{线性拟合计算分支方向\relax \relax }{figure.caption.18}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces 基于邻域的骨架方向计算\relax }}{24}{algorithm.5}}
 \newlabel{alg:sklextract}{{5}{24}{基于邻域的骨架方向计算\relax \relax }{algorithm.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.4}获取子枝长度和半径}{24}{section.5.4}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {6}{\ignorespaces 骨架半径抽取\relax }}{25}{algorithm.6}}
 \newlabel{alg:radius}{{6}{25}{骨架半径抽取\relax \relax }{algorithm.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces 三种计算半径方法效果对比\relax }}{26}{figure.caption.18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces 三种计算半径方法效果对比\relax }}{26}{figure.caption.19}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{((a))}{\ignorespaces {样本图像}}}{26}{subfigure.5.4.1}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{((b))}{\ignorespaces {线性衰减(线性衰减系数为0.6)}}}{26}{subfigure.5.4.2}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{((c))}{\ignorespaces {Leonardo规则生成($D^2=\DOTSB \sum@ \slimits@ _{i=1}^n{d_i^2}$)}}}{26}{subfigure.5.4.3}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{((d))}{\ignorespaces {基于拟合的半径抽取}}}{26}{subfigure.5.4.4}}
-\newlabel{fig:radius}{{5.4}{26}{三种计算半径方法效果对比\relax \relax }{figure.caption.18}{}}
+\newlabel{fig:radius}{{5.4}{26}{三种计算半径方法效果对比\relax \relax }{figure.caption.19}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {7}{\ignorespaces 子枝长度抽取\relax }}{27}{algorithm.7}}
 \newlabel{alg:length}{{7}{27}{子枝长度抽取\relax \relax }{algorithm.7}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.5}本章小节}{27}{section.5.5}}
