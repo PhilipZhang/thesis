@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.3.8)  24 MAY 2013 13:22
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.3.8)  27 MAY 2013 13:32
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -2039,7 +2039,7 @@ Overfull \vbox (0.64914pt too high) has occurred while \output is active []
 
 
 
-]<<c7094.cmap>> <figures/techroute.jpg, id=825, 757.83125pt x 1429.34pt>
+]<<c7094.cmap>> <figures/techroute.jpg, id=825, 757.83125pt x 960.58875pt>
 File: figures/techroute.jpg Graphic file (type jpg)
 
 <use figures/techroute.jpg>)
@@ -2185,33 +2185,37 @@ Underfull \hbox (badness 6658) in paragraph at lines 80--80
 Overfull \vbox (0.607pt too high) has occurred while \output is active []
 
  [21 <./figures/fld1.jpg> <./figures/fld2.jpg> <./figures/fld3.jpg>]
+
+LaTeX Warning: File ot18b.cmap not found on input line 127.
+
+
 Overfull \vbox (0.607pt too high) has occurred while \output is active []
 
  [22]
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
+Underfull \hbox (badness 10000) in paragraph at lines 138--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--151
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
 
  []
 
-<figures/branch.png, id=993, 234.1247pt x 240.9pt>
+
+Overfull \vbox (0.607pt too high) has occurred while \output is active []
+
+ [23]
+<figures/branch.png, id=1001, 234.1247pt x 240.9pt>
 File: figures/branch.png Graphic file (type png)
  <use figures/branch.png>
 Overfull \vbox (0.607pt too high) has occurred while \output is active []
 
- [23]
-Underfull \hbox (badness 10000) in paragraph at lines 233--240
+ [24 <./figures/branch.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 236--243
 
  []
 
-
-Overfull \vbox (0.607pt too high) has occurred while \output is active []
-
- [24 <./figures/branch.png>] <figures/rsample.jpg, id=1014, 3228.06pt x 4304.08
-pt>
+<figures/rsample.jpg, id=1014, 3228.06pt x 4304.08pt>
 File: figures/rsample.jpg Graphic file (type jpg)
 
 <use figures/rsample.jpg>
@@ -2219,7 +2223,7 @@ File: figures/rsample.jpg Graphic file (type jpg)
 File: figures/rlinear.png Graphic file (type png)
 
 <use figures/rlinear.png>
-Underfull \hbox (badness 1721) in paragraph at lines 270--270
+Underfull \hbox (badness 1721) in paragraph at lines 273--273
 []\OT1/txr/m/n/10.53937 (b) |\C70/song/m/n/10.53937/7e ¿ \C70/song/m/n/10.53937
 /60 ' \C70/song/m/n/10.53937/88 p \C70/song/m/n/10.53937/51 Ï\OT1/txr/m/n/10.53
 937 (\C70/song/m/n/10.53937/7e ¿ \C70/song/m/n/10.53937/60 ' \C70/song/m/n/10.5
@@ -2232,14 +2236,14 @@ File: figures/rsquare.png Graphic file (type png)
 
 <use figures/rsquare.png>
 LaTeX Font Info:    Calculating math sizes for size <10.53937> on input line 27
-1.
+4.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 271.
+(Font)              size <10.95> substituted on input line 274.
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 271--271
+Underfull \hbox (badness 5189) in paragraph at lines 274--274
 []\OT1/txr/m/n/10.53937 (c) |Leonardo\C70/song/m/n/10.53937/89 Ä \C70/song/m/n/
 10.53937/52 ^^Y \C70/song/m/n/10.53937/75 ^^_ \C70/song/m/n/10.53937/62 ^^P\OT1
 /txr/m/n/10.53937 ($\OML/txmi/m/it/10.53937 D[] \OT1/txr/m/n/10.53937 =
@@ -2879,10 +2883,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 33326 strings out of 495046
- 629825 string characters out of 3181473
- 750754 words of memory out of 3000000
- 33906 multiletter control sequences out of 15000+200000
+ 33334 strings out of 495046
+ 629960 string characters out of 3181473
+ 750833 words of memory out of 3000000
+ 33909 multiletter control sequences out of 15000+200000
  225804 words of font info for 676 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  56i,12n,76p,669b,2145s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3182,7 +3186,7 @@ ng/unisongff.pfb></usr/share/texlive-bin/current/texmf-dist/fonts/type1/urw/tim
 es/utmb8a.pfb></usr/share/texlive-bin/current/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texlive-bin/current/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on thesis.pdf (63 pages, 18490747 bytes).
+Output written on thesis.pdf (63 pages, 18436070 bytes).
 PDF statistics:
  2305 PDF objects out of 2487 (max. 8388607)
  321 named destinations out of 1000 (max. 500000)
