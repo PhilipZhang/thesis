@@ -4,8 +4,9 @@
 \contentsline {chapter}{\numberline {第\nobreakspace {}2\nobreakspace {}章}树木建模的研究综述}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}虚拟树木建模技术}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}现实树木重建技术}{4}{section.2.2}
-\contentsline {section}{\numberline {2.3}现有方法的不足}{5}{section.2.3}
-\contentsline {section}{\numberline {2.4}本章小节}{6}{section.2.4}
+\contentsline {section}{\numberline {2.3}现有方法的缺陷}{5}{section.2.3}
+\contentsline {section}{\numberline {2.4}本实验室的先期工作及不足之处}{5}{section.2.4}
+\contentsline {section}{\numberline {2.5}本章小节}{6}{section.2.5}
 \contentsline {chapter}{\numberline {第\nobreakspace {}3\nobreakspace {}章}基于图像的树木轻量化3D建模方法}{7}{chapter.3}
 \contentsline {section}{\numberline {3.1}技术路线}{7}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}基于改进的PyrLK光流法的图像特征匹配}{7}{subsection.3.1.1}
@@ -20,7 +21,7 @@
 \contentsline {section}{\numberline {4.3}PyrLK光流算法的改进}{12}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}加入仿射变换}{12}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}反向追踪与中值过滤以提高鲁棒性}{13}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}支持仿射变换和提高鲁棒性的的PyrLK光流法}{15}{section.4.4}
+\contentsline {section}{\numberline {4.4}支持仿射变换和提高鲁棒性的PyrLK光流法}{15}{section.4.4}
 \contentsline {section}{\numberline {4.5}本章小节}{17}{section.4.5}
 \contentsline {chapter}{\numberline {第\nobreakspace {}5\nobreakspace {}章}基于三维体素泛洪与线性拟合的三维树木骨架抽取}{19}{chapter.5}
 \contentsline {section}{\numberline {5.1}三维体素模型}{19}{section.5.1}
@@ -34,29 +35,31 @@
 \contentsline {subsection}{\numberline {6.1.2}树木模型的参数化L-System规则抽取}{28}{subsection.6.1.2}
 \contentsline {subsection}{\numberline {6.1.3}使用L-System进行树木轻量化建模遇到的问题}{29}{subsection.6.1.3}
 \contentsline {section}{\numberline {6.2}基于枝干合并的树木分级轻量化}{29}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}枝干纵向合并}{30}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}枝干横向合并}{31}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}联合使用横纵向合并}{32}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.1}基于夹角的枝干纵向合并算法}{30}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}基于端点距离的枝干横向合并算法}{31}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}综合使用横纵向合并}{32}{subsection.6.2.3}
 \contentsline {section}{\numberline {6.3}本章小节}{33}{section.6.3}
-\contentsline {chapter}{\numberline {第\nobreakspace {}7\nobreakspace {}章}建模还原度}{34}{chapter.7}
+\contentsline {chapter}{\numberline {第\nobreakspace {}7\nobreakspace {}章}建模还原度度量}{34}{chapter.7}
 \contentsline {section}{\numberline {7.1}图像序列信息量}{34}{section.7.1}
 \contentsline {section}{\numberline {7.2}三维重建还原度}{36}{section.7.2}
 \contentsline {section}{\numberline {7.3}骨架抽取还原度}{36}{section.7.3}
 \contentsline {section}{\numberline {7.4}建模还原度计算}{37}{section.7.4}
 \contentsline {section}{\numberline {7.5}本章小节}{37}{section.7.5}
 \contentsline {chapter}{\numberline {第\nobreakspace {}8\nobreakspace {}章}基于用户交互的模型改善}{38}{chapter.8}
-\contentsline {section}{\numberline {8.1}加载树木点云文件}{39}{section.8.1}
-\contentsline {section}{\numberline {8.2}显示骨架模型}{40}{section.8.2}
-\contentsline {section}{\numberline {8.3}显示点云模型}{41}{section.8.3}
-\contentsline {section}{\numberline {8.4}显示体素模型}{42}{section.8.4}
-\contentsline {section}{\numberline {8.5}节点编辑}{43}{section.8.5}
-\contentsline {section}{\numberline {8.6}简化模型}{44}{section.8.6}
-\contentsline {section}{\numberline {8.7}泛洪算法演示}{45}{section.8.7}
-\contentsline {section}{\numberline {8.8}本章小节}{46}{section.8.8}
-\contentsline {chapter}{\numberline {第\nobreakspace {}9\nobreakspace {}章}实验过程与分析}{47}{chapter.9}
-\contentsline {section}{\numberline {9.1}实验环境}{47}{section.9.1}
-\contentsline {section}{\numberline {9.2}实验结果与分析}{47}{section.9.2}
-\contentsline {section}{\numberline {9.3}本章小节}{56}{section.9.3}
-\contentsline {chapter}{致\hspace {1em}谢}{57}{section*.52}
-\contentsline {chapter}{参考文献}{58}{section*.54}
+\contentsline {section}{\numberline {8.1}交互平台用例说明}{38}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}加载树木点云文件}{39}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}显示骨架模型}{40}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}显示点云模型}{41}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}显示体素模型}{42}{subsection.8.1.4}
+\contentsline {subsection}{\numberline {8.1.5}节点编辑}{43}{subsection.8.1.5}
+\contentsline {subsection}{\numberline {8.1.6}简化模型}{44}{subsection.8.1.6}
+\contentsline {subsection}{\numberline {8.1.7}泛洪算法演示}{45}{subsection.8.1.7}
+\contentsline {section}{\numberline {8.2}利用用户交互提升算法完整性}{46}{section.8.2}
+\contentsline {section}{\numberline {8.3}本章小节}{47}{section.8.3}
+\contentsline {chapter}{\numberline {第\nobreakspace {}9\nobreakspace {}章}实验过程与分析}{48}{chapter.9}
+\contentsline {section}{\numberline {9.1}实验环境}{48}{section.9.1}
+\contentsline {section}{\numberline {9.2}实验结果与分析}{48}{section.9.2}
+\contentsline {section}{\numberline {9.3}本章小节}{57}{section.9.3}
+\contentsline {chapter}{致\hspace {1em}谢}{58}{section*.53}
+\contentsline {chapter}{参考文献}{59}{section*.55}
 \contentsfinish 

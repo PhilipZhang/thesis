@@ -21,8 +21,9 @@
 在本文中未给出具体的系统分析和设计。本文试图对该用户交互平台的功能进行阐述，从而在功能性上
 对自动化算法进行人工加强和改善。
 
+\section{交互平台用例说明}
 \clearpage
-\section{加载树木点云文件}
+\subsection{加载树木点云文件}
 
 \begin{figure}[H]
 	\centering
@@ -59,7 +60,7 @@
 \end{table}
 
 \clearpage
-\section{显示骨架模型}
+\subsection{显示骨架模型}
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=6cm]{uc2.png}
@@ -93,7 +94,7 @@
 \end{table}
 
 \clearpage
-\section{显示点云模型}
+\subsection{显示点云模型}
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=6cm]{uc3.png}
@@ -127,7 +128,7 @@
 \end{table}
 
 \clearpage
-\section{显示体素模型}
+\subsection{显示体素模型}
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=6cm]{uc4.png}
@@ -161,22 +162,22 @@
 \end{table}
 
 \clearpage
-\section{节点编辑}
+\subsection{节点编辑}
 \begin{figure}[H]
 	\centering
-	\subfloat[节点插入(前)]{\includegraphics[height=4cm]{uc5_ins1.png}}\hspace{3em}
-	\subfloat[节点删除(前)]{\includegraphics[height=4cm]{uc5_rm1.png}}\hspace{3em}
-	\subfloat[节点移动(前)]{\includegraphics[height=4cm]{uc5_mv1.png}}\hspace{3em}
-	\subfloat[节点插入(后)]{\includegraphics[height=4cm]{uc5_ins2.png}}\hspace{3em}
-	\subfloat[节点删除(后)]{\includegraphics[height=4cm]{uc5_rm2.png}}\hspace{3em}
-	\subfloat[节点移动(后)]{\includegraphics[height=4cm]{uc5_mv2.png}}\hspace{3em}
+	\subfloat[节点插入(前)]{\includegraphics[width=0.26\linewidth]{uc5_ins1.png}}\hfill
+	\subfloat[节点删除(前)]{\includegraphics[width=0.26\linewidth]{uc5_rm1.png}}\hfill
+	\subfloat[节点移动(前)]{\includegraphics[width=0.26\linewidth]{uc5_mv1.png}}\hfill
+	\subfloat[节点插入(后)]{\includegraphics[width=0.26\linewidth]{uc5_ins2.png}}\hfill
+	\subfloat[节点删除(后)]{\includegraphics[width=0.26\linewidth]{uc5_rm2.png}}\hfill
+	\subfloat[节点移动(后)]{\includegraphics[width=0.26\linewidth]{uc5_mv2.png}}\hfill
 	\caption{用例图示：节点编辑}
 	\label{fig:uc5}
 \end{figure}
 
 \begin{table}[H]
 	\centering
-\begin{tabular}{|l|p{8cm}|}
+\begin{tabular}{|l|p{10cm}|}
 	\hline
 	用例名称: & 节点编辑\\
 	\hline
@@ -184,12 +185,13 @@
 	\hline
 	参与者: & 用户\\
 	\hline
-	简要说明: & 用户可以通过选中特定的节点，对其进行丰富的编辑操作，具体效果见图\ref{fig:uc5}\\
+	简要说明: & 可以对选中的节点进行丰富的编辑操作，具体效果见图\ref{fig:uc5}。
+	其中橙色球体表示当前选中节点，半透明蓝色部分表示当前节点其下的子树，褐色区域表示树的其他部分\\
 	\hline
 	前置条件: & 树木的显示模式为骨架模型\\
 	\hline
 	基本事件流: & 1. 用户按下'g'键\\
-	 & 2. 树木骨架从当前节点按用户视角右方向生长出一个子节点\\
+	 & 2. 树木骨架从当前节点按用户视角右方向长出一个子节点\\
 	 & 3. 调整当前节点为新增的子节点\\
 	\hline
 	可选事件流1: & 1. 用户按下'p'键\\
@@ -201,17 +203,15 @@
 	可选事件流3: & 1. 用户按下'n','f'键\\
 	 & 2. 当前节点及其以下的子树在z平面内外平移\\
 	\hline
-	后置条件: & 无\\
-	\hline
 \end{tabular}
 \end{table}
 
 \clearpage
-\section{简化模型}
+\subsection{简化模型}
 \begin{figure}[H]
 	\centering
-	\subfloat[合并简化(前)]{\includegraphics[height=6cm]{uc6_1.png}}\hspace{5em}
-	\subfloat[纵向简化(后)]{\includegraphics[height=6cm]{uc6_2.png}}\hspace{5em}
+	\subfloat[模型简化(前)]{\includegraphics[width=0.4\linewidth]{uc6_1.png}}\hfill
+	\subfloat[模型简化(后)]{\includegraphics[width=0.4\linewidth]{uc6_2.png}}\hfill
 	\caption{用例图示：简化模型}
 	\label{fig:uc6}
 \end{figure}
@@ -240,13 +240,15 @@
 \end{table}
 
 \clearpage
-\section{泛洪算法演示}
+\subsection{泛洪算法演示}
 \begin{figure}[H]
 	\centering
-	\subfloat[输入:从点云中得到的体素模型]{\includegraphics[width=0.35\linewidth]{uc7_1.png}}\hfill
-	\subfloat[泛洪算法初始化]{\includegraphics[width=0.35\linewidth]{uc7_2.png}}\hfill
-	\subfloat[泛洪算法中间步骤]{\includegraphics[width=0.35\linewidth]{uc7_3.png}}\hfill
-	\subfloat[泛洪算法完成]{\includegraphics[width=0.35\linewidth]{uc7_4.png}}
+	\subfloat[输入:从点云中得到的体素模型]{\includegraphics[width=0.26\linewidth]{uc7_1.png}}\hfill
+	\subfloat[第1次迭代]{\includegraphics[width=0.26\linewidth]{uc7_2.png}}\hfill
+	\subfloat[第4次迭代]{\includegraphics[width=0.26\linewidth]{uc7_3.png}}\hfill
+	\subfloat[第7次迭代]{\includegraphics[width=0.26\linewidth]{uc7_4.png}}\hfill
+	\subfloat[第10次迭代]{\includegraphics[width=0.26\linewidth]{uc7_5.png}}\hfill
+	\subfloat[泛洪算法完成]{\includegraphics[width=0.26\linewidth]{uc7_6.png}}
 	\caption{用例图示：泛洪算法演示}
 	\label{fig:uc7}
 \end{figure}
@@ -276,6 +278,41 @@
 \end{table}
 
 \clearpage
+\section{利用用户交互提升算法完整性}
+根据用户交互平台提供的一系列功能，可以对本文提出的骨架抽取算法进行进一步的完善。由于依靠自动化
+骨架抽取算法不可能100\%的恢复出树木的骨架信息，它可能带有一定的骨架缺失，因此有必要依靠少量的人工
+交互与指引，进一步完善算法中的缺失部分，从而得到一个完整的骨架模型。这里的人工指引并不是指的逐
+个节点的手工编辑，而是对某些缺失的骨架给出一个方向的指引，使得其在缺失方向上重新进行泛洪，而自动化
+地补全缺失的信息。这种方式比起手工对缺失的骨架进行建模效率高出许多，因为用户只要给出一个缺失的方向
+即可。
+
+图\ref{fig:intalg}展示了通过用户交互的方法指引泛洪算法的进一步完善的过程。
+如图\ref{fig:intalg}(a)，该树木模型已经经过了本文前文所介绍的骨架抽取步骤。然而与点云模型相对比，
+发现当前节点处仍有部分的枝干丢失。经过分析，该枝干丢失可能的原因主要是骨架抽取算法的分支判定条件
+并没有将当前分支判定进去。一种可行的办法是调整分支条件的参数，但是这对于用户来说并不是一种很好
+的解决办法，因为在实际应用中，要用户去了解一个算法内部的参数是不大可能的。因此本文提出了基于用户
+交互与指引的方法，用户只需要从缺失枝干的父枝干出发，引出一个子节点，而泛洪算法将由该子节点开始
+继续探索该缺失部分。图\ref{fig:intalg}(b)给出了一个用户指引生成的节点，因此泛洪算法将继续从该
+子节点开始，恢复该缺失枝条的骨架。最终的恢复结果如图\ref{fig:intalg}(c)所示。其中橙色球体代表当前
+节点，红色区域代表点云，褐色区域代表已抽取骨架，蓝色区域代表通过用户交互恢复出来的枝条。
+
+\begin{figure}[H]
+	\centering
+	\subfloat[缺失的枝条]{\includegraphics[width=0.3\linewidth]{before.png}}\hfill
+	\subfloat[新插入节点作为算法指引]{\includegraphics[width=0.3\linewidth]{direction.png}}\hfill
+	\subfloat[恢复的枝条]{\includegraphics[width=0.3\linewidth]{after.png}}
+	\caption{基于用户交互提升算法完整性}
+	\label{fig:intalg}
+\end{figure}
+
+可见，基于用户交互对算法进行快捷而方便的指引，相较于让用户逐个节点去进行完善，这种方法对于缺失枝干
+的恢复具有重要意义。首先，该方法只用引出一个节点作为新的种子点，泛洪算法就可以递归性地恢复整个枝干，
+这比起让用户去逐个节点的编辑，大大的节省了建模的时间；同时，由于运用本文介绍的骨架抽取算法所抽取出
+的骨架已经大部分的还原了原始骨架，因此需要的用户交互只是及其少量的，这就保证了建模还是由自动化的方法
+主导的，有着很好的便捷性;最后，若用户对于最终恢复的模型还有局部需要微调，则可以配合前面的模型编辑
+功能进行编辑，这种编辑是建立在已经成型的树木骨架的基础上的，因此比起从头开始建模，也是更加方便和
+快捷的方式。
+
 \section{本章小节}
 本章给出了一个基于用户交互的模型改善平台，它可以解决自动化算法所带来的一些主观性和二义性问题，通过
 最终用户或应用来对自动化生成的模型进行改善，可以使本文给出的基于图像的树木轻量化算法普及到更多的应用

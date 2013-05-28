@@ -71,7 +71,7 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 的前提下，本文提出了分别从纵向和横向对树枝进行合并的方法，以去掉一些只是起到微调作用的枝干。
 这种方法在尽可能保证真实感不过多丢失的前提下对树枝进行简化操作，以适应更广泛的Web应用领域。
 
-\subsection{枝干纵向合并}
+\subsection{基于夹角的枝干纵向合并算法}
 
 纵向合并表示从父到子，从根到页进行纵向递归式的合并。若当前节点与其父节点和子节点的夹角小于所设定
 的阈值，那么则将该节点去掉，并将其子节点连接到其父节点。注意，若该节点的子节点数目不只一个，
@@ -83,24 +83,24 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 和\textbf{CD}合并。在图\ref{fig:vert}(c)中，由于节点\textbf{D}有两个孩子，所以不对其进行合并
 操作。
 
-纵向合并算法的伪代码在算法\ref{alg:vertical}中给出。
+基于夹角的枝干纵向合并算法的伪代码在算法\ref{alg:vertical}中给出。
 
 \begin{figure}[H]
 	\centering
-	\subfloat[输入树枝骨架]{
+	\subfloat[合并AB、BC]{
 \includegraphics[height=5cm]{vert1.jpg}}
 \hspace{4em}
-	\subfloat[合并AB、BC]{
+	\subfloat[合并AC、CD]{
 \includegraphics[height=5cm]{vert2.jpg}}
 \hspace{4em}
-	\subfloat[合并AC、CD]{
+	\subfloat[合并完成]{
 \includegraphics[height=5cm]{vert3.jpg}}
 	\caption{树枝简化过程}
 	\label{fig:vert}
 \end{figure}
 
 \begin{algorithm}[H]
-	\caption{纵向合并枝干}
+	\caption{基于夹角的枝干纵向合并}
 	\label{alg:vertical}
 	\begin{algorithmic}[1] 
 		%\Comment {根据纵向合并角度参数，以当前节点为发起点递归式地纵向合并枝干}
@@ -127,7 +127,7 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 	\end{algorithmic}
 \end{algorithm}
 
-\subsection{枝干横向合并}
+\subsection{基于端点距离的枝干横向合并算法}
 
 横向合并指的是对非常靠近的叶子节点进行合并。之所以只对叶子节点进行合并，是
 因为非叶子节点下面都有若干棵子树，若对它们进行合并，必须对它们下面的子树也进行合并。而合并子树
@@ -137,7 +137,7 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 给出。
 
 \begin{algorithm}[H]
-	\caption{横向合并枝干}
+	\caption{基于端点距离的枝干横向合并}
 	\label{alg:hori}
 	\begin{algorithmic}[1] 
 	\Require 初始化横向合并距离阈值$\mu$
@@ -167,27 +167,27 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{联合使用横纵向合并}
+\subsection{综合使用横纵向合并}
 
 纵向合并和横向合并单独使用时都具有很大的局限性，因为纵向合并只能对具有单个孩子并且没有
 兄弟的节点进行纵向递归地调用，而横向合并又只能对叶子节点进行兄弟级别的合并。但是将两种
 合并方法联合使用，将可以从整体上对树木进行微调操作，图\ref{fig:combine}对这一想法进行了
-演示。\ref{fig:combine}(a)中经过纵向的\textbf{AC,CD}合并得到\ref{fig:combine}(b)。
-\ref{fig:combine}(b)中由于\textbf{D}有两个子节点，无法进行纵向合并，所以考虑进行横向
-合并\textbf{DE,DF}，并得到\ref{fig:combine}(c)。最后进行一次纵向合并得到\ref{fig:combine}(d)。
+演示。\ref{fig:combine}(a)中经过纵向的\textbf{AB,BC}合并得到\ref{fig:combine}(b)。
+\ref{fig:combine}(b)中由于\textbf{C}有两个子节点，无法进行纵向合并，所以考虑进行横向
+合并\textbf{CD,CE}，并得到\ref{fig:combine}(c)。最后进行一次纵向合并得到\ref{fig:combine}(d)。
 
 \begin{figure}[H]
 	\centering
-	\subfloat[输入枝干骨架]{
+	\subfloat[纵向合并AB,BC]{
 	\includegraphics[height=6cm]{comb1.jpg}}
 	\hspace{6em}
-	\subfloat[纵向合并AC,CD]{
+	\subfloat[横向合并CD,CE]{
 	\includegraphics[height=6cm]{comb2.jpg}}
 	\hspace{6em}
-	\subfloat[横向合并DE,DF]{
+	\subfloat[纵向合并AC,CE]{
 	\includegraphics[height=6cm]{comb3.jpg}}
 	\hspace{6em}
-	\subfloat[纵向合并AD,DE]{
+	\subfloat[合并完成]{
 	\includegraphics[height=6cm]{comb4.jpg}}
 	\caption{联合使用纵向和横向合并}
 	\label{fig:combine}

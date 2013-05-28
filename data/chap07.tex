@@ -1,6 +1,6 @@
 % chap07.tex
 
-\chapter{建模还原度}
+\chapter{建模还原度度量}
 \label{sec:qualityevaluation}
 对于一个通过建模获得的树木模型，如果没有一个客观的量化评价指标，就无法从客观的角度
 反馈树木模型的还原度和各个步骤算法的可行性。对于本文的基于图像序列的树木建模方法，
@@ -55,7 +55,7 @@ tanping,lichuan,tanping2,liu}只给出了输入图片和建模结果在少量角
 
 根据以上的分析，本文给出了图像序列信息量的数学定义如下：\\
 \begin{definition}
-	\[ \mathbf{I}=1-[\frac{a}{b}]^n \]
+	\[ \mathbf{I}=1-\left[\frac{a}{b}\right]^n \]
 \end{definition}
 
 其中，图片序列信息量$\mathbf{I}$的取值范围为$[0,1]$。当$\mathbf{I}=0$时表示图片序列并不包含树木信息，
@@ -104,7 +104,7 @@ $i$张图像上在树木轮廓外的点的数量，因此$P_i+O_i$自然就表�
 将图片序列信息量$\mathbf{I}$、三维重建还原度$\mathbf{R_{3d}}$和骨架抽取还原度$\mathbf{R_s}$代入建模还原度$\mathbb{Q}$
 的定义式中，可以得到建模还原度的计算式：\\
 \begin{equation}
-	\mathbb{Q}= (1-[\frac{a}{b}]^n)\cdot \frac{1}{n}\sum_{i=1}^n \frac{P_i}{P_i+O_i} \cdot \frac{S}{N}
+	\mathbb{Q}= (1-\left[\frac{a}{b}\right]^n)\cdot \frac{1}{n}\sum_{i=1}^n \frac{P_i}{P_i+O_i} \cdot \frac{S}{N}
 \end{equation}
 
 \section{本章小节}

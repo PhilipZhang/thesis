@@ -12,46 +12,47 @@ A level-1 auxiliary file: data/chap09.aux
 A level-1 auxiliary file: data/ack.aux
 The style file: tongjibib.bst
 Database file #1: ref/refs.bib
+Warning--empty journal in ZhangChen
 Warning--empty booktitle in lk
-You've used 19 entries,
+You've used 22 entries,
             2221 wiz_defined-function locations,
-            672 strings with 7944 characters,
-and the built_in function-call counts, 9758 in all, are:
-= -- 991
-> -- 236
+            690 strings with 8452 characters,
+and the built_in function-call counts, 10461 in all, are:
+= -- 1061
+> -- 245
 < -- 5
-+ -- 110
-- -- 55
-* -- 779
-:= -- 1289
-add.period$ -- 43
-call.type$ -- 19
++ -- 115
+- -- 57
+* -- 824
+:= -- 1388
+add.period$ -- 49
+call.type$ -- 22
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 708
-empty$ -- 1019
-format.name$ -- 71
-if$ -- 2230
+cite$ -- 24
+duplicate$ -- 767
+empty$ -- 1102
+format.name$ -- 73
+if$ -- 2390
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 19
-newline$ -- 121
-num.names$ -- 19
-pop$ -- 88
+int.to.str$ -- 22
+missing$ -- 21
+newline$ -- 137
+num.names$ -- 21
+pop$ -- 97
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 167
+skip$ -- 179
 stack$ -- 0
-substring$ -- 1340
+substring$ -- 1412
 swap$ -- 47
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 102
-width$ -- 21
-write$ -- 233
-(There was 1 warning)
+warning$ -- 2
+while$ -- 106
+width$ -- 24
+write$ -- 265
+(There were 2 warnings)

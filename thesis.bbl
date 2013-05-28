@@ -101,6 +101,22 @@ Côté J~F, Widlowski J~L, Fournier R~A, et~al.
 \newblock Remote Sensing of Environment, 2009, 113(5): 1067 -- 1081
 \tongjidot
 
+\bibitem{WengHao}
+翁浩，贾金原.
+\newblock 单张图片树木L-System的智能提取算法.
+\newblock Journal of Frontiers of Computer Science \& Technology, 2013, 2
+\tongjidot
+
+\bibitem{ZhangChen}
+张晨，贾金原.
+\newblock 基于图像的树木模型规则提取和轻量化重建.
+\newblock 2013.
+\tongjidot
+
+\bibitem{SunRuoXi}
+Image-based lightweight tree modeling, VRCAI '09, New York, NY, USA, 2009. ACM
+\tongjidot
+
 \bibitem{horn}
 Horn B~K~P, Schunck B~G.
 \newblock Determining Optical Flow.
