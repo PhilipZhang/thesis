@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.3.8)  28 MAY 2013 21:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.3.8)  4 JUN 2013 20:39
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -2957,11 +2957,11 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 33520 strings out of 495046
- 633241 string characters out of 3181473
- 751132 words of memory out of 3000000
+ 33522 strings out of 495046
+ 633277 string characters out of 3181473
+ 751170 words of memory out of 3000000
  34023 multiletter control sequences out of 15000+200000
- 234604 words of font info for 702 fonts, out of 3000000 for 9000
+ 234902 words of font info for 703 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  56i,12n,76p,669b,2151s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{algorithm.9} has been referenced but does not exi
@@ -3264,7 +3264,7 @@ al/fonts/type1/cjk/unisong/unisongff.pfb></usr/share/texlive-bin/current/texmf-
 dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive-bin/current/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive-bin/current/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (65 pages, 19002383 bytes).
+Output written on thesis.pdf (65 pages, 19003192 bytes).
 PDF statistics:
  2375 PDF objects out of 2487 (max. 8388607)
  335 named destinations out of 1000 (max. 500000)
