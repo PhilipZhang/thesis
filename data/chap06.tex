@@ -147,9 +147,9 @@ N(l,r) \rightarrow \&(\theta_0)\wedge(\phi_0)!(r) + (l)S_0(l*a_0,r*b_0)...\&(\th
 		\State $N_1 \gets P.FirstNode$
 		\State $N_2 \gets P.SecondNode$
 		\If{$N_1.ChildCount = 0 \wedge N_2.ChildCount = 0$}
-		\State $\mathbf{\vec{u}} \gets N_1.Position$
-		\State $\mathbf{\vec{v}} \gets N_2.Position$
-		\State $\gamma \gets |\mathbf{\vec{u}} - \mathbf{\vec{u}}|$
+		\State $\vec{\mathbf{u}} \gets N_1.Position$
+		\State $\vec{\mathbf{v}} \gets N_2.Position$
+		\State $\gamma \gets |\vec{\mathbf{u}} - \vec{\mathbf{u}}|$
 			\If{$\gamma<\mu$}
 				\State $New\ Node\ N'$
 				\State $N'.Position \gets (N_1.Position+N_2.Position)/2$

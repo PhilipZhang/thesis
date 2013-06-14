@@ -11,25 +11,34 @@
 邻域大小才确定下来。然后从其点云分布拟合出各个分支的方向，从而生长出新的子节点，
 并递归地生长下去直到点云的边界。
 
-\section{三维体素模型}
+\section{点云体素化}
 前面三维重建步骤得到的结果是一个点云模型，该模型中的点数量庞大，不适于后续的
-邻域搜索，因此我们需要对点云进行体素化处理。所谓体素化，就是将点云占据的空间
-划分成一个个的小立方体，每一个立方体称之为一个体素。
+邻域搜索，因此我们需要对点云进行体素化处理。所谓体素化，就是将离散的点的数据
+组织形式转化为连续的体素的组织形式。它主要分为三步:\\
+
+\begin{itemize}
+	\item \textbf{求得点云包围盒}: 即找到包围点云模型中所有点的最小的长方体。如图
+		\ref{fig:voxel}(a)。
+	\item \textbf{包围盒空间分块}: 根据上一步得到长方体，进行空间分块，每个分块
+		为一个小的立方体，即体素。如图\ref{fig:voxel}(b)。
+	\item \textbf{点云索引}: 对于每一个非空的体素，进行点云的索引。如图\ref{fig:voxel}(c)。
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\subfloat[求得点云包围盒]{\includegraphics[width=0.3\linewidth]{box.png}}\hfill
+	\subfloat[包围盒空间分块]{\includegraphics[width=0.3\linewidth]{voxel.png}}\hfill
+	\subfloat[点云索引]{\includegraphics[width=0.3\linewidth]{index.png}}
+	\caption{点云体素化}
+	\label{fig:voxel}
+\end{figure}
 
 在将点云模型转化为体素模型以后，对于点云的邻域搜索便转化为了对于空间临近体素的
 搜索，体素的位置就反映了点集的位置，因此不用每次搜索都遍历整个点云，而是只用将
 步长范围体素中的点集遍历即可。由于体素是我们处理的基本单位，所以体素的大小也
 直接决定了体素模型的精度，因此，在确保非空体素的空间连续性和效率允许的基础上，
 本文建议让体素尽可能的小，以保证模型的精度。将点云模型转换为体素模型的伪代码
-在算法\ref{alg:voxel}中给出。图\ref{fig:voxel}形象地展示了将空间体素化以后树木的点云模型
-在体素块中的分布情况。
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[height=8cm]{voxel.png}
-	\caption{三维体素模型}
-	\label{fig:voxel}
-\end{figure}
+在算法\ref{alg:voxel}中给出。
 
 \begin{algorithm}[H]
 	\caption{点云模型体素化}
@@ -78,46 +87,64 @@
 	\subfloat[初始状态(邻域范围为1个体素)]{\includegraphics[height=3cm]{fld1.jpg}}\hspace{4em}
 	\subfloat[第一次泛洪迭代(邻域范围为6个体素)]{\includegraphics[height=3cm]{fld2.jpg}}\hspace{4em}
 	\subfloat[第二次泛洪迭代(邻域范围为11个体素)]{\includegraphics[height=3cm]{fld3.jpg}}
-	\caption{体素泛洪示意图}
+	\caption{单个体素泛洪示意图}
 	\label{fig:3dfld}
 \end{figure}
 
-三维体素泛洪确定邻域范围算法的伪代码在算法\ref{alg:3dfld}中给出。
+由于树木有多个节点，所以确定节点间的泛洪顺序十分重要。因为泛洪算法对泛洪过的区域不再进行泛洪，因此
+需要将各个节点之间的相互影响降到最低。本文通过广度优先的方法，按层级对体素进行泛洪，这样就避免了子
+节点的泛洪影响到叔父节点的泛洪。同时，对于同一层级的体素，将其视为多个种子点，并采取并发的泛洪，
+也就是同时对它们进行泛洪，这样既提高了泛洪的效率，也使得同层级间的体素之间的影响降到最小。
+
+图\ref{fig:flood}给出了多种子点并发泛洪确定邻域的示意图。其中蓝色方块为未泛洪体素，着红色的方块表示
+已泛洪体素，橙色的小球为当前的种子点。由图可见，当前的种子点为树木的相同层级上的节点，即广度优先的
+并发泛洪。
+
+\begin{figure}[H]
+	\centering
+	\subfloat[步骤1]{\includegraphics[width=0.4\linewidth]{seed1.png}}\hfill
+	\subfloat[步骤2]{\includegraphics[width=0.4\linewidth]{seed2.png}}\hfill
+	\subfloat[步骤3]{\includegraphics[width=0.4\linewidth]{seed3.png}}\hfill
+	\subfloat[步骤4]{\includegraphics[width=0.4\linewidth]{seed4.png}}\hfill
+	\caption{多种子点并发泛洪示意图}
+	\label{fig:flood}
+\end{figure}
+
+多种子点并发体素泛洪确定邻域范围算法的伪代码在算法\ref{alg:3dfld}中给出。
 \begin{algorithm}[H] 
-	\caption{三维体素泛洪确定邻域范围}
+	\caption{多种子点并发泛洪邻域探索算法}
 	\label{alg:3dfld}
 	\begin{algorithmic}[1]
-		\Require 当前体素$C$，三维体素数组$\mathbb{V}[1..d,1..d,1..d]$，
-		泛洪方向数组$\mathbb{D}[1..26]$，邻域范围增长比例阈值$\lambda$
-		%\Require 三维体素数组$\mathbb{V}[1..d,1..d,1..d]$
-		%\Require 泛洪方向数组$\mathbb{D}[1..27]$
-		%\Require 邻域范围增长比例阈值$\lambda$
+		\Require 当前层级体素集$\mathbb{C}$，三维体素数组$\mathbb{V}[1..d,1..d,1..d]$，
+		泛洪方向数组$\mathbb{D}[1..26]$，邻域范围增长比例阈值$\lambda$，最大迭代次数$num$
 		\Ensure	邻域范围内体素集合$\mathbb{S}$
-		\State 初始化单次迭代新增体素集合$\mathbb{S'}$
-		\State $\mathbb{S'}.AddVoxel($根节点所在体素$)$
+		\State 当前层级体素数目$n$ = $\mathbb{C}$.Count
+		\State 初始化前一次泛洪体素数目数组$\mathbb{P}[1,..,n]$
+		\For{i = 1 \textbf{to} $num$}
+		\State 体素索引$j = 0$
+		\ForAll{体素$voxel \in \mathbb{C}$}
+		\State $j++$
+		\State 临时体素数组$\mathbb{T}$
 		\ForAll{泛洪方向$Direction \in \mathbb{D}$}
-			\State $NewIndex = C.Index + Direction$
+			\State $NewIndex = voxel.Index + Direction$
 			\State $NewVoxel = \mathbb{V}[NewIndex.x,NewIndex.y,NewIndex.z]$
 			\If{$NewVoxel$非空$\bigcap NewVoxel$有效}
-				\State $\mathbb{S'}.AddVoxel(NewVoxel)$
+				\State $\mathbb{T}.AddVoxel(NewVoxel)$
 			\EndIf
 		\EndFor
-		\State 体素增长比例$\mu=\frac{\mathbb{S'}.VoxelCount}{\mathbb{S}.VoxelCount}$
+		\State 体素增长比例$\mu=\frac{\mathbb{T}.Count}{\mathbb{P}[j]}$
 		\If{$\mu > \lambda$}
-			\ForAll{$voxel \in \mathbb{S'}$}
-				\State 把$voxel$作为当前体素进行递归调用
+			\ForAll{$voxel \in \mathbb{T}$}
+				\State S.AddVoxel(voxel)
 			\EndFor
 		\EndIf
+		\EndFor
+		\EndFor
 		\State \Return $\mathbb{S}$
 	\end{algorithmic}
 \end{algorithm}
 
-在进行三维泛洪的时候，可以编程实现26个方向迭代过程的并行化，以提高算法的效率。同时，值得注意的是，
-为了将各个节点邻域范围探索的互相影响程度降到最低，本文将树木节点进行分级，即对每个节点，从根节点出发，
-确定该节点是根节点的第几代子节点。本文对同一代的子节点进行并行化的邻域拓展，即对同一级的节点同时进行
-泛洪，这样就可以避免一个子枝泛洪到另外一个子枝的邻域区域的错误。
-
-\section{通过最小二乘法线性拟合确定分支方向}
+\section{最小二乘法线性拟合确定分支方向}
 \label{subsec:leastsquares}
 当得到邻域范围以后，便得到了邻域内体素在基于当前节点26个方向上的密度分布，而
 每个体素内又包含着若干的点，因此等于是得到了在当前节点邻域内的点云分布情况。
@@ -222,7 +249,7 @@
 	\end{algorithmic}
 \end{algorithm}
 
-\section{获取子枝长度和半径}
+\section{拟合子枝长度和半径}
 树木骨架的长度和半径对树木模型的真实感有着十分显著的贡献，所以尽可能准确的获得子枝的长度和
 半径信息能够有助于重建出极具真实感的树木模型。对于树木枝干半径的获取方法有许多，
 主要分为根据规则生成半径和从树木点云结构中获取半径两种方式。
@@ -237,31 +264,30 @@ $i$个子枝的直径，$n$为子枝的数量。这个公式被广泛地用于�
 同样进行半径抽取的方法。注意，用该方法的前提是点云分布须均匀化，然而基于图像进行三维重建
 得到的树木点云会呈现表皮化的现象，这是由于图片上的点都是树木的表皮点，所以在得到
 三维点云后，是需要进行一些修复工作的，本文用随机点填充的方法对该点云模型进行了实心化
-的修复。当点云分布满足均匀化时，在对某个骨架进行拟合之后，对于拟合出来的直线，来计算
-所有参加拟合该直线的点到该直线的平均距离$D_{avg}$，然后就可以计算该骨架的半径$R=D_{avg}*2$。
-由于点云分布均匀，所以半径显然就是平均距离的2倍。该算法的伪代码在算法\ref{alg:radius}中给出。\\
+的修复。当点云分布满足均匀化时，在对某个骨架进行拟合之后，对于拟合出来的直线，根据点
+到直线的距离，可以同样根据最小二乘法拟合出骨架的半径。
+该算法的伪代码在算法\ref{alg:radius}中给出。\\
 
 \begin{algorithm}[H]
-	\caption{骨架半径抽取}
+	\caption{半径拟合算法}
 	\label{alg:radius}
 	\begin{algorithmic}[1] 
 		\Require 拟合出的当前子枝所在直线$L$
 		\Require 当前子枝的点集$\mathbb{S}$
 		\Ensure 当前子枝半径$R$
-		\State 初始化点到直线距离之和$D_{sum}=0$
-		\ForAll{空间点$P \in \mathbb{S}$}
-		\State 点到直线距离$D_{sum}+=CalculateDistance(P, L)$
+		\State 初始化点到直线距离数组$\mathbb{D}[1,..,n]$
+		\For{$i$ = 1 \textbf{to} $n$}
+		\State 点到直线距离$\mathbb{D}[i]=CalculateDistance(P, L)$
 		\EndFor
-		\State 平均距离$D_{avg}=D_{sum}/\mathbb{S}.Count$
-		\State 子枝半径$R=D_{avg}*2$
+		\State 拟合出使得下面式子达到最小值的半径$R$:\[ \sum_{i=1}^n (2\times \mathbb{D}[i] - R)^2  \]
 		\State \Return $R$
 	\end{algorithmic}
 \end{algorithm}
 
 图\ref{fig:radius}给出了三种半径求解方法的效果对比。\ref{fig:radius}(a)给出了线性衰减方法
 的结果，该方法中子枝半径以父枝半径的线性倍衰减。\ref{fig:radius}(b)给出了前文提到的Leonardo
- da Vinci规则所生成的半径情况。\ref{fig:radius}(c)则采用本文中基于线性拟合直线，再计算所有点
- 到该直线平均距离的方法。从三者的效果中可以看出，线性衰减容易出现部分枝条生长不自然的现象，究其
+ da Vinci规则所生成的半径情况。\ref{fig:radius}(c)则采用本文中基于线性拟合的方法。
+ 从三者的效果中可以看出，线性衰减容易出现部分枝条生长不自然的现象，究其
  原因，还是因为一个单一的绝对的线性系数无法适用于所有的枝条，它对于某些枝条会偏大，对于另外一些
  枝条会偏小。 Leonardo规则虽然给出的是一种父子枝之间的相对关系，从一定程度上解决了线性系数单一
  绝对而导致的问题，但是它生成的树木枝干会出现过于均与化，而没有捕捉到现实中树木各个局部的特征。
@@ -281,31 +307,38 @@ $i$个子枝的直径，$n$为子枝的数量。这个公式被广泛地用于�
 随着父子关系而递减。相反地，它地规则往往要复杂许多，而且并没有统一的规则。基于此考虑，本文并
 没有对基于规则的长度估计进行实践，而是直接用与半径类似的方法，根据已拟合出的直线，试图从统计
 的角度对其枝条长度做出合理的估计。一个直观而可行的方法，是将当前节点与所有该方向邻域的点的连线向量
-投影到拟合出的直线方向向量上，这个投影的平均值的2倍，则可以估计为该方向子枝的长度。本文也给出了
-子枝长度估计的伪代码，列在了算法\ref{alg:length}中。
+投影到拟合出的直线方向向量上，然后根据拟合的方法得到高精确度的长度信息。
+子枝长度拟合的伪代码，列在了算法\ref{alg:length}中。
 
 \begin{algorithm}[H]
-	\caption{子枝长度抽取}
+	\caption{子枝长度拟合算法}
 	\label{alg:length}
 	\begin{algorithmic}[1] 
 		\Require 拟合出的当前子枝方向向量$L$，父节点$N$
 		\Require 当前子枝的点集$\mathbb{S}$
-		\Ensure 当前子枝长度$L$
-		\State 初始化父节点到邻域点的向量投影长度之和$D_{sum}=0$
-		\ForAll{空间点$P \in \mathbb{S}$}
-		\State 父节点到$P$的向量$Dir=P$.Position-$N$.Position
-		\State $Dir$在$L$上的投影距离$D_{sum}+=$CalculateProjectionLength$(Dir, L)$
+		\Ensure 当前子枝长度$l$
+		\State 初始化父节点到邻域点的向量投影长度数组$\mathbb{D}[1,..,n]$
+		\For{$i$ = 1 \textbf{to} $n$}
+		\State 父节点到$\mathbb{S}[i]$的向量$Dir=\mathbb{S}[i]$.Position-$N$.Position
+		\State $Dir$在$L$上的投影距离$\mathbb{D}[i]$ = CalculateProjectionLength$(Dir, L)$
 		\EndFor
-		\State 平均距离$D_{avg}=D_{sum}/\mathbb{S}.Count$
-		\State 子枝长度$L=D_{avg}*2$
-		\State \Return $L$
+		\State 拟合出使得下面式子达到最小值的长度$l$:\[ \sum_{i=1}^n (2\times \mathbb{D}[i] - l)^2  \]
+		\State \Return $l$
 	\end{algorithmic}
 \end{algorithm}
 
 \section{本章小节}
 
-三维体素泛洪是计算机图形学中二维像素泛洪的扩展，它将三维体素按洪水泛滥一般进行空间的扩展。本章利用三维体素泛洪实现了节点
-对邻域的探索，该方法可以有效的避免枝条间的干扰，并提高邻域探索的效率。然后在该邻域的范围内对方向进行分割，将每个分割方向上
-的点集根据最小二乘法进行拟合，得出该方向上骨架具体的直线方程。
-然后根据点集内点到对应直线方程的距离大小，算出该骨架的半径大小，根据点集与当前节点连线在直线方向上的投影长度，来估算出枝干长度。
-从而得到具有完整信息的骨架结构。
+本章首先将三维重建得到的点云数据进行体素化，通过对体素求解包围盒、空间分块、点云索引的方法，将离散的点云数据
+转化为连续的体素数据。
+
+接着本章提出了基于新的树木骨架抽取方法，主要包含:\\
+\begin{itemize}
+	\item \textbf{多种子点的并发三维体素泛洪}: 该方法通过广度优先的方法，对树木节点进行遍历。同时对于同一层级
+		上的节点，将它们作为种子点，并并发的进行三维体素的泛洪，以将节点间的相互影响降至最低。
+	\item \textbf{最小二乘法拟合骨架信息}: 该方法通过最小二乘的方法，对空间的局部点云进行方向、半径和长度的
+		拟合，从而以统计的方法从大量的空间点数据中抽取出有用的骨架信息。
+\end{itemize}
+
+通过本章的方法抽取出的骨架具有很高的准确性和真实感，因为它是通过统计的方法在实际的点云中进行信息的获取，相比
+起其他的基于规则的信息抽取方法，该方法有明显的优势。
